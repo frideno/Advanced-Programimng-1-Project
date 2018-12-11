@@ -4,8 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/omri/CLionProjects/prog1Project/Interperter.cpp" "/home/omri/CLionProjects/prog1Project/cmake-build-debug/CMakeFiles/prog1Project.dir/Interperter.cpp.o"
-  "/home/omri/CLionProjects/prog1Project/main.cpp" "/home/omri/CLionProjects/prog1Project/cmake-build-debug/CMakeFiles/prog1Project.dir/main.cpp.o"
+  "/home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Interperter.cpp" "/home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/cmake-build-debug/CMakeFiles/prog1Project.dir/Interperter.cpp.o"
+  "/home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/main.cpp" "/home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/cmake-build-debug/CMakeFiles/prog1Project.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

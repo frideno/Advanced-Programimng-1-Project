@@ -9,6 +9,7 @@
 #include <map>
 #include <fstream>
 #include "Command.h"
+#include "Expressions.h"
 using namespace std;
 /*
  *  class Interperter:
@@ -30,7 +31,7 @@ public:
     void parser(vector<string> command);
 
     // ‫‪Shunting-yard‬‬ of Dikstra - parse a string into a Expression (only binaries expressions).
-    Expression* shunting-yard(string exp);
+    Expression* shuntingYard(string exp);
 
 };
 #endif //PROG1PROJECT_LEXER_H
