@@ -3,7 +3,7 @@
 */
 Expression* Interperter::shunting-yard(string exp) {
 
-    //TODO: complete the function.
+    //TODO: complete the function
 
     return nullptr;
 }
