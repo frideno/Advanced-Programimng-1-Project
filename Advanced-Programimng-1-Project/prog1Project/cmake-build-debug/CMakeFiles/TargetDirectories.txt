@@ -1,3 +1,0 @@
-/home/omri/CLionProjects/prog1Project/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/omri/CLionProjects/prog1Project/cmake-build-debug/CMakeFiles/prog1Project.dir
-/home/omri/CLionProjects/prog1Project/cmake-build-debug/CMakeFiles/edit_cache.dir

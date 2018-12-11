@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/prog1Project.dir/main.cpp.o CMakeFiles/prog1Project.dir/Interperter.cpp.o  -o prog1Project 
