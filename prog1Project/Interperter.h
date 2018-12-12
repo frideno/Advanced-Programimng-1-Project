@@ -22,16 +22,25 @@ using namespace std;
 class Interperter {
 private:
     map<string, double> _symbolTable;
-    map<string, Command> _commandsTable;
+   // map<string, Command> _commandsTable;
+
+
+    // shunting-yard algorithm - from string of expression in infix - to vector of strings representing numbers
+    // and operators, in prefix.
+    vector<char> shuntingYard_infixToPostfix(string exp);
+
+    // ‫‪Shunting-yard‬‬ of Dikstra - parse a string into a Expression (only binaries expressions).
+    Expression* shuntingYard_postfixToExpression(vector<char>& exp);
 public:
+
     // lexer - from file, gets the next line of command into string[].
     vector<string> lexer(ifstream& script);
 
     // parser - from a commmandLine representing a command, parse it into command and do it.
     void parser(vector<string> command);
 
-    // ‫‪Shunting-yard‬‬ of Dikstra - parse a string into a Expression (only binaries expressions).
-    Expression* shuntingYard(string exp);
+    Expression* shuntingYard(string expression);
+
 
 };
 #endif //PROG1PROJECT_LEXER_H

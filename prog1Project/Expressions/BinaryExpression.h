@@ -44,7 +44,7 @@ public:
         output << be.toString();
         return  output;
     }
-    std::string toString() const {return _left->toString() + _sign + _right->toString();}
+    std::string toString() const {return "(" + _left->toString() +  _sign + _right->toString() + ")";}
 };
 
 #endif //PROG1PROJECT_BINARYEXPRESSION_H

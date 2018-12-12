@@ -7,14 +7,14 @@
 
 #include "Expression.h"
 #include <iostream>
-
+#include <cmath>
 class Number : public Expression{
 private:
 
     double _value;
 public:
     // constructor:
-    Number(double num):
+    explicit Number(double num):
         _value(num) {};
 
     // getter for number:
@@ -28,7 +28,16 @@ public:
         output << number.toString();
         return output;
     }
-    std::string toString() const  { return  std::to_string(_value);}
+    std::string toString() const  {
+
+        // if the value is an integer, print it like integer.
+
+        if (std::floor(_value) == _value) {
+            return std::to_string((int) _value);
+        }
+
+        // else, if it is pure double:
+        return  std::to_string(_value);}
 
 };
 #endif //PROG1PROJECT_NUMBER_H
