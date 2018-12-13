@@ -27,10 +27,13 @@ private:
 
     // shunting-yard algorithm - from string of expression in infix - to vector of strings representing numbers
     // and operators, in prefix.
-    vector<char> shuntingYard_infixToPostfix(string exp);
+    vector<string> shuntingYard_infixToPostfix(vector<string>& infix_token);
 
     // ‫‪Shunting-yard‬‬ of Dikstra - parse a string into a Expression (only binaries expressions).
-    Expression* shuntingYard_postfixToExpression(vector<char>& exp);
+    Expression* shuntingYard_postfixToExpression(vector<string>& exp);
+
+    // filter string representing expression into vector of tokens - (numbers, operators and brackets).
+    vector<string> filterExpressionString(string expression);
 public:
 
     // lexer - from file, gets the next line of command into string[].

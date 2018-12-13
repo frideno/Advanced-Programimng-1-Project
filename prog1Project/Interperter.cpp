@@ -16,10 +16,9 @@
  * */
 Expression* Interperter::shuntingYard(string expression) {
 
-    // TODO: make the expression paser of 1st function , work with spaces in the string.
-    // TODO: make the epxression parser of 1st function, work with numbers that are more than one digit, then changing from char to string the tokens.
+    vector<string> tokens = filterExpressionString(expression);
     // use 1st function.
-    vector<char> postfixVector = shuntingYard_infixToPostfix(expression);
+    vector<string> postfixVector = shuntingYard_infixToPostfix(tokens);
 
     // use 2nd function on the result of the 1st.
     return shuntingYard_postfixToExpression(postfixVector);
@@ -31,28 +30,28 @@ Expression* Interperter::shuntingYard(string expression) {
  * converts mathematical expression specified in infix notation, into prefix
  * [ for example - 3 * 4 + 5 ---> +(5, *(3, 4))]
  */
-vector<char> Interperter::shuntingYard_infixToPostfix(string exp) {
+vector<string> Interperter::shuntingYard_infixToPostfix(vector<string>& tokens) {
 
     string prefix;
-    vector<char> outputQueue;
-    stack<char> operatorsStack;
+    vector<string> outputQueue;
+    stack<string> operatorsStack;
 
     // while there is a token to read:
-    std::map<char, int> op_precedence;
-    op_precedence['+'] = 10;
-    op_precedence['-'] = 10;
-    op_precedence['*'] = 20;
-    op_precedence['/'] = 20;
-    op_precedence['^'] = 30;
+    std::map<string, int> op_precedence;
+    op_precedence["+"] = 10;
+    op_precedence["-"] = 10;
+    op_precedence["*"] = 20;
+    op_precedence["/"] = 20;
+    op_precedence["^"] = 30;
 
 
-    for(char& token: exp) {
-        if(isdigit(token)) {
+    for(string& token: tokens) {
+        if(ExpressionFactory::isNumber(token)) {
 
             outputQueue.push_back(token);
             // cout << "Add " << token << " to output" << endl;
         } else if (ExpressionFactory::isOperator(token)){
-            while(!operatorsStack.empty() && operatorsStack.top() != '(' && ((op_precedence.at(operatorsStack.top()) > op_precedence.at(token))
+            while(!operatorsStack.empty() && operatorsStack.top() != "(" && ((op_precedence.at(operatorsStack.top()) > op_precedence.at(token))
                     || (op_precedence.at(operatorsStack.top()) == op_precedence.at(token) && ExpressionFactory::isLeftAccociative(token)))) {
                 //cout << "Pop stack to output " << token << endl;
                 outputQueue.push_back(operatorsStack.top());
@@ -60,10 +59,10 @@ vector<char> Interperter::shuntingYard_infixToPostfix(string exp) {
             }
             operatorsStack.push(token);
             //cout << "Push " << token << " to stack" << endl;
-        } else if(token == '(')
+        } else if(token == "(")
                 operatorsStack.push(token);
-        else if(token == ')') {
-            while (!operatorsStack.empty() && operatorsStack.top() != '(') {
+        else if(token == ")") {
+            while (!operatorsStack.empty() && operatorsStack.top() != "(") {
                 outputQueue.push_back(operatorsStack.top());
                 operatorsStack.pop();
                 //cout << "Pop stack to output " << token << endl;
@@ -84,15 +83,13 @@ vector<char> Interperter::shuntingYard_infixToPostfix(string exp) {
 
     return outputQueue;
 
-
 }
-
 
 /*
  * Shunting yard algorithm second part - of our own -
  * turns the vector of tokens exp, and turn it into Expression object.
  * */
-Expression* Interperter::shuntingYard_postfixToExpression(vector<char>& exp){
+Expression* Interperter::shuntingYard_postfixToExpression(vector<string>& exp){
 
     int n = exp.size();
 
@@ -102,14 +99,14 @@ Expression* Interperter::shuntingYard_postfixToExpression(vector<char>& exp){
      * n -1, and the left will be at teh sub string of k , where k is the place right expression end at.
      */
 
-    char token = exp[n-1];
-    if(isdigit(token)) {
+    string token = exp[n-1];
+    if(ExpressionFactory::isNumber(token)) {
 
         // if the last token was a number, then we want to just create a Number out of it.
         exp.pop_back();
-        return new Number(token - '0'); // cast from char of number , to int of the number.
+        return new Number((int) stoi(token, nullptr, 10)); // cast from string of number , to int of the number.
 
-    } else if(ExpressionFactory::isOperator(token)) {
+    } else {
 
         // if last token is operator, as said, we can remove it, and preform the function at the refrenced exp,
         // acutally modifing it, then get the right and left expressions.
@@ -123,10 +120,52 @@ Expression* Interperter::shuntingYard_postfixToExpression(vector<char>& exp){
         Expression* result = ExpressionFactory::create(token, left, right);
         return result;
 
-    } else {
-        // if token is not a number or an operator, there must be a syntax mistake.
-        return nullptr;
     }
 
+
+}
+
+// filter string representing expression into vector of tokens - (numbers, operators and brackets).
+
+vector<string> Interperter::filterExpressionString(string expression) {
+
+    // intilize tokens vector to empty.
+
+    vector<string> tokens;
+    string tmpNumber = "";
+
+    // for each char at the expression:
+
+    for(int i = 0; i < expression.length(); i++) {
+
+        char c = expression[i];
+        // if the char is space, we will ignore it.
+        if(c == ' ') {
+            continue;
+        }
+
+        // if the char is a digit, we will add it to the tmp number, that gains near digits.
+        else if(isdigit(c)) {
+            tmpNumber += c;
+        }
+
+        // else, it is an operator or brackets, so we will add the last tmp number created, if it is not empty,
+        // and reset it, and add the the operator to the tokens.
+        else {
+            if(tmpNumber != "") {
+                tokens.push_back(tmpNumber);
+                tmpNumber = "";
+            }
+            // add the operator or brackets, to the tokens.
+            string token = "";
+            token += c;
+            tokens.push_back(token);
+        }
+    }
+    // add to tokens the last number created if exists.
+    if(tmpNumber != "")
+        tokens.push_back(tmpNumber);
+
+    return tokens;
 
 }

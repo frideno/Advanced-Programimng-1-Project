@@ -12,14 +12,17 @@ public:
 
     // create functions, which create expression by the token representing them.
     //Expression* create(char function, Expression* exp);
-    static Expression* create(char operatora, Expression* left, Expression* right);
+    static Expression* create(string operatora, Expression* left, Expression* right);
 
-    // helping function to determine if a char represent one of our operators.
-    static bool isOperator(char token);
+    // helping function to determine if a string represent one of our operators.
+    static bool isOperator(string token);
+
+    // helping function to determine if a string represent number.
+    static bool isNumber(string token);
 
     // helping function to determine if a char represent one of our operators, that is left associative,
     // means that a~b~c = (a~b)~c.
-    static bool isLeftAccociative(char operat);
+    static bool isLeftAccociative(string operat);
 
 };
 
