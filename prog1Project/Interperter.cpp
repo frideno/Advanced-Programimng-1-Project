@@ -2,10 +2,12 @@
      Created by Omri and Gal on 12/9/18.
 */
 #include "Interperter.h"
-#include "Expressions/ExpressionFactory.cpp"
-
 #include <stack>
 #include <algorithm>
+#include "Expressions/ExpressionFactory.h"
+#include "DataBase.h"
+#include "Utils.h"
+
 
 /**
  * Shuting yard algortim -
@@ -37,12 +39,9 @@ vector<string> Interperter::shuntingYard_infixToPostfix(vector<string>& tokens) 
     stack<string> operatorsStack;
 
     // while there is a token to read:
-    std::map<string, int> op_precedence;
-    op_precedence["+"] = 10;
-    op_precedence["-"] = 10;
-    op_precedence["*"] = 20;
-    op_precedence["/"] = 20;
-    op_precedence["^"] = 30;
+    std::map<string, int> op_precedence =  ExpressionFactory::operatorsPrecedence;
+
+
 
 
     for(string& token: tokens) {
@@ -100,11 +99,24 @@ Expression* Interperter::shuntingYard_postfixToExpression(vector<string>& exp){
      */
 
     string token = exp[n-1];
-    if(ExpressionFactory::isNumber(token)) {
+    if(!ExpressionFactory::isOperator(token)) {
 
-        // if the last token was a number, then we want to just create a Number out of it.
+        // if the last token was not an operator,  then we want to just create a Number/varialbe out of it.
         exp.pop_back();
-        return new Number((int) stoi(token, nullptr, 10)); // cast from string of number , to int of the number.
+        double number;
+        if (ExpressionFactory::isNumber(token)) {
+          return new Number(Utils::to_int(token)); // cast from string of number , to int of the number.
+        }
+        // else, it is a variable, so we want to return it.
+        else {
+
+            // if the variable is a keyword like TRUE, FALSE, we will give it a keyword value by the map.
+            if (DataBase::containsKeyword(token)) {
+                return new Number(DataBase::getKeywordValue(token));
+            }
+
+            return new Var(token);
+        }
 
     } else {
 
@@ -133,6 +145,8 @@ vector<string> Interperter::filterExpressionString(string expression) {
 
     vector<string> tokens;
     string tmpNumber = "";
+    string tmpOperator = "";
+    string tmpVariable = "";
 
     // for each char at the expression:
 
@@ -146,26 +160,116 @@ vector<string> Interperter::filterExpressionString(string expression) {
 
         // if the char is a digit, we will add it to the tmp number, that gains near digits.
         else if(isdigit(c)) {
-            tmpNumber += c;
+
+            //if an operaqtor came before digit, we will push it to tokens.
+
+            if(tmpOperator != "") {
+                tokens.push_back(tmpOperator);
+                tmpOperator = "";
+            }
+
+            // but if it was letter before digits, its fine because we can have variables with
+            //  both letters and digits. else it is a number.
+
+            if(tmpVariable != "") {
+                tmpVariable += c;
+            }
+            else {
+                tmpNumber += c;
+            }
+        }
+        else if((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'))
+        {
+
+            if(tmpNumber != "") {
+                tokens.push_back(tmpNumber);
+                tmpNumber = "";
+            }
+
+            if(tmpOperator != "") {
+                tokens.push_back(tmpOperator);
+                tmpOperator = "";
+            }
+
+            tmpVariable += c;
         }
 
         // else, it is an operator or brackets, so we will add the last tmp number created, if it is not empty,
         // and reset it, and add the the operator to the tokens.
         else {
+
             if(tmpNumber != "") {
                 tokens.push_back(tmpNumber);
                 tmpNumber = "";
             }
-            // add the operator or brackets, to the tokens.
-            string token = "";
-            token += c;
-            tokens.push_back(token);
+            if(tmpVariable != "") {
+                tokens.push_back(tmpVariable);
+            }
+
+            tmpOperator += c;
         }
+
+
     }
     // add to tokens the last number created if exists.
     if(tmpNumber != "")
         tokens.push_back(tmpNumber);
 
     return tokens;
+
+}
+
+
+vector<string> Interperter::lexer() {
+
+    vector<string> tokens;
+
+    // read from script to array of strings.
+    for(string line; getline(_script, line);)
+    {
+        printf("Start working on lexer");
+    }
+    return tokens;
+}
+
+
+void Interperter::parser(vector<string> commands) {
+
+    int index = 0;
+    while (index < commands.size()) {
+
+        // create a command by the map of commands:
+        Command* c = DataBase::getCommand(commands[index]);
+
+        // creates the variables to command by all tokens until another command word;
+        vector<string&> variables;
+
+        // if the command is a block - we recieve variables until }.
+        if (c->isBlockCommand()) {
+            int bracketMaazan = 0;
+            while (commands[index] != "}" || (commands[index] == "}" && bracketsMaazan != 0)) {
+
+                // for each {, we increase maazan by 1, and for each } decrease, so know that is the right } at end.
+                variables.push_back(commands[index]);
+                index++;
+
+                if (commands[index] == "{")
+                    bracketMaazan ++;
+            }
+            // push the }.
+            variables.push_back(commands[index]);
+        }
+
+        // else, just get the few next variables by the command property.
+        else {
+
+        }
+
+        // do command of c.
+        c->doCommand(variables);
+
+        // TODO: check number of variables is not wrong.
+    }
+
 
 }

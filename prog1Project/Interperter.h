@@ -21,29 +21,35 @@ using namespace std;
 
 class Interperter {
 private:
-    map<string, double> _symbolTable;
-   // map<string, Command> _commandsTable;
 
+    // variables:
 
-    // shunting-yard algorithm - from string of expression in infix - to vector of strings representing numbers
-    // and operators, in prefix.
-    vector<string> shuntingYard_infixToPostfix(vector<string>& infix_token);
+    ifstream& _script;
 
-    // ‫‪Shunting-yard‬‬ of Dikstra - parse a string into a Expression (only binaries expressions).
-    Expression* shuntingYard_postfixToExpression(vector<string>& exp);
+    // methods:
+
+    static vector<string> shuntingYard_infixToPostfix(vector<string>& infix_token);
+
+    static  Expression* shuntingYard_postfixToExpression(vector<string>& exp);
+
 
     // filter string representing expression into vector of tokens - (numbers, operators and brackets).
-    vector<string> filterExpressionString(string expression);
+    static vector<string> filterExpressionString(string expression);
 public:
 
+    // constructor:
+    Interperter(ifstream& script):
+        _script(script) {};
+
     // lexer - from file, gets the next line of command into string[].
-    vector<string> lexer(ifstream& script);
+    vector<string> lexer();
 
     // parser - from a commmandLine representing a command, parse it into command and do it.
-    void parser(vector<string> command);
+    static void parser(vector<string> command);
 
-    Expression* shuntingYard(string expression);
-
+    // ‫‪Shunting-yard‬‬ of Dikstra - parse a string into a Expression (only binaries expressions).
+    static Expression* shuntingYard(string expression);
 
 };
+
 #endif //PROG1PROJECT_LEXER_H

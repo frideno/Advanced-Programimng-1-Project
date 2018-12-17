@@ -5,7 +5,7 @@
 #ifndef PROG1PROJECT_NUMBER_H
 #define PROG1PROJECT_NUMBER_H
 
-#include "Expression.h"
+#include "../Expression.h"
 #include <iostream>
 #include <cmath>
 class Number : public Expression{

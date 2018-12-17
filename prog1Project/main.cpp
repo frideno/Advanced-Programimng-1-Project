@@ -14,7 +14,7 @@ int main() {
 
      // test for the shunting yard string to string:
      Interperter* inter = new Interperter;
-     string t2 = "3190+4*42/ (1-15) ^ 2 ^ 3";
+     string t2 = "var < 3";
       Expression* e = inter->shuntingYard(t2);
       cout << e->toString();
     return 0;

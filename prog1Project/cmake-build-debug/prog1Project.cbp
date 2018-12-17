@@ -88,10 +88,10 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expressions/BinaryExpression.h">
+		<Unit filename="/home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expression.h">
 			<Option target="prog1Project"/>
 		</Unit>
-		<Unit filename="/home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expressions/Expression.h">
+		<Unit filename="/home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expressions/BinaryExpression.h">
 			<Option target="prog1Project"/>
 		</Unit>
 		<Unit filename="/home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expressions/Expressions_operators/Plus.h">

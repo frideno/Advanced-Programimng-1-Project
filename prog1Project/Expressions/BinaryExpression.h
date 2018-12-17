@@ -5,7 +5,7 @@
 #ifndef PROG1PROJECT_BINARYEXPRESSION_H
 #define PROG1PROJECT_BINARYEXPRESSION_H
 
-#include "Expression.h"
+#include "../Expression.h"
 #include <string>
 #include <iostream>
 /*
