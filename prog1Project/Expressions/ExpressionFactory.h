@@ -11,9 +11,32 @@
 using namespace std;
 class ExpressionFactory {
 
-public:
+private:
+    static map<string, int> createMap() {
+        map<string, int> m =
+                {
+                        {"+",  10},
+                        {"-",  10},
+                        {"*",  20},
+                        {"/",  20},
+                        {"^",  30},
+                        {">",  100},
+                        {"<",  100},
+                        {"==", 100},
+                        {"!=", 100},
+                        {"(",  100000},
+                        {")",  100000}
+
+                };
+        return m;
+    }
 
     static map<string, int> operatorsPrecedence;
+
+public:
+
+    // getter for operatorsPrecedence
+    static map<string, int> getOperatorsPrecedence();
 
     // create functions, which create expression by the token representing them.
     //Expression* create(char function, Expression* exp);

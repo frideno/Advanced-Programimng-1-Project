@@ -88,13 +88,91 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Command.h">
+			<Option target="prog1Project"/>
+		</Unit>
+		<Unit filename="/home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Commands/ConditionParser.cpp">
+			<Option target="prog1Project"/>
+		</Unit>
+		<Unit filename="/home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Commands/ConditionParser.h">
+			<Option target="prog1Project"/>
+		</Unit>
+		<Unit filename="/home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Commands/DefineVarCommand.cpp">
+			<Option target="prog1Project"/>
+		</Unit>
+		<Unit filename="/home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Commands/DefineVarCommand.h">
+			<Option target="prog1Project"/>
+		</Unit>
+		<Unit filename="/home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Commands/EqualsCommand.cpp">
+			<Option target="prog1Project"/>
+		</Unit>
+		<Unit filename="/home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Commands/EqualsCommand.h">
+			<Option target="prog1Project"/>
+		</Unit>
+		<Unit filename="/home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Commands/IfCommand.cpp">
+			<Option target="prog1Project"/>
+		</Unit>
+		<Unit filename="/home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Commands/IfCommand.h">
+			<Option target="prog1Project"/>
+		</Unit>
+		<Unit filename="/home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Commands/OpenDataServerCommand.cpp">
+			<Option target="prog1Project"/>
+		</Unit>
+		<Unit filename="/home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Commands/OpenDataServerCommand.h">
+			<Option target="prog1Project"/>
+		</Unit>
+		<Unit filename="/home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Commands/PrintCommand.cpp">
+			<Option target="prog1Project"/>
+		</Unit>
+		<Unit filename="/home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Commands/PrintCommand.h">
+			<Option target="prog1Project"/>
+		</Unit>
+		<Unit filename="/home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Commands/SemicolonCommand.h">
+			<Option target="prog1Project"/>
+		</Unit>
+		<Unit filename="/home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Commands/WhileCommand.cpp">
+			<Option target="prog1Project"/>
+		</Unit>
+		<Unit filename="/home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Commands/WhileCommand.h">
+			<Option target="prog1Project"/>
+		</Unit>
 		<Unit filename="/home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expression.h">
 			<Option target="prog1Project"/>
 		</Unit>
-		<Unit filename="/home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expressions/BinaryExpression.h">
+		<Unit filename="/home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expressions.h">
+			<Option target="prog1Project"/>
+		</Unit>
+		<Unit filename="/home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expressions/BooleanExpressions/Bigger.h">
+			<Option target="prog1Project"/>
+		</Unit>
+		<Unit filename="/home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expressions/BooleanExpressions/Equals.h">
+			<Option target="prog1Project"/>
+		</Unit>
+		<Unit filename="/home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expressions/BooleanExpressions/NotEquals.h">
+			<Option target="prog1Project"/>
+		</Unit>
+		<Unit filename="/home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expressions/BooleanExpressions/Smaller.h">
+			<Option target="prog1Project"/>
+		</Unit>
+		<Unit filename="/home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expressions/ExpressionFactory.cpp">
+			<Option target="prog1Project"/>
+		</Unit>
+		<Unit filename="/home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expressions/ExpressionFactory.h">
+			<Option target="prog1Project"/>
+		</Unit>
+		<Unit filename="/home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expressions/Expressions_operators/Div.h">
+			<Option target="prog1Project"/>
+		</Unit>
+		<Unit filename="/home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expressions/Expressions_operators/Minus.h">
+			<Option target="prog1Project"/>
+		</Unit>
+		<Unit filename="/home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expressions/Expressions_operators/Mul.h">
 			<Option target="prog1Project"/>
 		</Unit>
 		<Unit filename="/home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expressions/Expressions_operators/Plus.h">
+			<Option target="prog1Project"/>
+		</Unit>
+		<Unit filename="/home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expressions/Expressions_operators/Pow.h">
 			<Option target="prog1Project"/>
 		</Unit>
 		<Unit filename="/home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expressions/Number.h">
@@ -103,10 +181,19 @@
 		<Unit filename="/home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expressions/UnaryExpression.h">
 			<Option target="prog1Project"/>
 		</Unit>
+		<Unit filename="/home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expressions/Var.h">
+			<Option target="prog1Project"/>
+		</Unit>
 		<Unit filename="/home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Interperter.cpp">
 			<Option target="prog1Project"/>
 		</Unit>
 		<Unit filename="/home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Interperter.h">
+			<Option target="prog1Project"/>
+		</Unit>
+		<Unit filename="/home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Utils.cpp">
+			<Option target="prog1Project"/>
+		</Unit>
+		<Unit filename="/home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Utils.h">
 			<Option target="prog1Project"/>
 		</Unit>
 		<Unit filename="/home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/main.cpp">

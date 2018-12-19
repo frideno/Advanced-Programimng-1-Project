@@ -12,6 +12,7 @@
 #include <string>
 #include <map>
 using namespace std;
+
 class ConditionParser : public Command{
 
 private:
@@ -29,7 +30,12 @@ protected:
     vector<string>& getStatements();
 
 public:
-    void doCommand(std::vector<std::string> args) override;
+    void doCommand(std::vector<std::string>& args) ;
+
+    bool anotherArg(string &current);
+
+    bool goBackArg(string &current) ;
+
 
 };
 

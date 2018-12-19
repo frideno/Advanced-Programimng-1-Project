@@ -14,7 +14,6 @@
 #include "Expressions/BinaryExpression.h"
 #include "Expressions/UnaryExpression.h"
 #include "Expressions/Number.h"
-#include "Expressions/Var.h"
 #include "Expressions/Expressions_operators/Plus.h"
 #include "Expressions/Expressions_operators/Minus.h"
 #include "Expressions/Expressions_operators/Mul.h"

@@ -5,28 +5,36 @@
 #include "ConditionParser.h"
 #include "../Interperter.h"
 
+Expression *ConditionParser::getCondition() {
+    return _condition;
+}
 
-void ConditionParser::doCommand(vector<string> args) {
+vector<string> &ConditionParser::getStatements() {
+    return _statements;
+}
+
+void ConditionParser::doCommand(vector<string>& args) {
 
     int i = 0;
 
-    string conditionString = "";
-    // parse the condition part;
+    vector<string> conditionVec;
+
+    // lex the condition part;
 
     while(args[i] != "{") {
-        conditionString += args[i];
+        conditionVec.push_back(args[i]);
         i++;
     }
 
     // if no condtion lexed, than exception.
-    if (conditionString == "")
-        throw ("Conditional has no opening brackets \"{\"");
+    if (conditionVec.size() == 0)
+        throw ("Conditional has no condition declared");
 
     // moving i to skip {.
     i++;
 
     // interperter the shunting yard of expression into the condition, so we can caluclate it next.
-    _condition = Interperter::shuntingYard(conditionString);
+    _condition = Interperter::shuntingYard(conditionVec);
 
     // if last token is not } , expetion.
     if (args[args.size() - 1] != "}")
@@ -38,10 +46,35 @@ void ConditionParser::doCommand(vector<string> args) {
 
 }
 
-Expression *ConditionParser::getCondition() {
-    return _condition;
+bool ConditionParser::anotherArg(string &current) {
+
+    // stop when a } sign show, and the balance of { and } are 0.
+
+    static int balance = 0;
+
+    // if the current token is {, we raise the balance by 1, becuase another } will come before ours.
+
+    if(current == "{")
+        balance++;
+
+    // if the current token is }, we take the balance off by 1, because a matching { was there before.
+    if(current == "}") {
+        balance--;
+
+        // if the } is here, and a balance of } achieved, then we can stop reading characters.
+        if(balance == 0)
+            return false;
+
+        if (balance < 0)
+            throw("an unappropriate } was defined, without suited {");
+    }
+
+    // continue reading if it was not } with balance of 0.
+    return true;
 }
 
-vector<string> &ConditionParser::getStatements() {
-    return _statements;
+bool ConditionParser::goBackArg(string &current) {
+
+    // condition parser dont need to read things before the keyword.
+    return false;
 }

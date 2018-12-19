@@ -5,11 +5,23 @@
 #include "PrintCommand.h"
 #include "NumberOfArgsToCommandException.h"
 #include "../Interperter.h"
+#include "../Utils.h"
 
-void PrintCommand::doCommand(std::vector<std::string> args) {
 
-    // if number of arguments is fine, print the args[0] thing.
-    //std::string toPrint = Interperter::shuntingYard(args[0]);
+void PrintCommand::doCommand(vector<string> &args) {
+    return;
+}
 
+bool PrintCommand::goBackArg(string &current) {
+
+    // print command don't need to go back before print.
+    return false;
+}
+
+
+bool PrintCommand::anotherArg(string &current) {
+
+    // get const amout of anotehr args - 1.
+    return Utils::getNArguments(1);
 
 }

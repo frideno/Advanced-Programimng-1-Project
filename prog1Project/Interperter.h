@@ -2,8 +2,8 @@
      Created by omri on 12/9/18.
 */
 
-#ifndef PROG1PROJECT_LEXER_H
-#define PROG1PROJECT_LEXER_H
+#ifndef PROG1PROJECT_INTERPERTER_H
+#define PROG1PROJECT_INTERPERTER_H
 #include <vector>
 #include <string>
 #include <map>
@@ -22,12 +22,7 @@ using namespace std;
 class Interperter {
 private:
 
-    // variables:
-
-    ifstream& _script;
-
-    // methods:
-
+    // help functions:
     static vector<string> shuntingYard_infixToPostfix(vector<string>& infix_token);
 
     static  Expression* shuntingYard_postfixToExpression(vector<string>& exp);
@@ -37,19 +32,15 @@ private:
     static vector<string> filterExpressionString(string expression);
 public:
 
-    // constructor:
-    Interperter(ifstream& script):
-        _script(script) {};
-
     // lexer - from file, gets the next line of command into string[].
-    vector<string> lexer();
+    static vector<string> lexer(ifstream& script);
 
     // parser - from a commmandLine representing a command, parse it into command and do it.
     static void parser(vector<string> command);
 
     // ‫‪Shunting-yard‬‬ of Dikstra - parse a string into a Expression (only binaries expressions).
-    static Expression* shuntingYard(string expression);
+    static Expression* shuntingYard(vector<string>& tokens);
 
 };
 
-#endif //PROG1PROJECT_LEXER_H
+#endif //PROG1PROJECT_INTERPERTER_H

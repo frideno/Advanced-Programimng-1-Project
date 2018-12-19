@@ -2,8 +2,8 @@
 // Created by omri on 12/10/18.
 //
 
-#ifndef PROG1PROJECT_PLUS_H
-#define PROG1PROJECT_PLUS_H
+#ifndef PROG1PROJECT_BIGGER_H
+#define PROG1PROJECT_BIGGER_H
 
 
 #include "../BinaryExpression.h"
@@ -21,4 +21,4 @@ public:
 };
 
 
-#endif //PROG1PROJECT_PLUS_H
+#endif //PROG1PROJECT_BIGGER_H
