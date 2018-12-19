@@ -9,6 +9,7 @@
 #include <map>
 #include <fstream>
 #include "Command.h"
+#include "Expressions.h"
 using namespace std;
 /*
  *  class Interperter:
@@ -20,17 +21,35 @@ using namespace std;
 
 class Interperter {
 private:
-    map<string, double> _symbolTable;
-    map<string, Command> _commandsTable;
+
+    // variables:
+
+    ifstream& _script;
+
+    // methods:
+
+    static vector<string> shuntingYard_infixToPostfix(vector<string>& infix_token);
+
+    static  Expression* shuntingYard_postfixToExpression(vector<string>& exp);
+
+
+    // filter string representing expression into vector of tokens - (numbers, operators and brackets).
+    static vector<string> filterExpressionString(string expression);
 public:
+
+    // constructor:
+    Interperter(ifstream& script):
+        _script(script) {};
+
     // lexer - from file, gets the next line of command into string[].
-    vector<string> lexer(ifstream& script);
+    vector<string> lexer();
 
     // parser - from a commmandLine representing a command, parse it into command and do it.
-    void parser(vector<string> command);
+    static void parser(vector<string> command);
 
     // ‫‪Shunting-yard‬‬ of Dikstra - parse a string into a Expression (only binaries expressions).
-    Expression* shunting-yard(string exp);
+    static Expression* shuntingYard(string expression);
 
 };
+
 #endif //PROG1PROJECT_LEXER_H

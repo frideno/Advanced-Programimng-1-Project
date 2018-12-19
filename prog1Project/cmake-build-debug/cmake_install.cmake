@@ -1,4 +1,4 @@
-# Install script for directory: /home/omri/CLionProjects/prog1Project
+# Install script for directory: /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/omri/CLionProjects/prog1Project/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
