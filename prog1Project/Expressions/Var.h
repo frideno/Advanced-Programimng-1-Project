@@ -8,7 +8,7 @@
 #include "../Expression.h"
 #include <iostream>
 #include <cmath>
-#include "../DataBase.cpp"
+#include "../Databases/SymbolsDB.h"
 
 class Var : public Expression{
 private:
@@ -23,7 +23,7 @@ public:
     std::string getVar() const {return _varName;};
 
     // getter of num.
-    double calculate() { return DataBase::getsymbol(_varName); };
+    double calculate() { return SymbolsDB::getsymbol(_varName); };
 
     //output operator:
     friend std::ostream& operator<<(std::ostream& output, const Var& Var) {
@@ -32,4 +32,5 @@ public:
     }
     std::string toString() const {return _varName; }
 };
+//g++ Databases/*.h Databases/*.cpp Expressions/*.h Expressions/*.cpp Commands/*.h Commands/*.cpp  main.cpp Command.h Expression.h Expressions.h Interperter.h Interperter.cpp Utils.h Utils.cpp -std=c++1y
 #endif //PROG1PROJECT_Var_H

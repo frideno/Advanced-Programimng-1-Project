@@ -8,8 +8,10 @@
 #include "../Command.h"
 #include "ConditionParser.h"
 
-class IfCommand : public ConditionParser{
-    void doCommand(std::vector<std::string> args);
+class IfCommand: public ConditionParser{
+public:
+    void doCommand(std::vector<std::string>& args) override;
+
 };
 
 

@@ -1,14 +1,15 @@
 /*
      Created by Omri and Gal on 12/9/18.
 */
+
 #include "Interperter.h"
+#include "Databases/ConstsDB.h"
 #include <stack>
 #include <algorithm>
+#include "Databases/SymbolsDB.h"
 #include "Expressions/ExpressionFactory.h"
-#include "DataBase.h"
 #include "Utils.h"
-
-
+#include "Expressions/Var.h"
 /**
  * Shuting yard algortim -
  * get string @expression and return combined work of two functions
@@ -16,10 +17,8 @@
  * 2nd- turns the vector into an Expression object.
  *
  * */
-Expression* Interperter::shuntingYard(string expression) {
+Expression* Interperter::shuntingYard(vector<string>& tokens) {
 
-    vector<string> tokens = filterExpressionString(expression);
-    // use 1st function.
     vector<string> postfixVector = shuntingYard_infixToPostfix(tokens);
 
     // use 2nd function on the result of the 1st.
@@ -39,7 +38,7 @@ vector<string> Interperter::shuntingYard_infixToPostfix(vector<string>& tokens) 
     stack<string> operatorsStack;
 
     // while there is a token to read:
-    std::map<string, int> op_precedence =  ExpressionFactory::operatorsPrecedence;
+    std::map<string, int> op_precedence (ExpressionFactory::getOperatorsPrecedence());
 
 
 
@@ -110,12 +109,19 @@ Expression* Interperter::shuntingYard_postfixToExpression(vector<string>& exp){
         // else, it is a variable, so we want to return it.
         else {
 
-            // if the variable is a keyword like TRUE, FALSE, we will give it a keyword value by the map.
-            if (DataBase::containsKeyword(token)) {
-                return new Number(DataBase::getKeywordValue(token));
+            // if the variable is a command keyword.
+            if (ConstsDB::containsCommand(token)) {
+                throw ("Variable with name of language keyword is not allowed");
             }
-
-            return new Var(token);
+            // if the variable is a keyword like TRUE, FALSE, we will give it a keyword value by the map.
+            if (ConstsDB::containsKeyword(token)) {
+                return new Number(ConstsDB::getKeywordValue(token));
+            }
+            if (!SymbolsDB::containsSymbol(token)) {
+                throw ("no symbol named " + token + "is defined.");
+            } else {
+                return new Var(token);
+            }
         }
 
     } else {
@@ -137,97 +143,111 @@ Expression* Interperter::shuntingYard_postfixToExpression(vector<string>& exp){
 
 }
 
-// filter string representing expression into vector of tokens - (numbers, operators and brackets).
-
-vector<string> Interperter::filterExpressionString(string expression) {
-
-    // intilize tokens vector to empty.
-
-    vector<string> tokens;
-    string tmpNumber = "";
-    string tmpOperator = "";
-    string tmpVariable = "";
-
-    // for each char at the expression:
-
-    for(int i = 0; i < expression.length(); i++) {
-
-        char c = expression[i];
-        // if the char is space, we will ignore it.
-        if(c == ' ') {
-            continue;
-        }
-
-        // if the char is a digit, we will add it to the tmp number, that gains near digits.
-        else if(isdigit(c)) {
-
-            //if an operaqtor came before digit, we will push it to tokens.
-
-            if(tmpOperator != "") {
-                tokens.push_back(tmpOperator);
-                tmpOperator = "";
-            }
-
-            // but if it was letter before digits, its fine because we can have variables with
-            //  both letters and digits. else it is a number.
-
-            if(tmpVariable != "") {
-                tmpVariable += c;
-            }
-            else {
-                tmpNumber += c;
-            }
-        }
-        else if((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'))
-        {
-
-            if(tmpNumber != "") {
-                tokens.push_back(tmpNumber);
-                tmpNumber = "";
-            }
-
-            if(tmpOperator != "") {
-                tokens.push_back(tmpOperator);
-                tmpOperator = "";
-            }
-
-            tmpVariable += c;
-        }
-
-        // else, it is an operator or brackets, so we will add the last tmp number created, if it is not empty,
-        // and reset it, and add the the operator to the tokens.
-        else {
-
-            if(tmpNumber != "") {
-                tokens.push_back(tmpNumber);
-                tmpNumber = "";
-            }
-            if(tmpVariable != "") {
-                tokens.push_back(tmpVariable);
-            }
-
-            tmpOperator += c;
-        }
-
-
+void addTokenIfStartedNew(vector<string>& tokens, string& check1) {
+    if(check1 != "") {
+        tokens.push_back(check1);
+        check1 = "";
     }
-    // add to tokens the last number created if exists.
-    if(tmpNumber != "")
-        tokens.push_back(tmpNumber);
-
-    return tokens;
-
 }
 
 
-vector<string> Interperter::lexer() {
+vector<string> Interperter::lexer(ifstream& script) {
+    /*
+     *
+     * The lexer should read the source code character by character, and send tokens to the parser.
+
+        After each token, it should use the next character cto decide what kind of token to read.
+
+        if c is a digit, collect an integer as long as you read digits
+        if c is a letter, collect an identifier as long as you read identifier characters (digit, letter, ')
+        if c is a double quote, collect a string literal as long as you read characters other than a double quote
+        if c is space character (i.e. space, newline, or tab), ignore it and read next character
+     * */
 
     vector<string> tokens;
 
     // read from script to array of strings.
-    for(string line; getline(_script, line);)
+    for(string line; getline(script, line);)
     {
-        printf("Start working on lexer");
+        string tmpNumber = "";
+        string tmpOperator = "";
+        string tmpVariable = "";
+        string tmpString = "";
+        bool stringFollow = false;
+        for(char& c:line)
+        {
+
+            // if we following a string in qoutes, anything gets in the string.
+            if (stringFollow) {
+
+                // if we get a closing ", then save the string.
+                if (c == '"') {
+                    tokens.push_back(tmpString);
+                    stringFollow = false;
+                }
+
+                    // else recieve the char into the string.
+                else
+                    tmpString += c;
+
+            }
+                // if not, seperate by char:
+            else {
+
+
+                // if the char is space, we will ignore it and submit all tmps.
+                if (c == ' ')  {
+                    addTokenIfStartedNew(tokens, tmpNumber);
+                    addTokenIfStartedNew(tokens, tmpVariable);
+                    addTokenIfStartedNew(tokens, tmpOperator);
+                }
+
+                    // if the char is a digit, we will add it to the tmp number, that gains near digits.
+                else if (isdigit(c)) {
+
+                    //if an operaqtor came before digit, we will push it to tokens.
+                    addTokenIfStartedNew(tokens, tmpOperator);
+
+                    // but if it was letter before digits, its fine because we can have variables with
+                    //  both letters and digits. else it is a number.
+                    if (tmpVariable != "") {
+                        tmpVariable += c;
+                    } else {
+                        tmpNumber += c;
+                    }
+                    // if it is a letter or an underscore:
+                } else if ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z') || c == '_') {
+
+                    addTokenIfStartedNew(tokens, tmpNumber);
+                    addTokenIfStartedNew(tokens, tmpOperator);
+                    tmpVariable += c;
+                }
+                    // if it is a quotes mark, we start writing into a string and save the others.
+                else if (c == '"') {
+                    addTokenIfStartedNew(tokens, tmpNumber);
+                    addTokenIfStartedNew(tokens, tmpOperator);
+                    stringFollow = true;
+                }
+
+                    // else, it is an operator or brackets, so we will add the last tmp number created, if it is not empty,
+                    // and reset it, and add the the operator to the tokens.
+                else {
+                    addTokenIfStartedNew(tokens, tmpNumber);
+                    addTokenIfStartedNew(tokens, tmpVariable);
+                    tmpOperator += c;
+                }
+            }
+
+            // push an indicator of end of line.
+        }
+
+        // adds the variables that gained after the loop if not added before.
+        addTokenIfStartedNew(tokens, tmpNumber);
+        addTokenIfStartedNew(tokens, tmpOperator);
+        addTokenIfStartedNew(tokens, tmpVariable);
+        tokens.push_back(ConstsDB::ENDLINE_KEYWORD);
+
+
     }
     return tokens;
 }
@@ -236,40 +256,76 @@ vector<string> Interperter::lexer() {
 void Interperter::parser(vector<string> commands) {
 
     int index = 0;
-    while (index < commands.size()) {
 
-        // create a command by the map of commands:
-        Command* c = DataBase::getCommand(commands[index]);
+    // while the index is before teh end of commands size.
+    while(index < commands.size()) {
 
-        // creates the variables to command by all tokens until another command word;
-        vector<string&> variables;
+        vector<string> args;
 
-        // if the command is a block - we recieve variables until }.
-        if (c->isBlockCommand()) {
-            int bracketMaazan = 0;
-            while (commands[index] != "}" || (commands[index] == "}" && bracketsMaazan != 0)) {
-
-                // for each {, we increase maazan by 1, and for each } decrease, so know that is the right } at end.
-                variables.push_back(commands[index]);
-                index++;
-
-                if (commands[index] == "{")
-                    bracketMaazan ++;
-            }
-            // push the }.
-            variables.push_back(commands[index]);
+        // gain vars until a keyword.
+        while (!ConstsDB::containsCommand(commands[index])) {
+            args.push_back(commands[index]);
+            index++;
         }
 
-        // else, just get the few next variables by the command property.
-        else {
+        // creates a command by the command keyword.
+        Command* com = ConstsDB::getCommand(commands[index]);
 
+        // substruct index backwards while the command ask for go back
+        while(com->goBackArg(commands[index])) {
+            index--;
+        }
+        // skip the keyword:
+        index++;
+
+        // adds a args while the command ask for another.
+        while(com->anotherArg(commands[index])) {
+            args.push_back(commands[index]);
+            index++;
         }
 
-        // do command of c.
-        c->doCommand(variables);
+        // command object do the command on the arguments list.
+        com->doCommand(args);
 
-        // TODO: check number of variables is not wrong.
+        // skips the last argument to move to next keyword.
+        index++;
     }
+
+//    int index = 0;
+//    while (index < commands.size()) {
+//
+//        // create a command by the map of commands:
+//        Command* c = ConstsDB::getCommand(commands[index]);
+//
+//        // creates the variables to command by all tokens until another command word;
+//        vector<string&> variables;
+//
+//        // if the command is a block - we recieve variables until }.
+//        if (c->isBlockCommand()) {
+//            int bracketMaazan = 0;
+//            while (commands[index] != "}" || (commands[index] == "}" && bracketsMaazan != 0)) {
+//
+//                // for each {, we increase maazan by 1, and for each } decrease, so know that is the right } at end.
+//                variables.push_back(commands[index]);
+//                index++;
+//
+//                if (commands[index] == "{")
+//                    bracketMaazan ++;
+//            }
+//            // push the }.
+//            variables.push_back(commands[index]);
+//        }
+//
+//        // else, just get the few next variables by the command property.
+//        else {
+//
+//        }
+//
+//        // do command of c.
+//        c->doCommand(variables);
+//
+//        // TODO: check number of variables is not wrong.
+//    }
 
 
 }

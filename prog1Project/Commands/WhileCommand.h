@@ -9,7 +9,9 @@
 #include "ConditionParser.h"
 
 class WhileCommand :public ConditionParser{
-    void doCommand(std::vector<std::string> args);
+public:
+    void doCommand(std::vector<std::string>& args) override;
+
 };
 
 

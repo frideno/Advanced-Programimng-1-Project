@@ -4,7 +4,7 @@
 
 #include "WhileCommand.h"
 
-void WhileCommand::doCommand(std::vector<std::string> args) {
+void WhileCommand::doCommand(std::vector<std::string>& args) {
 
     // do parent condition parser to get the condition and statements.
     ConditionParser::doCommand(args);

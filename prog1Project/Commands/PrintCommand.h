@@ -13,8 +13,12 @@
  */
 class PrintCommand : public Command{
 
-    // do command override.
-    void doCommand(std::vector<std:: string> args);
+public:
+    bool anotherArg(string &current) override;
+
+    void doCommand(vector<string> &args) override;
+
+    bool goBackArg(string &current) override;
 
 };
 

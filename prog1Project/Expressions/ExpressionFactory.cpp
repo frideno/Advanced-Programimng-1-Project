@@ -1,6 +1,6 @@
 //
 // Created by omri on 12/12/18.
-//
+//"
 
 #include "ExpressionFactory.h"
 #include "Expressions_operators/Div.h"
@@ -13,22 +13,6 @@
 #include "BooleanExpressions/Equals.h"
 #include "BooleanExpressions/NotEquals.h"
 
-
-map<string, int> ExpressionFactory::operatorsPrecedence =
-{
-     {"+",10}
-    ,{"-",10}
-    ,{"*",20}
-    ,{"/",20}
-    ,{"^",30}
-    ,{">",100}
-    ,{"<",100}
-    ,{"==",100}
-    ,{"!=",100}
-     ,{"(", 100000}
-     ,{")", 100000}
-
-};
 // create expression by the token representing them.
 Expression *ExpressionFactory::create(string operatora, Expression *left, Expression *right) {
     if(operatora == "+")
@@ -53,11 +37,14 @@ Expression *ExpressionFactory::create(string operatora, Expression *left, Expres
     return nullptr;
 }
 
+
+map<string, int> ExpressionFactory::operatorsPrecedence = ExpressionFactory::createMap();
+
 // helping function to determine if a string represent one of our operators.
 
 bool ExpressionFactory::isOperator(string token) {
-    return (operatorsPrecedence.count(token) > 0);
-
+    return (ExpressionFactory::operatorsPrecedence.count(token) > 0);
+}
 // helping function to determine if a string represent number.
 bool ExpressionFactory::isNumber(string token) {
 
@@ -82,5 +69,9 @@ bool ExpressionFactory::isLeftAccociative(string operat) {
         return true;
     else
         return false;
+}
+
+map<string, int> ExpressionFactory::getOperatorsPrecedence() {
+    return ExpressionFactory::operatorsPrecedence;
 }
 

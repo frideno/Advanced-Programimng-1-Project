@@ -9,7 +9,12 @@
 
 class OpenDataServerCommand: public Command {
 
-    // do command override.
-    void doCommand(std::vector<std::string> args);
+public:
+    bool goBackArg(string &current) override;
+
+public:
+    void doCommand(vector<string> &args) override;
+
+    bool anotherArg(string &current) override;
 };
 #endif //PROG1PROJECT_OPENDATASERVER_H
