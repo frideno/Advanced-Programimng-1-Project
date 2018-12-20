@@ -41,11 +41,11 @@ public:
 
     // interpreter constructor, which builds around the code from lexed list, start with index = 0.
     Interperter(vector<string> code):
-        _currentCommand(nullptr), _index(0),  _tokens(code), _isNeededMoreLines(false) {};
+        _currentCommand(nullptr), _index(0),  _tokens(code), _currentArgs(), _isNeededMoreLines(false) {};
 
     // interpreter constructor, which build new interpreter ready to lex and parse in this order.
     Interperter():
-        _currentCommand(nullptr), _index(0),  _tokens(), _isNeededMoreLines(false) {};
+        _currentCommand(nullptr), _index(0),  _tokens(), _currentArgs(), _isNeededMoreLines(false) {};
 
 
     // lexer - from file, gets the next line of command into string[].

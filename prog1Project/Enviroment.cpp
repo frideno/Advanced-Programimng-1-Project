@@ -53,14 +53,13 @@ void Enviroment::FileOperation() {
     string fileName;
     cin >> fileName;
 
-    ifstream file("../prac");
+    ifstream file("../"+fileName);
     if (file.is_open()) {
         Interperter* i = new Interperter();
         string line;
         while (getline(file, line)) {
             i->lexer(line);
             i->parser();
-            getline(cin, line);
 
         }
 
