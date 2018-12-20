@@ -18,5 +18,7 @@ using namespace std;
      virtual void doCommand(vector<string>& args) = 0;
      virtual bool anotherArg(string& current) = 0;
      virtual bool goBackArg(string& current) = 0;
+
+     virtual Command* clone() = 0;
  };
 #endif //ADVANCED_PROGRAMIMNG_1_PROJECT_COMMAND_H

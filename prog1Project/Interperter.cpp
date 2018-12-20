@@ -44,11 +44,8 @@ vector<string> Interperter::shuntingYard_infixToPostfix(vector<string>& tokens) 
 
 
     for(string& token: tokens) {
-        if(ExpressionFactory::isNumber(token)) {
 
-            outputQueue.push_back(token);
-            // cout << "Add " << token << " to output" << endl;
-        } else if (ExpressionFactory::isOperator(token)){
+        if (ExpressionFactory::isOperator(token)){
             while(!operatorsStack.empty() && operatorsStack.top() != "(" && ((op_precedence.at(operatorsStack.top()) > op_precedence.at(token))
                     || (op_precedence.at(operatorsStack.top()) == op_precedence.at(token) && ExpressionFactory::isLeftAccociative(token)))) {
                 //cout << "Pop stack to output " << token << endl;
@@ -68,6 +65,10 @@ vector<string> Interperter::shuntingYard_infixToPostfix(vector<string>& tokens) 
             operatorsStack.pop();
             //cout << "Pop stack " << token << endl;
 
+        }
+        // if its a number or operator or whatever else.
+        else {
+            outputQueue.push_back(token);
         }
     }
     while (!operatorsStack.empty()){
@@ -182,7 +183,7 @@ vector<string> Interperter::lexer(ifstream& script) {
 
                 // if we get a closing ", then save the string.
                 if (c == '"') {
-                    tokens.push_back(tmpString);
+                    tokens.push_back('"' + tmpString + '"');
                     stringFollow = false;
                 }
 
@@ -262,24 +263,42 @@ void Interperter::parser(vector<string> commands) {
 
         vector<string> args;
 
+
+        // var x = 5
+
+        // var x = 5;
+        // Command var. {x}
+        // var x = 6
+        // = 6*3-9x;\
+        // if x<7 {
+        //x = x - 1
+        //
+
         // gain vars until a keyword.
-        while (!ConstsDB::containsCommand(commands[index])) {
-            args.push_back(commands[index]);
+        while (!ConstsDB::containsCommand(commands[index]) && index < commands.size()) {
             index++;
         }
 
         // creates a command by the command keyword.
-        Command* com = ConstsDB::getCommand(commands[index]);
+        Command* com = ConstsDB::createCommand(commands[index]);
 
         // substruct index backwards while the command ask for go back
-        while(com->goBackArg(commands[index])) {
-            index--;
+        while(com->goBackArg(commands[index]) && index > 0) {
+             index--;
         }
+
         // skip the keyword:
-        index++;
+        index ++;
 
         // adds a args while the command ask for another.
-        while(com->anotherArg(commands[index])) {
+        while(com->anotherArg(commands[index]) && index < commands.size()) {
+//
+//            if(index = code[code.size() - 1])
+//                while (true) {
+//                    wait for input
+//                }
+//
+
             args.push_back(commands[index]);
             index++;
         }
@@ -287,9 +306,16 @@ void Interperter::parser(vector<string> commands) {
         // command object do the command on the arguments list.
         com->doCommand(args);
 
-        // skips the last argument to move to next keyword.
-        index++;
+        // skips to move to next keyword.
     }
+    /**
+     * line = getLine()
+     * lexed = lexer(line)
+     * parser(lexed (string[])):
+     *      code += lexed
+     *
+     *
+     */
 
 //    int index = 0;
 //    while (index < commands.size()) {

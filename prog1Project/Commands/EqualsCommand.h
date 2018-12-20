@@ -8,12 +8,17 @@
 #include "../Command.h"
 
 class EqualsCommand: public Command {
+private:
+    int _internalUseN = 2;
 public:
     void doCommand(vector<string> &args) override;
 
     bool anotherArg(string &current) override;
 
     bool goBackArg(string &current) override;
+
+    // clonable:
+    Command* clone() { return new EqualsCommand(*this);}
 
 };
 

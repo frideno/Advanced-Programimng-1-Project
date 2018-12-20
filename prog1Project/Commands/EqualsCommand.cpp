@@ -19,6 +19,9 @@ void EqualsCommand::doCommand(vector<string> &args) {
     // assign value of expression to varName;
     SymbolsDB::setsymbol(varName, e->calculate());
 
+    // deleting memory of e.
+    delete e;
+
 }
 
 bool EqualsCommand::anotherArg(string &current) {
@@ -28,6 +31,6 @@ bool EqualsCommand::anotherArg(string &current) {
 
 bool EqualsCommand::goBackArg(string &current) {
 
-    // go back 1, to a var name to assigned to.
-    Utils::getNArguments(1);
+    // go back 1, to a var name to assigned to. and another behind the = sign.
+    return Utils::getNArguments(_internalUseN);
 }

@@ -9,17 +9,13 @@ int Utils::to_int(string s) {
     return stoi(s, nullptr, 10);
 }
 
-
-bool Utils::getNArguments(int N) {
-
-    static int count = N;
-
-    // if the count reached to 0, can stop.
-    if (count == 0)
+/**
+ * returns N - 1 = *Np - 1 times true, last time fasle;
+*/
+bool Utils::getNArguments(int& N) {
+    if (N == 0)
         return false;
-
-    // else, the count decrease by 1, and can get another arg.
-    count --;
+    N--;
     return true;
 }
 

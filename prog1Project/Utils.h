@@ -15,7 +15,7 @@ public:
     static int to_int(string s);
 
     //
-    static bool getNArguments(int N);
+    static bool getNArguments(int& N);
 
 };
 /**

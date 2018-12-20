@@ -45,6 +45,12 @@ public:
         return  output;
     }
     std::string toString() const {return "(" + _left->toString() +  _sign + _right->toString() + ")";}
+
+    // destructor:
+    ~BinaryExpression() {
+        delete _left;
+        delete _right;
+    }
 };
 
 #endif //PROG1PROJECT_BINARYEXPRESSION_H

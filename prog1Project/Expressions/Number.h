@@ -8,27 +8,28 @@
 #include "../Expression.h"
 #include <iostream>
 #include <cmath>
-class Number : public Expression{
+class Number : public Expression {
 private:
 
     double _value;
 public:
     // constructor:
-    explicit Number(double num):
-        _value(num) {};
+    explicit Number(double num) :
+            _value(num) {};
 
     // getter for number:
-    double getNumber() const {return _value;};
+    double getNumber() const { return _value; };
 
     // getter of num.
     double calculate() { return _value; };
 
     //output operator:
-    friend std::ostream& operator<<(std::ostream& output, const Number& number) {
+    friend std::ostream &operator<<(std::ostream &output, const Number &number) {
         output << number.toString();
         return output;
     }
-    std::string toString() const  {
+
+    std::string toString() const {
 
         // if the value is an integer, print it like integer.
 
@@ -37,7 +38,9 @@ public:
         }
 
         // else, if it is pure double:
-        return  std::to_string(_value);}
+        return std::to_string(_value);
+    }
+
 
 };
 #endif //PROG1PROJECT_NUMBER_H

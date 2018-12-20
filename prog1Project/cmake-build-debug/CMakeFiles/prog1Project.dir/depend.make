@@ -19,6 +19,7 @@ CMakeFiles/prog1Project.dir/Commands/ConditionParser.cpp.o: ../Expressions/Expre
 CMakeFiles/prog1Project.dir/Commands/ConditionParser.cpp.o: ../Expressions/Number.h
 CMakeFiles/prog1Project.dir/Commands/ConditionParser.cpp.o: ../Expressions/UnaryExpression.h
 CMakeFiles/prog1Project.dir/Commands/ConditionParser.cpp.o: ../Interperter.h
+CMakeFiles/prog1Project.dir/Commands/ConditionParser.cpp.o: ../Utils.h
 
 CMakeFiles/prog1Project.dir/Commands/DefineVarCommand.cpp.o: ../Command.h
 CMakeFiles/prog1Project.dir/Commands/DefineVarCommand.cpp.o: ../Commands/ConditionParser.h
@@ -30,6 +31,7 @@ CMakeFiles/prog1Project.dir/Commands/DefineVarCommand.cpp.o: ../Commands/OpenDat
 CMakeFiles/prog1Project.dir/Commands/DefineVarCommand.cpp.o: ../Commands/PrintCommand.h
 CMakeFiles/prog1Project.dir/Commands/DefineVarCommand.cpp.o: ../Commands/SemicolonCommand.h
 CMakeFiles/prog1Project.dir/Commands/DefineVarCommand.cpp.o: ../Commands/WhileCommand.h
+CMakeFiles/prog1Project.dir/Commands/DefineVarCommand.cpp.o: ../Databases/ConstsDB.cpp
 CMakeFiles/prog1Project.dir/Commands/DefineVarCommand.cpp.o: ../Databases/ConstsDB.h
 CMakeFiles/prog1Project.dir/Commands/DefineVarCommand.cpp.o: ../Databases/SymbolsDB.cpp
 CMakeFiles/prog1Project.dir/Commands/DefineVarCommand.cpp.o: ../Databases/SymbolsDB.h
@@ -109,6 +111,7 @@ CMakeFiles/prog1Project.dir/Commands/PrintCommand.cpp.o: ../Command.h
 CMakeFiles/prog1Project.dir/Commands/PrintCommand.cpp.o: ../Commands/NumberOfArgsToCommandException.h
 CMakeFiles/prog1Project.dir/Commands/PrintCommand.cpp.o: ../Commands/PrintCommand.cpp
 CMakeFiles/prog1Project.dir/Commands/PrintCommand.cpp.o: ../Commands/PrintCommand.h
+CMakeFiles/prog1Project.dir/Commands/PrintCommand.cpp.o: ../Databases/SymbolsDB.h
 CMakeFiles/prog1Project.dir/Commands/PrintCommand.cpp.o: ../Expression.h
 CMakeFiles/prog1Project.dir/Commands/PrintCommand.cpp.o: ../Expressions.h
 CMakeFiles/prog1Project.dir/Commands/PrintCommand.cpp.o: ../Expressions/BinaryExpression.h
@@ -195,6 +198,7 @@ CMakeFiles/prog1Project.dir/Utils.cpp.o: ../Utils.cpp
 CMakeFiles/prog1Project.dir/Utils.cpp.o: ../Utils.h
 
 CMakeFiles/prog1Project.dir/main.cpp.o: ../Command.h
+CMakeFiles/prog1Project.dir/main.cpp.o: ../Databases/SymbolsDB.h
 CMakeFiles/prog1Project.dir/main.cpp.o: ../Expression.h
 CMakeFiles/prog1Project.dir/main.cpp.o: ../Expressions.h
 CMakeFiles/prog1Project.dir/main.cpp.o: ../Expressions/BinaryExpression.h

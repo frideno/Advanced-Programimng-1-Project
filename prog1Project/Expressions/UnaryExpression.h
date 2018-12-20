@@ -41,5 +41,6 @@ public:
     std::string toString()  const {
         return _sign + _expression->toString();
     }
+    ~UnaryExpression() {delete _expression;}
 };
 #endif //PROG1PROJECT_UNARYEXPRESSION_H

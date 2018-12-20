@@ -29,13 +29,17 @@ protected:
     Expression* getCondition();
     vector<string>& getStatements();
 
+    int _innerUseN = 1;
+
 public:
-    void doCommand(std::vector<std::string>& args) ;
+    void doCommand(std::vector<std::string>& args) override;
 
-    bool anotherArg(string &current);
+    bool anotherArg(string &current)override;
 
-    bool goBackArg(string &current) ;
+    bool goBackArg(string &current) override;
 
+    // clonable:
+    Command* clone() { return new ConditionParser(*this);}
 
 };
 
