@@ -66,7 +66,7 @@ vector<string> Interperter::shuntingYard_infixToPostfix(vector<string>& tokens) 
             //cout << "Pop stack " << token << endl;
 
         }
-        // if its a number or operator or whatever else.
+        // if its a number or variable name or whatever else.
         else {
             outputQueue.push_back(token);
         }
@@ -305,6 +305,8 @@ void Interperter::parser(vector<string> commands) {
 
         // command object do the command on the arguments list.
         com->doCommand(args);
+
+        delete com;
 
         // skips to move to next keyword.
     }

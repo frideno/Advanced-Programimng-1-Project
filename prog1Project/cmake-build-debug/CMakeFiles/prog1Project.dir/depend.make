@@ -151,10 +151,15 @@ CMakeFiles/prog1Project.dir/Commands/WhileCommand.cpp.o: ../Interperter.h
 
 CMakeFiles/prog1Project.dir/Expressions/ExpressionFactory.cpp.o: ../Expression.h
 CMakeFiles/prog1Project.dir/Expressions/ExpressionFactory.cpp.o: ../Expressions/BinaryExpression.h
+CMakeFiles/prog1Project.dir/Expressions/ExpressionFactory.cpp.o: ../Expressions/BooleanExpressions/And.h
 CMakeFiles/prog1Project.dir/Expressions/ExpressionFactory.cpp.o: ../Expressions/BooleanExpressions/Bigger.h
+CMakeFiles/prog1Project.dir/Expressions/ExpressionFactory.cpp.o: ../Expressions/BooleanExpressions/BiggerEquals.h
 CMakeFiles/prog1Project.dir/Expressions/ExpressionFactory.cpp.o: ../Expressions/BooleanExpressions/Equals.h
 CMakeFiles/prog1Project.dir/Expressions/ExpressionFactory.cpp.o: ../Expressions/BooleanExpressions/NotEquals.h
+CMakeFiles/prog1Project.dir/Expressions/ExpressionFactory.cpp.o: ../Expressions/BooleanExpressions/Or.h
 CMakeFiles/prog1Project.dir/Expressions/ExpressionFactory.cpp.o: ../Expressions/BooleanExpressions/Smaller.h
+CMakeFiles/prog1Project.dir/Expressions/ExpressionFactory.cpp.o: ../Expressions/BooleanExpressions/SmallerEquals.h
+CMakeFiles/prog1Project.dir/Expressions/ExpressionFactory.cpp.o: ../Expressions/BooleanExpressions/Xor.h
 CMakeFiles/prog1Project.dir/Expressions/ExpressionFactory.cpp.o: ../Expressions/ExpressionFactory.cpp
 CMakeFiles/prog1Project.dir/Expressions/ExpressionFactory.cpp.o: ../Expressions/ExpressionFactory.h
 CMakeFiles/prog1Project.dir/Expressions/ExpressionFactory.cpp.o: ../Expressions/Expressions_operators/Div.h
