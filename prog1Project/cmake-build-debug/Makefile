@@ -312,6 +312,33 @@ Commands/WhileCommand.cpp.s:
 	$(MAKE) -f CMakeFiles/prog1Project.dir/build.make CMakeFiles/prog1Project.dir/Commands/WhileCommand.cpp.s
 .PHONY : Commands/WhileCommand.cpp.s
 
+Enviroment.o: Enviroment.cpp.o
+
+.PHONY : Enviroment.o
+
+# target to build an object file
+Enviroment.cpp.o:
+	$(MAKE) -f CMakeFiles/prog1Project.dir/build.make CMakeFiles/prog1Project.dir/Enviroment.cpp.o
+.PHONY : Enviroment.cpp.o
+
+Enviroment.i: Enviroment.cpp.i
+
+.PHONY : Enviroment.i
+
+# target to preprocess a source file
+Enviroment.cpp.i:
+	$(MAKE) -f CMakeFiles/prog1Project.dir/build.make CMakeFiles/prog1Project.dir/Enviroment.cpp.i
+.PHONY : Enviroment.cpp.i
+
+Enviroment.s: Enviroment.cpp.s
+
+.PHONY : Enviroment.s
+
+# target to generate assembly for a file
+Enviroment.cpp.s:
+	$(MAKE) -f CMakeFiles/prog1Project.dir/build.make CMakeFiles/prog1Project.dir/Enviroment.cpp.s
+.PHONY : Enviroment.cpp.s
+
 Expressions/ExpressionFactory.o: Expressions/ExpressionFactory.cpp.o
 
 .PHONY : Expressions/ExpressionFactory.o
@@ -450,6 +477,9 @@ help:
 	@echo "... Commands/WhileCommand.o"
 	@echo "... Commands/WhileCommand.i"
 	@echo "... Commands/WhileCommand.s"
+	@echo "... Enviroment.o"
+	@echo "... Enviroment.i"
+	@echo "... Enviroment.s"
 	@echo "... Expressions/ExpressionFactory.o"
 	@echo "... Expressions/ExpressionFactory.i"
 	@echo "... Expressions/ExpressionFactory.s"

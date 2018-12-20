@@ -9,8 +9,10 @@ Expression *ConditionParser::getCondition() {
     return _condition;
 }
 
-vector<string> &ConditionParser::getStatements() {
-    return _statements;
+Interperter *ConditionParser::getStatementsInterpreter() {
+    Interperter* i = _statesmentsInterpreter;
+    i->reset();
+    return i;
 }
 
 void ConditionParser::doCommand(vector<string>& args) {
@@ -37,9 +39,12 @@ void ConditionParser::doCommand(vector<string>& args) {
     _condition = Interperter::shuntingYard(conditionVec);
 
 
+    vector<string> statesments;
     // getts the inside of the { } brackets so we can execute them.
     for(i; i < args.size(); i++)
-        _statements.push_back(args[i]);
+        statesments.push_back(args[i]);
+
+    _statesmentsInterpreter = new Interperter(statesments);
 
 }
 

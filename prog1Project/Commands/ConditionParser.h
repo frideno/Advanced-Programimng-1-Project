@@ -21,13 +21,13 @@ private:
     Expression* _condition;
 
     // script of statements to execute:
-    vector<string> _statements;
+    Interperter* _statesmentsInterpreter;
 protected:
 
     //getters:
 
     Expression* getCondition();
-    vector<string>& getStatements();
+    Interperter* getStatementsInterpreter();
 
     int _innerUseN = 1;
 

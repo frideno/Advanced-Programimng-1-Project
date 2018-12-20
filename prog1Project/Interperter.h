@@ -22,6 +22,12 @@ using namespace std;
 class Interperter {
 private:
 
+    Command* _currentCommand;
+    vector<string> _tokens;
+    vector<string> _currentArgs;
+    int _index = 0;
+    bool _isNeededMoreLines;
+
     // help functions:
     static vector<string> shuntingYard_infixToPostfix(vector<string>& infix_token);
 
@@ -32,14 +38,26 @@ private:
     static vector<string> filterExpressionString(string expression);
 public:
 
+
+    // interpreter constructor, which builds around the code from lexed list, start with index = 0.
+    Interperter(vector<string> code):
+        _currentCommand(nullptr), _index(0),  _tokens(code), _isNeededMoreLines(false) {};
+
+    // interpreter constructor, which build new interpreter ready to lex and parse in this order.
+    Interperter():
+        _currentCommand(nullptr), _index(0),  _tokens(), _isNeededMoreLines(false) {};
+
+
     // lexer - from file, gets the next line of command into string[].
-    static vector<string> lexer(ifstream& script);
+    void lexer(string& line);
 
     // parser - from a commmandLine representing a command, parse it into command and do it.
-    static void parser(vector<string> command);
+    void parser();
 
     // ‫‪Shunting-yard‬‬ of Dikstra - parse a string into a Expression (only binaries expressions).
     static Expression* shuntingYard(vector<string>& tokens);
+
+    void reset();
 
 };
 

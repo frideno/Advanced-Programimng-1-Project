@@ -10,7 +10,8 @@ void IfCommand::doCommand(std::vector<std::string>& args) {
     ConditionParser::doCommand(args);
 
     if(getCondition()->calculate() > 0) {
-        Interperter::parser(getStatements());
+        getStatementsInterpreter()->parser();
+
     }
 
 }

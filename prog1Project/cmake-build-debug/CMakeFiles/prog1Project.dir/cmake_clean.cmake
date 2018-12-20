@@ -7,6 +7,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/prog1Project.dir/Commands/PrintCommand.cpp.o"
   "CMakeFiles/prog1Project.dir/Commands/WhileCommand.cpp.o"
   "CMakeFiles/prog1Project.dir/Expressions/ExpressionFactory.cpp.o"
+  "CMakeFiles/prog1Project.dir/Enviroment.cpp.o"
   "CMakeFiles/prog1Project.dir/main.cpp.o"
   "CMakeFiles/prog1Project.dir/Interperter.cpp.o"
   "CMakeFiles/prog1Project.dir/Utils.cpp.o"

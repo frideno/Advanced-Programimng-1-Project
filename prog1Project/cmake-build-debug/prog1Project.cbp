@@ -136,6 +136,12 @@
 		<Unit filename="/home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Commands/WhileCommand.h">
 			<Option target="prog1Project"/>
 		</Unit>
+		<Unit filename="/home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Enviroment.cpp">
+			<Option target="prog1Project"/>
+		</Unit>
+		<Unit filename="/home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Enviroment.h">
+			<Option target="prog1Project"/>
+		</Unit>
 		<Unit filename="/home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expression.h">
 			<Option target="prog1Project"/>
 		</Unit>

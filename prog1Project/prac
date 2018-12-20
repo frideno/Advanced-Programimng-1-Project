@@ -1,16 +1,2 @@
 var x = 1
-var y = 1
-while x >= 1 && x < 100 {
-
-    while y < 5 {
-        y = y + 1
-        print y
-        print "<- y "
-
-    }
-    y = x
-   x  = x * 2
-   print x
-   print "<- x "
-
-}
+print x
