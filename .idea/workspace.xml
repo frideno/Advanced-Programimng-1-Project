@@ -1,0 +1,890 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
+    <generated>
+      <config projectName="prog1Project" targetName="prog1Project" />
+    </generated>
+  </component>
+  <component name="CMakeSettings" AUTO_RELOAD="true">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="886ddf54-410f-4ec7-85da-6220b92d2a25" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/prog1Project/Commands/CMakeLists.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/prog1Project/Commands/DefineVarCommand.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/prog1Project/Commands/DefineVarCommand.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/prog1Project/Commands/EqualsCommand.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/prog1Project/Commands/EqualsCommand.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/prog1Project/Commands/SemicolonCommand.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/prog1Project/Databases/CMakeLists.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/prog1Project/Databases/ConstsDB.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/prog1Project/Databases/SymbolsDB.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/prog1Project/Databases/SymbolsDB.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/prog1Project/Expressions/BooleanExpressions/CMakeLists.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/prog1Project/Expressions/CMakeLists.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/prog1Project/Expressions/Expressions_operators/CMakeLists.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/prog1Project/prac" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prog1Project/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/prog1Project/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prog1Project/Command.h" beforeDir="false" afterPath="$PROJECT_DIR$/prog1Project/Command.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prog1Project/Commands/ConditionParser.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/prog1Project/Commands/ConditionParser.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prog1Project/Commands/ConditionParser.h" beforeDir="false" afterPath="$PROJECT_DIR$/prog1Project/Commands/ConditionParser.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prog1Project/Commands/IfCommand.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/prog1Project/Commands/IfCommand.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prog1Project/Commands/IfCommand.h" beforeDir="false" afterPath="$PROJECT_DIR$/prog1Project/Commands/IfCommand.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prog1Project/Commands/NumberOfArgsToCommandException.h" beforeDir="false" afterPath="$PROJECT_DIR$/prog1Project/Commands/NumberOfArgsToCommandException.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prog1Project/Commands/OpenDataServerCommand.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/prog1Project/Commands/OpenDataServerCommand.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prog1Project/Commands/OpenDataServerCommand.h" beforeDir="false" afterPath="$PROJECT_DIR$/prog1Project/Commands/OpenDataServerCommand.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prog1Project/Commands/PrintCommand.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/prog1Project/Commands/PrintCommand.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prog1Project/Commands/PrintCommand.h" beforeDir="false" afterPath="$PROJECT_DIR$/prog1Project/Commands/PrintCommand.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prog1Project/Commands/WhileCommand.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/prog1Project/Commands/WhileCommand.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prog1Project/Commands/WhileCommand.h" beforeDir="false" afterPath="$PROJECT_DIR$/prog1Project/Commands/WhileCommand.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prog1Project/DataBase.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/prog1Project/DataBase.h" beforeDir="false" afterPath="$PROJECT_DIR$/prog1Project/Databases/ConstsDB.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prog1Project/Expression.h.gch" beforeDir="false" afterPath="$PROJECT_DIR$/prog1Project/Expression.h.gch" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prog1Project/Expressions.h" beforeDir="false" afterPath="$PROJECT_DIR$/prog1Project/Expressions.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prog1Project/Expressions/BinaryExpression.h.gch" beforeDir="false" afterPath="$PROJECT_DIR$/prog1Project/Expressions/BinaryExpression.h.gch" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prog1Project/Expressions/BooleanExpressions/Bigger.h" beforeDir="false" afterPath="$PROJECT_DIR$/prog1Project/Expressions/BooleanExpressions/Bigger.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prog1Project/Expressions/BooleanExpressions/Equals.h" beforeDir="false" afterPath="$PROJECT_DIR$/prog1Project/Expressions/BooleanExpressions/Equals.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prog1Project/Expressions/BooleanExpressions/NotEquals.h" beforeDir="false" afterPath="$PROJECT_DIR$/prog1Project/Expressions/BooleanExpressions/NotEquals.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prog1Project/Expressions/BooleanExpressions/Smaller.h" beforeDir="false" afterPath="$PROJECT_DIR$/prog1Project/Expressions/BooleanExpressions/Smaller.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prog1Project/Expressions/ExpressionFactory.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/prog1Project/Expressions/ExpressionFactory.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prog1Project/Expressions/ExpressionFactory.h" beforeDir="false" afterPath="$PROJECT_DIR$/prog1Project/Expressions/ExpressionFactory.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prog1Project/Expressions/Number.h.gch" beforeDir="false" afterPath="$PROJECT_DIR$/prog1Project/Expressions/Number.h.gch" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prog1Project/Expressions/UnaryExpression.h.gch" beforeDir="false" afterPath="$PROJECT_DIR$/prog1Project/Expressions/UnaryExpression.h.gch" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prog1Project/Expressions/Var.h" beforeDir="false" afterPath="$PROJECT_DIR$/prog1Project/Expressions/Var.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prog1Project/Interperter.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/prog1Project/Interperter.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prog1Project/Interperter.h" beforeDir="false" afterPath="$PROJECT_DIR$/prog1Project/Interperter.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prog1Project/Interperter.h.gch" beforeDir="false" afterPath="$PROJECT_DIR$/prog1Project/Interperter.h.gch" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prog1Project/Utils.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/prog1Project/Utils.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prog1Project/Utils.h" beforeDir="false" afterPath="$PROJECT_DIR$/prog1Project/Utils.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prog1Project/a.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/prog1Project/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/prog1Project/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prog1Project/cmake-build-debug/CMakeFiles/prog1Project.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/prog1Project/cmake-build-debug/CMakeFiles/prog1Project.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prog1Project/cmake-build-debug/CMakeFiles/prog1Project.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/prog1Project/cmake-build-debug/CMakeFiles/prog1Project.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prog1Project/cmake-build-debug/CMakeFiles/prog1Project.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/prog1Project/cmake-build-debug/CMakeFiles/prog1Project.dir/cmake_clean.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prog1Project/cmake-build-debug/CMakeFiles/prog1Project.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/prog1Project/cmake-build-debug/CMakeFiles/prog1Project.dir/depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prog1Project/cmake-build-debug/CMakeFiles/prog1Project.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/prog1Project/cmake-build-debug/CMakeFiles/prog1Project.dir/link.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prog1Project/cmake-build-debug/CMakeFiles/prog1Project.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/prog1Project/cmake-build-debug/CMakeFiles/prog1Project.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prog1Project/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/prog1Project/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prog1Project/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/prog1Project/cmake-build-debug/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prog1Project/cmake-build-debug/prog1Project.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/prog1Project/cmake-build-debug/prog1Project.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prog1Project/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/prog1Project/main.cpp" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/prog1Project/cmake-build-debug/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/prog1Project/Interperter.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="269">
+              <caret line="111" selection-start-line="111" selection-end-line="111" />
+              <folding>
+                <element signature="e#47#89#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/prog1Project/Expressions/ExpressionFactory.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="327">
+              <caret line="55" selection-start-line="55" selection-end-line="55" />
+              <folding>
+                <element signature="e#122#148#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/prog1Project/Expressions/ExpressionFactory.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="508">
+              <caret line="74" column="49" selection-start-line="74" selection-start-column="49" selection-end-line="74" selection-end-column="49" />
+              <folding>
+                <element signature="e#40#70#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/prog1Project/Command.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="9" selection-start-line="9" selection-end-line="9" />
+              <folding>
+                <element signature="e#138#155#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/prog1Project/CMakeLists.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="10" column="28" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/prog1Project/Databases/ConstsDB.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="367">
+              <caret line="66" selection-start-line="66" selection-end-line="66" />
+              <folding>
+                <element signature="e#104#131#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>Commandname</find>
+      <find>object</find>
+      <find>While</find>
+      <find>var</find>
+      <find>const</find>
+      <find>keywordValues</find>
+      <find>args[</find>
+      <find>double</find>
+      <find>string</find>
+      <find>_data</find>
+      <find>contains</find>
+      <find>DataBase</find>
+      <find>ConstsDB</find>
+      <find>Expression*</find>
+      <find>map&lt;string&amp;</find>
+      <find>string&amp;</find>
+      <find>#include &quot;Databases/SymbolsDB.h&quot;</find>
+      <find>SymbolsDB.h&quot;</find>
+      <find>Iterator</find>
+      <find>PLUS</find>
+      <find>LEXER</find>
+      <find>override</find>
+      <find>operatorsPrecedence</find>
+      <find>ExpressionFactory::operatorsPrecedence</find>
+      <find>ExpressionFactory::op</find>
+      <find>createMap</find>
+      <find>c_str()</find>
+      <find>_symbolTable</find>
+      <find>operatorsPrece</find>
+      <find>ExpressionFactory</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>Pow</replace>
+      <replace>op_precedence.at(operatorsStack.top())</replace>
+      <replace>ExpressionFactory::isLeftAccociative</replace>
+      <replace>&quot;</replace>
+      <replace>ExpressionFactory::isNumber</replace>
+      <replace>Expression</replace>
+      <replace>Less</replace>
+      <replace>Bigger</replace>
+      <replace>Equals</replace>
+      <replace>NotEquals</replace>
+      <replace>,</replace>
+      <replace>}</replace>
+      <replace>symbol</replace>
+      <replace>symbolName</replace>
+      <replace>value</replace>
+      <replace>If</replace>
+      <replace>std::string</replace>
+      <replace>_iter</replace>
+      <replace>DataBase::get</replace>
+      <replace>SymbolsDB</replace>
+      <replace>ConstsDB</replace>
+      <replace>string</replace>
+      <replace>BIGGER</replace>
+      <replace>EQUALS</replace>
+      <replace>NOTEQUALS</replace>
+      <replace>SymbolsDB.cpp&quot;</replace>
+      <replace>SMALLER</replace>
+      <replace>INTERPERTER</replace>
+      <replace>SymbolsDB::_symbolTable</replace>
+      <replace>ExpressionFactory::operatorsPrece</replace>
+    </replaceStrings>
+    <dirStrings>
+      <dir>$PROJECT_DIR$/prog1Project</dir>
+    </dirStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="frideno &lt;4drive13@gmail.com&gt;" />
+      </list>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/prog1Project/Expressions/VAr.h" />
+        <option value="$PROJECT_DIR$/prog1Project/CommandExpression.h" />
+        <option value="$PROJECT_DIR$/prog1Project/Commands/BracketsParser.h" />
+        <option value="$PROJECT_DIR$/prog1Project/Commands/BracketsParser.cpp" />
+        <option value="$PROJECT_DIR$/prog1Project/Commands/OpenDataServer.h" />
+        <option value="$PROJECT_DIR$/prog1Project/DataBase.h" />
+        <option value="$PROJECT_DIR$/prog1Project/DataBase.cpp" />
+        <option value="$PROJECT_DIR$/prog1Project/CodeIterator.h" />
+        <option value="$PROJECT_DIR$/prog1Project/Iterator.h" />
+        <option value="$PROJECT_DIR$/prog1Project/Databases/DataBase.h" />
+        <option value="$PROJECT_DIR$/prog1Project/Databases/DataBase.cpp" />
+        <option value="$PROJECT_DIR$/prog1Project/Commands/OpenDataServerCommand.h" />
+        <option value="$PROJECT_DIR$/prog1Project/Commands/EqualsCommand.h" />
+        <option value="$PROJECT_DIR$/prog1Project/Utils.cpp" />
+        <option value="$PROJECT_DIR$/prog1Project/Commands/SemicolonCommand.h" />
+        <option value="$PROJECT_DIR$/prog1Project/Commands/DefineVarCommand.h" />
+        <option value="$PROJECT_DIR$/prog1Project/Commands/DefineVarCommand.cpp" />
+        <option value="$PROJECT_DIR$/prog1Project/Commands/OpenDataServerCommand.cpp" />
+        <option value="$PROJECT_DIR$/prog1Project/Utils.h" />
+        <option value="$PROJECT_DIR$/prog1Project/main.cpp" />
+        <option value="$PROJECT_DIR$/prog1Project/Expressions/BooleanExpressions/Bigger.h" />
+        <option value="$PROJECT_DIR$/prog1Project/Expressions/BooleanExpressions/Equals.h" />
+        <option value="$PROJECT_DIR$/prog1Project/Expressions/BooleanExpressions/NotEquals.h" />
+        <option value="$PROJECT_DIR$/prog1Project/Expressions/BooleanExpressions/Smaller.h" />
+        <option value="$PROJECT_DIR$/prog1Project/Commands/ConditionParser.cpp" />
+        <option value="$PROJECT_DIR$/prog1Project/Commands/PrintCommand.cpp" />
+        <option value="$PROJECT_DIR$/prog1Project/Command.h" />
+        <option value="$PROJECT_DIR$/prog1Project/Commands/CMakeLists.txt" />
+        <option value="$PROJECT_DIR$/prog1Project/Expressions/BooleanExpressions/CMakeLists.txt" />
+        <option value="$PROJECT_DIR$/prog1Project/Expressions/Expressions_operators/CMakeLists.txt" />
+        <option value="$PROJECT_DIR$/prog1Project/Commands/WhileCommand.h" />
+        <option value="$PROJECT_DIR$/prog1Project/Commands/IfCommand.h" />
+        <option value="$PROJECT_DIR$/prog1Project/Commands/ConditionParser.h" />
+        <option value="$PROJECT_DIR$/prog1Project/Commands/PrintCommand.h" />
+        <option value="$PROJECT_DIR$/prog1Project/Commands/WhileCommand.cpp" />
+        <option value="$PROJECT_DIR$/prog1Project/Commands/IfCommand.cpp" />
+        <option value="$PROJECT_DIR$/prog1Project/Databases/CMakeLists.txt" />
+        <option value="$PROJECT_DIR$/prog1Project/Databases/SymbolsDB.h" />
+        <option value="$PROJECT_DIR$/prog1Project/Interperter.h" />
+        <option value="$PROJECT_DIR$/prog1Project/Databases/ConstsDB.h" />
+        <option value="$PROJECT_DIR$/prog1Project/Expressions/ExpressionFactory.h" />
+        <option value="$PROJECT_DIR$/prog1Project/Commands/NumberOfArgsToCommandException.h" />
+        <option value="$PROJECT_DIR$/prog1Project/Expressions.h" />
+        <option value="$PROJECT_DIR$/prog1Project/Commands/EqualsCommand.cpp" />
+        <option value="$PROJECT_DIR$/prog1Project/Expressions/Var.h" />
+        <option value="$PROJECT_DIR$/prog1Project/Databases/ConstsDB.cpp" />
+        <option value="$PROJECT_DIR$/prog1Project/Databases/SymbolsDB.cpp" />
+        <option value="$PROJECT_DIR$/prog1Project/Interperter.cpp" />
+        <option value="$PROJECT_DIR$/prog1Project/Expressions/ExpressionFactory.cpp" />
+        <option value="$PROJECT_DIR$/prog1Project/Expressions/CMakeLists.txt" />
+        <option value="$PROJECT_DIR$/prog1Project/CMakeLists.txt" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="1366" />
+    <option name="y" value="25" />
+    <option name="width" value="1920" />
+    <option name="height" value="1055" />
+  </component>
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="prog1Project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Advanced-Programimng-1-Project" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="prog1Project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Advanced-Programimng-1-Project" type="462c0819:PsiDirectoryNode" />
+              <item name="prog1Project" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="prog1Project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Advanced-Programimng-1-Project" type="462c0819:PsiDirectoryNode" />
+              <item name="prog1Project" type="462c0819:PsiDirectoryNode" />
+              <item name="cmake-build-debug" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="prog1Project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Advanced-Programimng-1-Project" type="462c0819:PsiDirectoryNode" />
+              <item name="prog1Project" type="462c0819:PsiDirectoryNode" />
+              <item name="Databases" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="prog1Project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Advanced-Programimng-1-Project" type="462c0819:PsiDirectoryNode" />
+              <item name="prog1Project" type="462c0819:PsiDirectoryNode" />
+              <item name="Expressions" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="prog1Project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Advanced-Programimng-1-Project" type="462c0819:PsiDirectoryNode" />
+              <item name="prog1Project" type="462c0819:PsiDirectoryNode" />
+              <item name="Expressions" type="462c0819:PsiDirectoryNode" />
+              <item name="Expressions_operators" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/prog1Project/CMakeLists.txt" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.editor" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/prog1Project/Expressions/Expressions_operators" />
+      <recent name="$PROJECT_DIR$/prog1Project/Expressions/BooleanExpressions" />
+      <recent name="$PROJECT_DIR$/prog1Project/Expressions" />
+      <recent name="$PROJECT_DIR$/prog1Project/Databases" />
+      <recent name="$PROJECT_DIR$/prog1Project/Commands" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/prog1Project/Expressions/BE" />
+      <recent name="$PROJECT_DIR$/prog1Project/Expressions/BooleanExpressions" />
+      <recent name="$PROJECT_DIR$/prog1Project/Databases" />
+      <recent name="$PROJECT_DIR$/prog1Project/Expressions" />
+      <recent name="$PROJECT_DIR$/prog1Project" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="prog1Project" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="prog1Project" TARGET_NAME="prog1Project" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="prog1Project" RUN_TARGET_NAME="prog1Project">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="886ddf54-410f-4ec7-85da-6220b92d2a25" name="Default Changelist" comment="" />
+      <created>1544523438711</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1544523438711</updated>
+      <workItem from="1544523442454" duration="3290000" />
+      <workItem from="1544540139260" duration="1040000" />
+      <workItem from="1544553445656" duration="4700000" />
+      <workItem from="1544610892855" duration="15458000" />
+      <workItem from="1544656057816" duration="6393000" />
+      <workItem from="1544880510584" duration="6836000" />
+      <workItem from="1544984564241" duration="2646000" />
+      <workItem from="1545049460638" duration="31504000" />
+      <workItem from="1545130614551" duration="6765000" />
+      <workItem from="1545137558642" duration="18961000" />
+    </task>
+    <task id="LOCAL-00001" summary="omri">
+      <created>1544523489045</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1544523489045</updated>
+    </task>
+    <task id="LOCAL-00002" summary="finished the shunting yard functions, and created factory of sign to expression.&#10;now, interperter has Expression* shuntingYard(string exp).&#10;Power is also a Expression now.&#10;only needed at expression are:&#10;TODO: make the expression paser of 1st function , work with spaces in the string.&#10;TODO: make the epxression parser of 1st function, work with numbers that are more than one digit, then changing from char to string the tokens.">
+      <created>1544644267835</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1544644267835</updated>
+    </task>
+    <task id="LOCAL-00003" summary="TODO: make the expression paser of 1st function , work with spaces in the string.&#10;TODO: make the epxression parser of 1st function, work with numbers that are more than one digit, then changing from char to string the tokens.&#10;completed">
+      <created>1544662383821</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1544662383821</updated>
+    </task>
+    <task id="LOCAL-00004" summary="updated alot.">
+      <created>1545084579911</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1545084579911</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="97593000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="1366" y="-2" width="1920" height="1082" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17929563" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32948583" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.1673866" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3963283" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32948583" />
+      <window_info anchor="bottom" id="Database Changes" order="7" />
+      <window_info anchor="bottom" id="Messages" order="8" weight="0.48793283" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.45750263" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="11" />
+      <window_info active="true" anchor="bottom" id="CMake" order="12" visible="true" weight="0.33788037" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="3" weight="0.32977587" />
+    </layout>
+    <layout-to-restore>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17929563" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32948583" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.1673866" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3963283" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32948583" />
+      <window_info anchor="bottom" id="Database Changes" order="7" />
+      <window_info anchor="bottom" id="Messages" order="8" weight="0.47114375" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.95114005" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="11" />
+      <window_info anchor="bottom" id="CMake" order="12" visible="true" weight="0.33801296" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="3" />
+    </layout-to-restore>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="omri" />
+    <MESSAGE value="finished the shunting yard functions, and created factory of sign to expression.&#10;now, interperter has Expression* shuntingYard(string exp).&#10;Power is also a Expression now.&#10;only needed at expression are:&#10;TODO: make the expression paser of 1st function , work with spaces in the string.&#10;TODO: make the epxression parser of 1st function, work with numbers that are more than one digit, then changing from char to string the tokens." />
+    <MESSAGE value="TODO: make the expression paser of 1st function , work with spaces in the string.&#10;TODO: make the epxression parser of 1st function, work with numbers that are more than one digit, then changing from char to string the tokens.&#10;completed" />
+    <MESSAGE value="updated alot." />
+    <option name="LAST_COMMIT_MESSAGE" value="updated alot." />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/prog1Project/Utils.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" selection-start-line="24" selection-end-line="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/prog1Project/Commands/OpenDataServerCommand.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" selection-start-line="14" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/prog1Project/Commands/SemicolonCommand.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="62" lean-forward="true" selection-start-line="21" selection-start-column="62" selection-end-line="21" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/prog1Project/Commands/DefineVarCommand.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="34" lean-forward="true" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="34" />
+          <folding>
+            <element signature="e#39#68#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/prog1Project/Commands/OpenDataServerCommand.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="7" column="21" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/prog1Project/Utils.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="339">
+          <caret line="23" column="2" lean-forward="true" selection-start-line="23" selection-start-column="2" selection-end-line="23" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/include/c++/7/bits/stl_map.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="158">
+          <caret line="483" column="6" selection-start-line="483" selection-start-column="6" selection-end-line="483" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/prog1Project/Expressions/BinaryExpression.h">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/prog1Project/Expressions/Expressions_operators/Div.h">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/prog1Project/Expressions/BooleanExpressions/Bigger.h.gch">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/prog1Project/Expressions/BooleanExpressions/Bigger.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="23" column="28" selection-start-line="23" selection-start-column="28" selection-end-line="23" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/prog1Project/Expressions/BooleanExpressions/Equals.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="28" selection-start-line="23" selection-start-column="28" selection-end-line="23" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/prog1Project/Expressions/BooleanExpressions/NotEquals.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="31" selection-start-line="23" selection-start-column="31" selection-end-line="23" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/prog1Project/Expressions/BooleanExpressions/Smaller.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="284">
+          <caret line="19" column="22" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/prog1Project/Commands/ConditionParser.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-105">
+          <caret line="11" column="39" selection-start-line="11" selection-start-column="39" selection-end-line="11" selection-end-column="39" />
+          <folding>
+            <element signature="e#39#67#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/prog1Project/Hi.cpp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/prog1Project/Hi.h">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/prog1Project/CommandExpression.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="26" column="32" lean-forward="true" selection-start-line="26" selection-start-column="32" selection-end-line="26" selection-end-column="32" />
+          <folding>
+            <element signature="e#122#145#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/prog1Project/Commands/DefineVarCommand.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/prog1Project/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/prog1Project/Commands/WhileCommand.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="7" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
+          <folding>
+            <element signature="e#112#135#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/prog1Project/Commands/IfCommand.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/prog1Project/Commands/PrintCommand.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="11" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="11" />
+          <folding>
+            <element signature="e#39#64#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/prog1Project/Commands/PrintCommand.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="16" column="45" selection-start-line="16" selection-start-column="37" selection-end-line="16" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/prog1Project/Commands/WhileCommand.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="54" selection-start-line="6" selection-start-column="54" selection-end-line="6" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/prog1Project/Commands/IfCommand.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="51" selection-start-line="6" selection-start-column="51" selection-end-line="6" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/prog1Project/Commands/ConditionParser.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
+          <folding>
+            <element signature="e#118#141#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/prog1Project/Interperter.h.gch">
+      <provider selected="true" editor-type-id="LargeFileEditor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/prog1Project/Interperter.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="32" selection-start-line="5" selection-start-column="32" selection-end-line="5" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/prog1Project/cmake-build-debug/CMakeCache.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/prog1Project/cmake-build-debug/Makefile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2766" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/prog1Project/cmake-build-debug/prog1Project.cbp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/prog1Project/Commands/NumberOfArgsToCommandException.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="10" column="55" selection-start-line="8" selection-start-column="19" selection-end-line="10" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/prog1Project/Expressions.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/prog1Project/Expressions/Var.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="34" column="203" selection-start-line="34" selection-start-column="203" selection-end-line="34" selection-end-column="203" />
+          <folding>
+            <element signature="e#94#120#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/prog1Project/Commands/EqualsCommand.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="34" selection-start-line="7" selection-start-column="34" selection-end-line="7" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/prog1Project/Commands/EqualsCommand.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="2" selection-start-column="2" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/prog1Project/Databases/SymbolsDB.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="21" column="7" selection-start-line="21" selection-start-column="7" selection-end-line="21" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/prog1Project/Databases/ConstsDB.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="28">
+          <caret line="13" column="44" selection-start-line="13" selection-start-column="44" selection-end-line="13" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/prog1Project/Databases/SymbolsDB.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="81" selection-start-line="9" selection-start-column="81" selection-end-line="9" selection-end-column="81" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/prog1Project/Databases/ConstsDB.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="367">
+          <caret line="66" selection-start-line="66" selection-end-line="66" />
+          <folding>
+            <element signature="e#104#131#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/prog1Project/Commands/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="18" selection-start-line="5" selection-start-column="18" selection-end-line="6" selection-end-column="114" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/prog1Project/Command.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+          <folding>
+            <element signature="e#138#155#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/prog1Project/Databases/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="44" selection-start-line="6" selection-start-column="44" selection-end-line="6" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/prog1Project/Expressions/BooleanExpressions/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="18" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/prog1Project/Expressions/Expressions_operators/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="18" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/prog1Project/Interperter.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="269">
+          <caret line="111" selection-start-line="111" selection-end-line="111" />
+          <folding>
+            <element signature="e#47#89#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/prog1Project/Expressions/ExpressionFactory.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="327">
+          <caret line="55" selection-start-line="55" selection-end-line="55" />
+          <folding>
+            <element signature="e#122#148#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/prog1Project/Expressions/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/prog1Project/Expressions/ExpressionFactory.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="508">
+          <caret line="74" column="49" selection-start-line="74" selection-start-column="49" selection-end-line="74" selection-end-column="49" />
+          <folding>
+            <element signature="e#40#70#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/prog1Project/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="28" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

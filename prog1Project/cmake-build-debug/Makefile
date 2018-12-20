@@ -39,10 +39,10 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /snap/clion/56/bin/cmake/linux/bin/cmake
+CMAKE_COMMAND = /snap/clion/57/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /snap/clion/56/bin/cmake/linux/bin/cmake -E remove -f
+RM = /snap/clion/57/bin/cmake/linux/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
@@ -59,7 +59,7 @@ CMAKE_BINARY_DIR = /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Projec
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/snap/clion/56/bin/cmake/linux/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/snap/clion/57/bin/cmake/linux/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -70,7 +70,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/snap/clion/56/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/snap/clion/57/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -312,6 +312,33 @@ Commands/WhileCommand.cpp.s:
 	$(MAKE) -f CMakeFiles/prog1Project.dir/build.make CMakeFiles/prog1Project.dir/Commands/WhileCommand.cpp.s
 .PHONY : Commands/WhileCommand.cpp.s
 
+Enviroment.o: Enviroment.cpp.o
+
+.PHONY : Enviroment.o
+
+# target to build an object file
+Enviroment.cpp.o:
+	$(MAKE) -f CMakeFiles/prog1Project.dir/build.make CMakeFiles/prog1Project.dir/Enviroment.cpp.o
+.PHONY : Enviroment.cpp.o
+
+Enviroment.i: Enviroment.cpp.i
+
+.PHONY : Enviroment.i
+
+# target to preprocess a source file
+Enviroment.cpp.i:
+	$(MAKE) -f CMakeFiles/prog1Project.dir/build.make CMakeFiles/prog1Project.dir/Enviroment.cpp.i
+.PHONY : Enviroment.cpp.i
+
+Enviroment.s: Enviroment.cpp.s
+
+.PHONY : Enviroment.s
+
+# target to generate assembly for a file
+Enviroment.cpp.s:
+	$(MAKE) -f CMakeFiles/prog1Project.dir/build.make CMakeFiles/prog1Project.dir/Enviroment.cpp.s
+.PHONY : Enviroment.cpp.s
+
 Expressions/ExpressionFactory.o: Expressions/ExpressionFactory.cpp.o
 
 .PHONY : Expressions/ExpressionFactory.o
@@ -450,6 +477,9 @@ help:
 	@echo "... Commands/WhileCommand.o"
 	@echo "... Commands/WhileCommand.i"
 	@echo "... Commands/WhileCommand.s"
+	@echo "... Enviroment.o"
+	@echo "... Enviroment.i"
+	@echo "... Enviroment.s"
 	@echo "... Expressions/ExpressionFactory.o"
 	@echo "... Expressions/ExpressionFactory.i"
 	@echo "... Expressions/ExpressionFactory.s"

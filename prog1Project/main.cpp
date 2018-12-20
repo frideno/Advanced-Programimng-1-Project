@@ -7,21 +7,20 @@
 #include "Interperter.h"
 
 using namespace std;;
-
 #include <unistd.h>
 #include <stdio.h>
 #include <limits.h>
+#include <unistd.h>
+#include <stdio.h>
+#include <limits.h>
+#include "Databases/SymbolsDB.h"
+#include "Enviroment.h"
 
 int main() {
-    ifstream file("prac");
 
-    if(file.is_open()) {
-        vector<string> vs = Interperter::lexer(file);
-        for(int i = 0; i < vs.size(); i++) {
-            cout << vs[i] << ",";
-        }
-    } else {
-        cout << "coud not open file";
-    }
+    Enviroment* e = new Enviroment;
+    e->operation();
+    delete e;
+
 
 }

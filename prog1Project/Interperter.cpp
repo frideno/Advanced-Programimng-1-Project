@@ -44,11 +44,8 @@ vector<string> Interperter::shuntingYard_infixToPostfix(vector<string>& tokens) 
 
 
     for(string& token: tokens) {
-        if(ExpressionFactory::isNumber(token)) {
 
-            outputQueue.push_back(token);
-            // cout << "Add " << token << " to output" << endl;
-        } else if (ExpressionFactory::isOperator(token)){
+        if (ExpressionFactory::isOperator(token)){
             while(!operatorsStack.empty() && operatorsStack.top() != "(" && ((op_precedence.at(operatorsStack.top()) > op_precedence.at(token))
                     || (op_precedence.at(operatorsStack.top()) == op_precedence.at(token) && ExpressionFactory::isLeftAccociative(token)))) {
                 //cout << "Pop stack to output " << token << endl;
@@ -68,6 +65,10 @@ vector<string> Interperter::shuntingYard_infixToPostfix(vector<string>& tokens) 
             operatorsStack.pop();
             //cout << "Pop stack " << token << endl;
 
+        }
+        // if its a number or variable name or whatever else.
+        else {
+            outputQueue.push_back(token);
         }
     }
     while (!operatorsStack.empty()){
@@ -151,7 +152,7 @@ void addTokenIfStartedNew(vector<string>& tokens, string& check1) {
 }
 
 
-vector<string> Interperter::lexer(ifstream& script) {
+void Interperter::lexer(string& line) {
     /*
      *
      * The lexer should read the source code character by character, and send tokens to the parser.
@@ -166,166 +167,154 @@ vector<string> Interperter::lexer(ifstream& script) {
 
     vector<string> tokens;
 
-    // read from script to array of strings.
-    for(string line; getline(script, line);)
+    string tmpNumber = "";
+    string tmpOperator = "";
+    string tmpVariable = "";
+    string tmpString = "";
+    bool stringFollow = false;
+    for(char& c:line)
     {
-        string tmpNumber = "";
-        string tmpOperator = "";
-        string tmpVariable = "";
-        string tmpString = "";
-        bool stringFollow = false;
-        for(char& c:line)
-        {
 
-            // if we following a string in qoutes, anything gets in the string.
-            if (stringFollow) {
+        // if we following a string in qoutes, anything gets in the string.
+        if (stringFollow) {
 
-                // if we get a closing ", then save the string.
-                if (c == '"') {
-                    tokens.push_back(tmpString);
-                    stringFollow = false;
-                }
-
-                    // else recieve the char into the string.
-                else
-                    tmpString += c;
-
+            // if we get a closing ", then save the string.
+            if (c == '"') {
+                tokens.push_back('"' + tmpString + '"');
+                stringFollow = false;
             }
-                // if not, seperate by char:
-            else {
+
+                // else recieve the char into the string.
+            else
+                tmpString += c;
+
+        }
+            // if not, seperate by char:
+        else {
 
 
-                // if the char is space, we will ignore it and submit all tmps.
-                if (c == ' ')  {
-                    addTokenIfStartedNew(tokens, tmpNumber);
-                    addTokenIfStartedNew(tokens, tmpVariable);
-                    addTokenIfStartedNew(tokens, tmpOperator);
-                }
+            // if the char is space, we will ignore it and submit all tmps.
+            if (c == ' ')  {
+                addTokenIfStartedNew(tokens, tmpNumber);
+                addTokenIfStartedNew(tokens, tmpVariable);
+                addTokenIfStartedNew(tokens, tmpOperator);
+            }
 
-                    // if the char is a digit, we will add it to the tmp number, that gains near digits.
-                else if (isdigit(c)) {
+                // if the char is a digit, we will add it to the tmp number, that gains near digits.
+            else if (isdigit(c)) {
 
-                    //if an operaqtor came before digit, we will push it to tokens.
-                    addTokenIfStartedNew(tokens, tmpOperator);
+                //if an operaqtor came before digit, we will push it to tokens.
+                addTokenIfStartedNew(tokens, tmpOperator);
 
-                    // but if it was letter before digits, its fine because we can have variables with
-                    //  both letters and digits. else it is a number.
-                    if (tmpVariable != "") {
-                        tmpVariable += c;
-                    } else {
-                        tmpNumber += c;
-                    }
-                    // if it is a letter or an underscore:
-                } else if ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z') || c == '_') {
-
-                    addTokenIfStartedNew(tokens, tmpNumber);
-                    addTokenIfStartedNew(tokens, tmpOperator);
+                // but if it was letter before digits, its fine because we can have variables with
+                //  both letters and digits. else it is a number.
+                if (tmpVariable != "") {
                     tmpVariable += c;
+                } else {
+                    tmpNumber += c;
                 }
-                    // if it is a quotes mark, we start writing into a string and save the others.
-                else if (c == '"') {
-                    addTokenIfStartedNew(tokens, tmpNumber);
-                    addTokenIfStartedNew(tokens, tmpOperator);
-                    stringFollow = true;
-                }
+                // if it is a letter or an underscore:
+            } else if ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z') || c == '_') {
 
-                    // else, it is an operator or brackets, so we will add the last tmp number created, if it is not empty,
-                    // and reset it, and add the the operator to the tokens.
-                else {
-                    addTokenIfStartedNew(tokens, tmpNumber);
-                    addTokenIfStartedNew(tokens, tmpVariable);
-                    tmpOperator += c;
-                }
+                addTokenIfStartedNew(tokens, tmpNumber);
+                addTokenIfStartedNew(tokens, tmpOperator);
+                tmpVariable += c;
+            }
+                // if it is a quotes mark, we start writing into a string and save the others.
+            else if (c == '"') {
+                addTokenIfStartedNew(tokens, tmpNumber);
+                addTokenIfStartedNew(tokens, tmpOperator);
+                stringFollow = true;
             }
 
-            // push an indicator of end of line.
+                // else, it is an operator or brackets, so we will add the last tmp number created, if it is not empty,
+                // and reset it, and add the the operator to the tokens.
+            else {
+                addTokenIfStartedNew(tokens, tmpNumber);
+                addTokenIfStartedNew(tokens, tmpVariable);
+                tmpOperator += c;
+            }
         }
 
-        // adds the variables that gained after the loop if not added before.
-        addTokenIfStartedNew(tokens, tmpNumber);
-        addTokenIfStartedNew(tokens, tmpOperator);
-        addTokenIfStartedNew(tokens, tmpVariable);
-        tokens.push_back(ConstsDB::ENDLINE_KEYWORD);
-
-
+        // push an indicator of end of line.
     }
-    return tokens;
+
+    // adds the variables that gained after the loop if not added before.
+    addTokenIfStartedNew(tokens, tmpNumber);
+    addTokenIfStartedNew(tokens, tmpOperator);
+    addTokenIfStartedNew(tokens, tmpVariable);
+    tokens.push_back(ConstsDB::ENDLINE_KEYWORD);
+
+    // saves the lexed tokens into current args of interpreter.
+    _tokens = tokens;
 }
 
 
-void Interperter::parser(vector<string> commands) {
+void Interperter::parser() {
 
-    int index = 0;
+    // reset tokens index to 0
+    _index = 0;
 
-    // while the index is before teh end of commands size.
-    while(index < commands.size()) {
+    // if we don't need more lines, mean we staring new command, than we make the needed premake:
+    // generate a command from keyword, and gain prev keyword args.
 
-        vector<string> args;
+    while (_index < _tokens.size()) {
+        if (!_isNeededMoreLines) {
 
-        // gain vars until a keyword.
-        while (!ConstsDB::containsCommand(commands[index])) {
-            args.push_back(commands[index]);
-            index++;
+            // intilizing args to empty vector.
+            _currentArgs = vector<string>();
+
+            // gain vars until a keyword.
+            while (_index < _tokens.size() && !ConstsDB::containsCommand(_tokens[_index])) {
+                _index++;
+            }
+
+            // creates a command by the command keyword.
+            _currentCommand = ConstsDB::createCommand(_tokens[_index]);
+
+            // substruct _index backwards while the command ask for go back
+            while (_index > 0 && _currentCommand->goBackArg(_tokens[_index])) {
+                _index--;
+            }
+
+            // skip the keyword:
+            _index++;
+        }
+        else {
+            cout << endl;
         }
 
-        // creates a command by the command keyword.
-        Command* com = ConstsDB::getCommand(commands[index]);
+        // now we want to read until end of the command args:
 
-        // substruct index backwards while the command ask for go back
-        while(com->goBackArg(commands[index])) {
-            index--;
-        }
-        // skip the keyword:
-        index++;
+        bool hungry;
+        while (_index < _tokens.size() && (hungry = _currentCommand->anotherArg(_tokens[_index]))) {
 
-        // adds a args while the command ask for another.
-        while(com->anotherArg(commands[index])) {
-            args.push_back(commands[index]);
-            index++;
+            _currentArgs.push_back(_tokens[_index]);
+            _index++;
         }
 
-        // command object do the command on the arguments list.
-        com->doCommand(args);
+        // if we stop reading because we reached the end of the given input, but the command was hungry for more,
+        // we will stop funtion and continue in next call of parse, on the next line.
+        if (_index == _tokens.size() && hungry) {
+            _isNeededMoreLines = true;
+            return;
+        }
+            // else, we read all line, and we can do the command:
 
-        // skips the last argument to move to next keyword.
-        index++;
+        else {
+
+            // command object do the command on the arguments list.
+            _currentCommand->doCommand(_currentArgs);
+
+            // delete the command and mark as complete.
+            delete _currentCommand;
+            _isNeededMoreLines = false;
+        }
     }
+}
 
-//    int index = 0;
-//    while (index < commands.size()) {
-//
-//        // create a command by the map of commands:
-//        Command* c = ConstsDB::getCommand(commands[index]);
-//
-//        // creates the variables to command by all tokens until another command word;
-//        vector<string&> variables;
-//
-//        // if the command is a block - we recieve variables until }.
-//        if (c->isBlockCommand()) {
-//            int bracketMaazan = 0;
-//            while (commands[index] != "}" || (commands[index] == "}" && bracketsMaazan != 0)) {
-//
-//                // for each {, we increase maazan by 1, and for each } decrease, so know that is the right } at end.
-//                variables.push_back(commands[index]);
-//                index++;
-//
-//                if (commands[index] == "{")
-//                    bracketMaazan ++;
-//            }
-//            // push the }.
-//            variables.push_back(commands[index]);
-//        }
-//
-//        // else, just get the few next variables by the command property.
-//        else {
-//
-//        }
-//
-//        // do command of c.
-//        c->doCommand(variables);
-//
-//        // TODO: check number of variables is not wrong.
-//    }
-
-
+void Interperter::reset() {
+    _index = 0;
+    _isNeededMoreLines = false;
+    _currentCommand = nullptr;
 }

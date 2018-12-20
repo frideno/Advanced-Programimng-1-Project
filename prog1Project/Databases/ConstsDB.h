@@ -22,7 +22,7 @@ class ConstsDB {
 private:
 
 // initliztion of string names to command object map:
-    static map<string, Command*> createCommandsByNames();
+    static map<string, Command *> createCommandsByNames();
 
     // intiliztion of string names to keyword values map:
 
@@ -32,12 +32,13 @@ private:
     static map<string, double> _keywordValues;
 
     // commands table - between name and command object.
-    static  map<string, Command *> _commandsByNames;
+    static map<string, Command *> _commandsByNames;
 
 public:
-    static char ENDLINE_KEYWORD[1];
+    static const string ENDLINE_KEYWORD;
 
-    // get a command object by name.
+    static Command* createCommand(string name);
+        // get a command object by name.
     static Command *getCommand(string name);
 
     static bool containsCommand(string name);
@@ -47,6 +48,10 @@ public:
 
     // check if a keyword exsists.
     static bool containsKeyword(string name);
+
+    /**
+     * doCommand(string[])
+     */
 
 };
 

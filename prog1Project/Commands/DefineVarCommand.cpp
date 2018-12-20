@@ -5,7 +5,8 @@
 #include "DefineVarCommand.h"
 #include "../Utils.h"
 #include "../Databases/SymbolsDB.cpp"
-#include "../Databases/ConstsDB.h"
+#include "../Databases/ConstsDB.cpp"
+
 void DefineVarCommand::doCommand(vector<string> &args) {
 
     string varName = args[0];
@@ -21,8 +22,11 @@ void DefineVarCommand::doCommand(vector<string> &args) {
 
 bool DefineVarCommand::anotherArg(string &current) {
 
+    return Utils::getNArguments(_internalUseN);
+
     // varCommand defined by: "var x"
-    return Utils::getNArguments(1);
+
+
 }
 
 bool DefineVarCommand::goBackArg(string &current) {

@@ -4,13 +4,15 @@
 
 #include "ConditionParser.h"
 #include "../Interperter.h"
-
+#include "../Utils.h"
 Expression *ConditionParser::getCondition() {
     return _condition;
 }
 
-vector<string> &ConditionParser::getStatements() {
-    return _statements;
+Interperter *ConditionParser::getStatementsInterpreter() {
+    Interperter* i = _statesmentsInterpreter;
+    i->reset();
+    return i;
 }
 
 void ConditionParser::doCommand(vector<string>& args) {
@@ -36,13 +38,13 @@ void ConditionParser::doCommand(vector<string>& args) {
     // interperter the shunting yard of expression into the condition, so we can caluclate it next.
     _condition = Interperter::shuntingYard(conditionVec);
 
-    // if last token is not } , expetion.
-    if (args[args.size() - 1] != "}")
-        throw ("Conditional missing closing brackets \"}\"");
 
+    vector<string> statesments;
     // getts the inside of the { } brackets so we can execute them.
     for(i; i < args.size(); i++)
-        _statements.push_back(args[i]);
+        statesments.push_back(args[i]);
+
+    _statesmentsInterpreter = new Interperter(statesments);
 
 }
 
@@ -63,7 +65,7 @@ bool ConditionParser::anotherArg(string &current) {
 
         // if the } is here, and a balance of } achieved, then we can stop reading characters.
         if(balance == 0)
-            return false;
+            return false; // wait another 1 token - }, before stop excepting arguments.
 
         if (balance < 0)
             throw("an unappropriate } was defined, without suited {");

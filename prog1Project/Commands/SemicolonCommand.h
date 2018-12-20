@@ -22,5 +22,8 @@ public:
         // ; command don't need to go back before it. it does nothing.
         return false;
     }
+
+    // clonable:
+    Command* clone() { return new SemicolonCommand(*this);}
 };
 #endif //PROG1PROJECT_SEMICOLONCOMMAND_H

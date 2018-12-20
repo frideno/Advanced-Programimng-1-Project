@@ -8,13 +8,17 @@
 #include "../Command.h"
 
 class OpenDataServerCommand: public Command {
-
 public:
     bool goBackArg(string &current) override;
 
-public:
     void doCommand(vector<string> &args) override;
 
     bool anotherArg(string &current) override;
+
+    // clonable:
+    Command* clone() { return new OpenDataServerCommand(*this);}
+
+private:
+    int _internalUseN = 2;
 };
 #endif //PROG1PROJECT_OPENDATASERVER_H

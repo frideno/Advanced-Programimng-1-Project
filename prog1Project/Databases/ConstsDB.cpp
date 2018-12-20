@@ -5,7 +5,7 @@
 #include "ConstsDB.h"
 //intilizing const maps:
 
-const string ConstsDB::ENDLINE_KEYWORD = {'a'};
+const string ConstsDB::ENDLINE_KEYWORD = ";";
 
 // inner use to intilize maps:
 
@@ -31,6 +31,17 @@ map<string, double> ConstsDB::createKeywordValues() {
     map<string, double> m = {{ "true", 1 }, { "false", 0 }};
     return m;
 };
+
+Command* ConstsDB::createCommand(string name) {
+    if(_commandsByNames.count(name) != 0) {
+        // TODO: CHANGE TO FACTORY.
+        return _commandsByNames.at(name)->clone();
+    }
+    else {
+        throw("Command (keyword) name is not defined");
+    }
+
+}
 
 Command *ConstsDB::getCommand(string name) {
     if(_commandsByNames.count(name) != 0) {

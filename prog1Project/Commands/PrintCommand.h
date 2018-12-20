@@ -20,6 +20,11 @@ public:
 
     bool goBackArg(string &current) override;
 
+    // clonable:
+    Command* clone() { return new PrintCommand(*this);}
+
+private:
+    int _internalUseN = 1;
 };
 
 

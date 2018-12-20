@@ -30,7 +30,7 @@ void OpenDataServerCommand::doCommand(vector<string> &args) {
 bool OpenDataServerCommand::anotherArg(string &current) {
 
     // get const amout of anotehr args - 2.
-    return Utils::getNArguments(2);
+    return Utils::getNArguments(_internalUseN);
 }
 
 bool OpenDataServerCommand::goBackArg(string &current) {

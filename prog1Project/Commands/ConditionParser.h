@@ -21,21 +21,25 @@ private:
     Expression* _condition;
 
     // script of statements to execute:
-    vector<string> _statements;
+    Interperter* _statesmentsInterpreter;
 protected:
 
     //getters:
 
     Expression* getCondition();
-    vector<string>& getStatements();
+    Interperter* getStatementsInterpreter();
+
+    int _innerUseN = 1;
 
 public:
-    void doCommand(std::vector<std::string>& args) ;
+    void doCommand(std::vector<std::string>& args) override;
 
-    bool anotherArg(string &current);
+    bool anotherArg(string &current)override;
 
-    bool goBackArg(string &current) ;
+    bool goBackArg(string &current) override;
 
+    // clonable:
+    Command* clone() { return new ConditionParser(*this);}
 
 };
 

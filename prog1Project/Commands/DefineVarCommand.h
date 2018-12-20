@@ -8,13 +8,19 @@
 #include "../Command.h"
 
 class DefineVarCommand : public Command{
+
+private:
+    int _internalUseN = 1;
+
 public:
     bool goBackArg(string &current) override;
 
-public:
     void doCommand(vector<string> &args) override;
 
     bool anotherArg(string &current) override;
+
+    // clonable:
+    Command* clone() { return new DefineVarCommand(*this);}
 };
 
 

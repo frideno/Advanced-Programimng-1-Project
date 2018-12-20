@@ -10,7 +10,8 @@ void WhileCommand::doCommand(std::vector<std::string>& args) {
     ConditionParser::doCommand(args);
 
     while(getCondition()->calculate() > 0) {
-        Interperter::parser(getStatements());
+        getStatementsInterpreter()->parser();
+
     }
 
 }

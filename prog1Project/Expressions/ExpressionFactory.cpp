@@ -12,7 +12,11 @@
 #include "BooleanExpressions/Smaller.h"
 #include "BooleanExpressions/Equals.h"
 #include "BooleanExpressions/NotEquals.h"
-
+#include "BooleanExpressions/Xor.h"
+#include "BooleanExpressions/Or.h"
+#include "BooleanExpressions/And.h"
+#include "BooleanExpressions/BiggerEquals.h"
+#include "BooleanExpressions/SmallerEquals.h"
 // create expression by the token representing them.
 Expression *ExpressionFactory::create(string operatora, Expression *left, Expression *right) {
     if(operatora == "+")
@@ -33,6 +37,17 @@ Expression *ExpressionFactory::create(string operatora, Expression *left, Expres
         return new Equals(left, right);
     if(operatora == "!=")
         return new NotEquals(left, right);
+    if(operatora == ">=")
+        return new BiggerEquals(left, right);
+    if(operatora == "<=")
+        return new SmallerEquals(left, right);
+    if(operatora == "&&")
+        return new And(left, right);
+    if(operatora == "||")
+        return new Or(left, right);
+    if(operatora == "^^")
+        return new Xor(left, right);
+
     // if the operator is unknown, return nullptr.
     return nullptr;
 }

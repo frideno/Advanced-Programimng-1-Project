@@ -1,3 +1,2 @@
-var x = 5+3
-x = 3
-print "done"
+var x = 1
+print x
