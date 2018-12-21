@@ -272,13 +272,15 @@ void Interperter::parser() {
             // creates a command by the command keyword.
             _currentCommand = ConstsDB::createCommand(_tokens[_index]);
 
+            // skip the keyword:
+            _index++;
+
             // substruct _index backwards while the command ask for go back
             while (_index > 0 && _currentCommand->goBackArg(_tokens[_index])) {
                 _index--;
             }
 
-            // skip the keyword:
-            _index++;
+
         }
         else {
             cout << endl;

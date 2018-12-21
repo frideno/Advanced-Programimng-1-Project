@@ -149,6 +149,26 @@ CMakeFiles/prog1Project.dir/Commands/WhileCommand.cpp.o: ../Expressions/Number.h
 CMakeFiles/prog1Project.dir/Commands/WhileCommand.cpp.o: ../Expressions/UnaryExpression.h
 CMakeFiles/prog1Project.dir/Commands/WhileCommand.cpp.o: ../Interperter.h
 
+CMakeFiles/prog1Project.dir/Enviroment.cpp.o: ../Command.h
+CMakeFiles/prog1Project.dir/Enviroment.cpp.o: ../Enviroment.cpp
+CMakeFiles/prog1Project.dir/Enviroment.cpp.o: ../Enviroment.h
+CMakeFiles/prog1Project.dir/Enviroment.cpp.o: ../Expression.h
+CMakeFiles/prog1Project.dir/Enviroment.cpp.o: ../Expressions.h
+CMakeFiles/prog1Project.dir/Enviroment.cpp.o: ../Expressions/BinaryExpression.h
+CMakeFiles/prog1Project.dir/Enviroment.cpp.o: ../Expressions/BooleanExpressions/Bigger.h
+CMakeFiles/prog1Project.dir/Enviroment.cpp.o: ../Expressions/BooleanExpressions/Equals.h
+CMakeFiles/prog1Project.dir/Enviroment.cpp.o: ../Expressions/BooleanExpressions/NotEquals.h
+CMakeFiles/prog1Project.dir/Enviroment.cpp.o: ../Expressions/BooleanExpressions/Smaller.h
+CMakeFiles/prog1Project.dir/Enviroment.cpp.o: ../Expressions/Expressions_operators/Div.h
+CMakeFiles/prog1Project.dir/Enviroment.cpp.o: ../Expressions/Expressions_operators/Minus.h
+CMakeFiles/prog1Project.dir/Enviroment.cpp.o: ../Expressions/Expressions_operators/Mul.h
+CMakeFiles/prog1Project.dir/Enviroment.cpp.o: ../Expressions/Expressions_operators/Plus.h
+CMakeFiles/prog1Project.dir/Enviroment.cpp.o: ../Expressions/Expressions_operators/Pow.h
+CMakeFiles/prog1Project.dir/Enviroment.cpp.o: ../Expressions/Number.h
+CMakeFiles/prog1Project.dir/Enviroment.cpp.o: ../Expressions/UnaryExpression.h
+CMakeFiles/prog1Project.dir/Enviroment.cpp.o: ../Interperter.h
+CMakeFiles/prog1Project.dir/Enviroment.cpp.o: ../Utils.h
+
 CMakeFiles/prog1Project.dir/Expressions/ExpressionFactory.cpp.o: ../Expression.h
 CMakeFiles/prog1Project.dir/Expressions/ExpressionFactory.cpp.o: ../Expressions/BinaryExpression.h
 CMakeFiles/prog1Project.dir/Expressions/ExpressionFactory.cpp.o: ../Expressions/BooleanExpressions/And.h
@@ -204,6 +224,7 @@ CMakeFiles/prog1Project.dir/Utils.cpp.o: ../Utils.h
 
 CMakeFiles/prog1Project.dir/main.cpp.o: ../Command.h
 CMakeFiles/prog1Project.dir/main.cpp.o: ../Databases/SymbolsDB.h
+CMakeFiles/prog1Project.dir/main.cpp.o: ../Enviroment.h
 CMakeFiles/prog1Project.dir/main.cpp.o: ../Expression.h
 CMakeFiles/prog1Project.dir/main.cpp.o: ../Expressions.h
 CMakeFiles/prog1Project.dir/main.cpp.o: ../Expressions/BinaryExpression.h
