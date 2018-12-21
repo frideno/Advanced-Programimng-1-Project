@@ -8,19 +8,32 @@
 #include "../Databases/SymbolsDB.h"
 void EqualsCommand::doCommand(vector<string> &args) {
     // TODO: handle bind.
-    // arguments are: varName, = , ..... (expression).
+    // arguments are: varName, = , (optional bind) ..... (expression).
 
     string varName = args[0];
-    vector<string> expressionArgs(args.begin() + 2, args.end());
 
-    // creates an expression with shunting yard.
-    Expression* e = Interperter::shuntingYard(expressionArgs);
+    // if varName = bind (expression), request to bind between them:
+    if (args.size() > 2 && args[2] == "bind") {
 
-    // assign value of expression to varName;
-    SymbolsDB::setsymbol(varName, e->calculate());
+        // binds between first and second var.
+        string& otherArgName = args[3];
+        SymbolsDB::bind(varName, otherArgName);
 
-    // deleting memory of e.
-    delete e;
+    }
+    else {
+
+        vector<string> expressionArgs(args.begin() + 2, args.end());
+
+        // creates an expression with shunting yard.
+        Expression *e = Interperter::shuntingYard(expressionArgs);
+
+
+        // assign value of expression to varName;
+        SymbolsDB::setsymbol(varName, e->calculate());
+
+        // deleting memory of e.
+        delete e;
+    }
 
 }
 

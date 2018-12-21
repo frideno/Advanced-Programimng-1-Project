@@ -18,6 +18,7 @@ private:
     // symbol table-  variables name to their value.
     static const double UNINTILIZED_VAR_DEFAULT;
     static map<string, double> _symbolTable;
+    static map<string, string> _bindTable;  // TODO: check if maybe change to <string, list<string>> if you can be binded to more than one.
 
 public:
 
@@ -39,6 +40,11 @@ public:
     // return if a symbol named symbolName is in the symbolTable.
     static bool containsSymbol(string symbolName);
 
+    // binds two var names between them - adds to bind map, and set var1 to be var2.
+    static void bind(string var1, string var2);
+
+    // check if two vars with those names are binded in bind map.
+    static bool isBinded(string var1, string var2);
 
 };
 
