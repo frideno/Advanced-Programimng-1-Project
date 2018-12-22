@@ -89,12 +89,7 @@ void task1(vector<string>& args) {
             throw("Client disconnected");
         }
         
-        /*
-        cout << string(buf, 0, bytesReceived) << endl;
- 
-        // Echo message back to client
-        send(clientSocket, buf, bytesReceived + 1, 0);
-        */
+        
         
         //here we should update the current data according to what the client sent to us............
     }
