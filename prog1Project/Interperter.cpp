@@ -45,7 +45,10 @@ vector<string> Interperter::shuntingYard_infixToPostfix(vector<string>& tokens) 
 
     for(string& token: tokens) {
 
-        if (ExpressionFactory::isOperator(token)){
+        if (ExpressionFactory::isUnaryOperator(token)) {
+            operatorsStack.push(token);
+        }
+        else if (ExpressionFactory::isBinaryOperator(token)){
             while(!operatorsStack.empty() && operatorsStack.top() != "(" && ((op_precedence.at(operatorsStack.top()) > op_precedence.at(token))
                     || (op_precedence.at(operatorsStack.top()) == op_precedence.at(token) && ExpressionFactory::isLeftAccociative(token)))) {
                 //cout << "Pop stack to output " << token << endl;
@@ -62,7 +65,8 @@ vector<string> Interperter::shuntingYard_infixToPostfix(vector<string>& tokens) 
                 operatorsStack.pop();
                 //cout << "Pop stack to output " << token << endl;
             }
-            operatorsStack.pop();
+            if (operatorsStack.size() != 0)
+                 operatorsStack.pop();
             //cout << "Pop stack " << token << endl;
 
         }
@@ -99,7 +103,7 @@ Expression* Interperter::shuntingYard_postfixToExpression(vector<string>& exp){
      */
 
     string token = exp[n-1];
-    if(!ExpressionFactory::isOperator(token)) {
+    if(!ExpressionFactory::isNaryOperator(token)) {
 
         // if the last token was not an operator,  then we want to just create a Number/varialbe out of it.
         exp.pop_back();
@@ -131,12 +135,15 @@ Expression* Interperter::shuntingYard_postfixToExpression(vector<string>& exp){
         // acutally modifing it, then get the right and left expressions.
 
         exp.pop_back();
-        Expression* right = shuntingYard_postfixToExpression(exp);
-        Expression* left = shuntingYard_postfixToExpression(exp);
+        vector<Expression*> subExpressions;
+
+        for (int i  = 0; i < ExpressionFactory::howManySubExpressions(token); i++) {
+            subExpressions.push_back(shuntingYard_postfixToExpression(exp));
+        }
 
         //create the result from the factory.
 
-        Expression* result = ExpressionFactory::create(token, left, right);
+        Expression* result = ExpressionFactory::create(token, subExpressions);
         return result;
 
     }
@@ -230,9 +237,38 @@ void Interperter::lexer(string& line) {
                 // else, it is an operator or brackets, so we will add the last tmp number created, if it is not empty,
                 // and reset it, and add the the operator to the tokens.
             else {
+
+                // checking if a - is for unary or binary -. special case.
+                if (c == '-') {
+
+                    // if the minus sign came after a number/variable, it must be binary.
+
+                    if (tmpNumber != "" || tmpVariable != "") {
+
+                        // we insert the binary form of minus, -.
+                        tmpOperator += '-';
+                    }
+
+                    // else the minus sign came after an operator or function, or nothing, it must be unary.
+                    else {
+                        // save the operator till fur.
+                        addTokenIfStartedNew(tokens, tmpOperator);
+
+                        // we insert the unary form of minus, #.
+                        tmpOperator += '#';
+
+                    }
+
+                // else, just add to operator.
+                } else {
+                    tmpOperator += c;
+
+                }
+
+                // save the variable or number till fur.
                 addTokenIfStartedNew(tokens, tmpNumber);
                 addTokenIfStartedNew(tokens, tmpVariable);
-                tmpOperator += c;
+
             }
         }
 

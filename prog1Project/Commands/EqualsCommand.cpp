@@ -6,6 +6,8 @@
 #include "../Utils.h"
 #include "../Databases/ConstsDB.h"
 #include "../Databases/SymbolsDB.h"
+#include "../Interperter.h"
+
 void EqualsCommand::doCommand(vector<string> &args) {
     // TODO: handle bind.
     // arguments are: varName, = , (optional bind) ..... (expression).

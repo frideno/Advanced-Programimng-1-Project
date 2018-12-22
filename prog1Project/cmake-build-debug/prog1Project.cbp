@@ -175,6 +175,9 @@
 		<Unit filename="/home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expressions/Expressions_operators/Mul.h">
 			<Option target="prog1Project"/>
 		</Unit>
+		<Unit filename="/home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expressions/Expressions_operators/Neg.h">
+			<Option target="prog1Project"/>
+		</Unit>
 		<Unit filename="/home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expressions/Expressions_operators/Plus.h">
 			<Option target="prog1Project"/>
 		</Unit>

@@ -17,49 +17,136 @@
 #include "BooleanExpressions/And.h"
 #include "BooleanExpressions/BiggerEquals.h"
 #include "BooleanExpressions/SmallerEquals.h"
+#include "Expressions_operators/Neg.h"
+
+
+
 // create expression by the token representing them.
-Expression *ExpressionFactory::create(string operatora, Expression *left, Expression *right) {
-    if(operatora == "+")
-        return new Plus(left, right);
-    if(operatora == "-")
-        return new Minus(left, right);
-    if(operatora == "*")
-        return new Mul(left, right);
-    if(operatora == "/")
-        return new Div(left, right);
-    if(operatora == "^")
-        return new Pow(left, right);
-    if(operatora == ">")
-        return new Bigger(left, right);
-    if(operatora == "<")
-        return new Smaller(left, right);
-    if(operatora == "==")
-        return new Equals(left, right);
-    if(operatora == "!=")
-        return new NotEquals(left, right);
-    if(operatora == ">=")
-        return new BiggerEquals(left, right);
-    if(operatora == "<=")
-        return new SmallerEquals(left, right);
-    if(operatora == "&&")
-        return new And(left, right);
-    if(operatora == "||")
-        return new Or(left, right);
-    if(operatora == "^^")
-        return new Xor(left, right);
+Expression *ExpressionFactory::create(string operatora, vector<Expression*> subExpressions) {
+
+    // binary expressions creation:
+    if(subExpressions.size() == 2) {
+        Expression* left = subExpressions[0];
+        Expression* right = subExpressions[1];
+
+        if (operatora == "+")
+            return new Plus(left, right);
+        if (operatora == "-")
+            return new Minus(left, right);
+        if (operatora == "*")
+            return new Mul(left, right);
+        if (operatora == "/")
+            return new Div(left, right);
+        if (operatora == "^")
+            return new Pow(left, right);
+        if (operatora == ">")
+            return new Bigger(left, right);
+        if (operatora == "<")
+            return new Smaller(left, right);
+        if (operatora == "==")
+            return new Equals(left, right);
+        if (operatora == "!=")
+            return new NotEquals(left, right);
+        if (operatora == ">=")
+            return new BiggerEquals(left, right);
+        if (operatora == "<=")
+            return new SmallerEquals(left, right);
+        if (operatora == "&&")
+            return new And(left, right);
+        if (operatora == "||")
+            return new Or(left, right);
+        if (operatora == "^^")
+            return new Xor(left, right);
+    }
+
+    // unary expressions creation:
+    else if (subExpressions.size() == 1) {
+
+        Expression* sub = subExpressions[0];
+        if (operatora == "#")
+            return new Neg(sub);
+    }
+
 
     // if the operator is unknown, return nullptr.
     return nullptr;
 }
 
+int ExpressionFactory::howManySubExpressions(string token) {
+    if(nArity.count(token) == 0)
+        return 0;
+    else
+        return nArity.at(token);
+}
 
-map<string, int> ExpressionFactory::operatorsPrecedence = ExpressionFactory::createMap();
+map<string, int> ExpressionFactory::createMap1() {
+    map<string, int> m =
+            {
+                    {"+",  10},
+                    {"-",  10},
+                    {"*",  20},
+                    {"/",  20},
+                    {"^",  30},
+                    {">",  1},
+                    {"<",  1},
+                    {"==", 1},
+                    {"!=", 1},
+                    {">=", 1},
+                    {"<=", 1},
+                    {"||", 0},
+                    {"&&", 0},
+                    {"^^", 0}
+
+            };
+    return m;
+}
+map<string, int> ExpressionFactory::createMap2() {
+    map<string, int> m =
+            {
+                    {"#",  20}
+            };
+    return m;
+}
+map<string, int> ExpressionFactory::createNarity() {
+    map<string, int> m =
+            {
+                    {"+",  2},
+                    {"-",  2},
+                    {"*",  2},
+                    {"/",  2},
+                    {"^",  2},
+                    {">",  2},
+                    {"<",  2},
+                    {"==", 2},
+                    {"!=", 2},
+                    {">=", 2},
+                    {"<=", 2},
+                    {"||", 2},
+                    {"&&", 2},
+                    {"^^", 2},
+                    {"#",  1}
+            };
+    return m;
+}
+map<string, int> ExpressionFactory::operatorsPrecedence = ExpressionFactory::createMap1();
+map<string, int> ExpressionFactory::functionsPrecedence = ExpressionFactory::createMap2();
+map<string, int> ExpressionFactory::nArity = ExpressionFactory::createNarity();
+
 
 // helping function to determine if a string represent one of our operators.
 
-bool ExpressionFactory::isOperator(string token) {
+bool ExpressionFactory::isBinaryOperator(string token) {
     return (ExpressionFactory::operatorsPrecedence.count(token) > 0);
 }
+
+bool ExpressionFactory::isUnaryOperator(string token) {
+    return (ExpressionFactory::functionsPrecedence.count(token) > 0);
+}
+
+bool ExpressionFactory::isNaryOperator(string token) {
+    return isUnaryOperator(token) || isBinaryOperator(token);
+}
+
 // helping function to determine if a string represent number.
 bool ExpressionFactory::isNumber(string token) {
 

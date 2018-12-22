@@ -3,6 +3,12 @@
 //
 
 #include "ConstsDB.h"
+#include "../Commands/WhileCommand.h"
+#include "../Commands/IfCommand.h"
+#include "../Commands/SemicolonCommand.h"
+#include "../Commands/EqualsCommand.h"
+#include "../Commands/DefineVarCommand.h"
+#include "../Commands/OpenDataServerCommand.h"
 //intilizing const maps:
 
 const string ConstsDB::ENDLINE_KEYWORD = ";";

@@ -10,12 +10,6 @@
 #include <map>
 #include "../Command.h"
 #include "../Commands/PrintCommand.h"
-#include "../Commands/WhileCommand.h"
-#include "../Commands/IfCommand.h"
-#include "../Commands/SemicolonCommand.h"
-#include "../Commands/EqualsCommand.h"
-#include "../Commands/DefineVarCommand.h"
-#include "../Commands/OpenDataServerCommand.h"
 
 class ConstsDB {
 

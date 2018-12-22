@@ -3,7 +3,6 @@
 //
 
 #include "Enviroment.h"
-#include <string>
 #include <iostream>
 #include "Utils.h"
 #include "Interperter.h"
@@ -37,8 +36,22 @@ void Enviroment::CommandlineOperation() {
 
         string line = ";";
         while (line != "done") {
-            i->lexer(line);
-            i->parser();
+
+            // if the command is to operate a script from file - run "../fileName"
+            if (line.length() > 6 && line.substr(0, 3) == "run") {
+                string fileName = line.substr(5, line.length() - 6);
+
+                runScriptFromFile(fileName);
+            }
+
+            // else lex and parse the line.
+
+            else {
+                i->lexer(line);
+                i->parser();
+            }
+
+            // get another line.
             getline(cin, line);
 
         }
@@ -52,6 +65,12 @@ void Enviroment::FileOperation() {
     cout << endl << ">> Enter file name:" << endl << "<< ";
     string fileName;
     cin >> fileName;
+
+    //  run from the file entered to terminal.
+    runScriptFromFile(fileName);
+}
+
+void Enviroment::runScriptFromFile(std::string &fileName) {
 
     ifstream file("../"+fileName);
     if (file.is_open()) {
@@ -68,5 +87,4 @@ void Enviroment::FileOperation() {
         cout << ">> File didn't found. GoodBye.";
 
     }
-
 }
