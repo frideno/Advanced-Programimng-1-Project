@@ -7,7 +7,7 @@
 
 using namespace std;
 
-class OpenDataServerCommand: public Command {
+class ConnectCommand: public Command {
 public:
     bool goBackArg(string &current) override;
 
@@ -16,7 +16,7 @@ public:
     bool anotherArg(string &current) override;
 
     // clonable:
-    Command* clone() { return new OpenDataServerCommand(*this);}
+    Command* clone() { return new ConnectCommand(*this);}
 
 private:
     int _internalUseN = 2;
