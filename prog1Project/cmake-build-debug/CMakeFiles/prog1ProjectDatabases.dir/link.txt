@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/prog1ProjectDatabases.dir/main.cpp.o CMakeFiles/prog1ProjectDatabases.dir/Interperter.cpp.o CMakeFiles/prog1ProjectDatabases.dir/Utils.cpp.o  -o prog1ProjectDatabases 

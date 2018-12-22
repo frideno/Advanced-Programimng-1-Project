@@ -1,9 +1,6 @@
-//
-// Created by omri on 12/15/18.
-//
 
-#ifndef PROG1PROJECT_OPENDATASERVER_H
-#define PROG1PROJECT_OPENDATASERVER_H
+#ifndef PROG1PROJECT_ConnectCommand_H
+#define PROG1PROJECT_ConnectCommand_H
 
 #include "../Command.h"
 #include <string>

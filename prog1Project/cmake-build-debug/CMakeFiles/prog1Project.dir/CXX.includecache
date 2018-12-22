@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Utils.cpp
+Utils.h
+/home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Utils.h
+
+/home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Utils.h
+string
+-
+

@@ -1,0 +1,7 @@
+to do:
+
+1. when reading a string of expression in filter function in the interperter.cpp:
+- name of variable could be composed of other chracters, not only from the english language.
+- name of variable could be a saved word, need to check and throw exception when that's the case.
+
+2.
