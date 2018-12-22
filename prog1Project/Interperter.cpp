@@ -109,7 +109,7 @@ Expression* Interperter::shuntingYard_postfixToExpression(vector<string>& exp){
         exp.pop_back();
         double number;
         if (ExpressionFactory::isNumber(token)) {
-          return new Number(Utils::to_int(token)); // cast from string of number , to int of the number.
+          return new Number(Utils::to_number(token)); // cast from string of number , to int of the number.
         }
         // else, it is a variable, so we want to return it.
         else {
@@ -196,7 +196,8 @@ void Interperter::lexer(string& line) {
                 tmpString += c;
 
         }
-            // if not, seperate by char:
+
+        // if not, seperate by char:
         else {
 
 
@@ -207,8 +208,8 @@ void Interperter::lexer(string& line) {
                 addTokenIfStartedNew(tokens, tmpOperator);
             }
 
-                // if the char is a digit, we will add it to the tmp number, that gains near digits.
-            else if (isdigit(c)) {
+                // if the char is a digit or floating point, we will add it to the tmp number, that gains near digits.
+            else if (isdigit(c) || c == '.') {
 
                 //if an operaqtor came before digit, we will push it to tokens.
                 addTokenIfStartedNew(tokens, tmpOperator);
@@ -217,7 +218,8 @@ void Interperter::lexer(string& line) {
                 //  both letters and digits. else it is a number.
                 if (tmpVariable != "") {
                     tmpVariable += c;
-                } else {
+                }
+                else {
                     tmpNumber += c;
                 }
                 // if it is a letter or an underscore:
@@ -238,7 +240,7 @@ void Interperter::lexer(string& line) {
                 // and reset it, and add the the operator to the tokens.
             else {
 
-                // checking if a - is for unary or binary -. special case.
+                // checking if a - is for unary or binary minus. special case :
                 if (c == '-') {
 
                     // if the minus sign came after a number/variable, it must be binary.

@@ -53,15 +53,9 @@ CMakeFiles/prog1Project.dir/Commands/DefineVarCommand.cpp.o: ../Interperter.h
 CMakeFiles/prog1Project.dir/Commands/DefineVarCommand.cpp.o: ../Utils.h
 
 CMakeFiles/prog1Project.dir/Commands/EqualsCommand.cpp.o: ../Command.h
-CMakeFiles/prog1Project.dir/Commands/EqualsCommand.cpp.o: ../Commands/ConditionParser.h
-CMakeFiles/prog1Project.dir/Commands/EqualsCommand.cpp.o: ../Commands/DefineVarCommand.h
 CMakeFiles/prog1Project.dir/Commands/EqualsCommand.cpp.o: ../Commands/EqualsCommand.cpp
 CMakeFiles/prog1Project.dir/Commands/EqualsCommand.cpp.o: ../Commands/EqualsCommand.h
-CMakeFiles/prog1Project.dir/Commands/EqualsCommand.cpp.o: ../Commands/IfCommand.h
-CMakeFiles/prog1Project.dir/Commands/EqualsCommand.cpp.o: ../Commands/OpenDataServerCommand.h
 CMakeFiles/prog1Project.dir/Commands/EqualsCommand.cpp.o: ../Commands/PrintCommand.h
-CMakeFiles/prog1Project.dir/Commands/EqualsCommand.cpp.o: ../Commands/SemicolonCommand.h
-CMakeFiles/prog1Project.dir/Commands/EqualsCommand.cpp.o: ../Commands/WhileCommand.h
 CMakeFiles/prog1Project.dir/Commands/EqualsCommand.cpp.o: ../Databases/ConstsDB.h
 CMakeFiles/prog1Project.dir/Commands/EqualsCommand.cpp.o: ../Databases/SymbolsDB.h
 CMakeFiles/prog1Project.dir/Commands/EqualsCommand.cpp.o: ../Expression.h
@@ -185,18 +179,13 @@ CMakeFiles/prog1Project.dir/Expressions/ExpressionFactory.cpp.o: ../Expressions/
 CMakeFiles/prog1Project.dir/Expressions/ExpressionFactory.cpp.o: ../Expressions/Expressions_operators/Div.h
 CMakeFiles/prog1Project.dir/Expressions/ExpressionFactory.cpp.o: ../Expressions/Expressions_operators/Minus.h
 CMakeFiles/prog1Project.dir/Expressions/ExpressionFactory.cpp.o: ../Expressions/Expressions_operators/Mul.h
+CMakeFiles/prog1Project.dir/Expressions/ExpressionFactory.cpp.o: ../Expressions/Expressions_operators/Neg.h
 CMakeFiles/prog1Project.dir/Expressions/ExpressionFactory.cpp.o: ../Expressions/Expressions_operators/Plus.h
 CMakeFiles/prog1Project.dir/Expressions/ExpressionFactory.cpp.o: ../Expressions/Expressions_operators/Pow.h
+CMakeFiles/prog1Project.dir/Expressions/ExpressionFactory.cpp.o: ../Expressions/UnaryExpression.h
 
 CMakeFiles/prog1Project.dir/Interperter.cpp.o: ../Command.h
-CMakeFiles/prog1Project.dir/Interperter.cpp.o: ../Commands/ConditionParser.h
-CMakeFiles/prog1Project.dir/Interperter.cpp.o: ../Commands/DefineVarCommand.h
-CMakeFiles/prog1Project.dir/Interperter.cpp.o: ../Commands/EqualsCommand.h
-CMakeFiles/prog1Project.dir/Interperter.cpp.o: ../Commands/IfCommand.h
-CMakeFiles/prog1Project.dir/Interperter.cpp.o: ../Commands/OpenDataServerCommand.h
 CMakeFiles/prog1Project.dir/Interperter.cpp.o: ../Commands/PrintCommand.h
-CMakeFiles/prog1Project.dir/Interperter.cpp.o: ../Commands/SemicolonCommand.h
-CMakeFiles/prog1Project.dir/Interperter.cpp.o: ../Commands/WhileCommand.h
 CMakeFiles/prog1Project.dir/Interperter.cpp.o: ../Databases/ConstsDB.h
 CMakeFiles/prog1Project.dir/Interperter.cpp.o: ../Databases/SymbolsDB.h
 CMakeFiles/prog1Project.dir/Interperter.cpp.o: ../Expression.h

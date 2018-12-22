@@ -5,10 +5,11 @@
 #include "Utils.h"
 
 // turn string to int.
-int Utils::to_int(string s) {
-    return stoi(s, nullptr, 10);
-}
+double Utils::to_number(string s) {
+    std::string::size_type sz;     // alias of size_t
 
+    return std::stod(s, &sz);
+}
 /**
  * returns N - 1 = *Np - 1 times true, last time fasle;
 */

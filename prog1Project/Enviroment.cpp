@@ -20,9 +20,9 @@ void Enviroment::operation() {
     cout << "<< ";
     cin >> option;
     cout << endl ;
-    if (Utils::to_int(option) == 1)
+    if (Utils::to_number(option) == 1)
         FileOperation();
-    else if (Utils::to_int(option) == 2)
+    else if (Utils::to_number(option) == 2)
         CommandlineOperation();
     else
         cout << ">> Wrong answer. GoodBye.";

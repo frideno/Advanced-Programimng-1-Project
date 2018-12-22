@@ -12,7 +12,7 @@ class Utils {
 public:
 
     // cast string to int.
-    static int to_int(string s);
+    static double to_number(string s);
 
     //
     static bool getNArguments(int& N);

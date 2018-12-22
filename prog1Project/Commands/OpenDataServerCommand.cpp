@@ -12,14 +12,14 @@ void OpenDataServerCommand::doCommand(vector<string> &args) {
     try {
         // tanslate port and rate to ints.
 
-        int port = Utils::to_int(args[0]);
-        int rate = Utils::to_int(args[1]);
+        int port = Utils::to_number(args[0]);
+        int rate = Utils::to_number(args[1]);
 
         // open a thread to run the server.
 
 
     }
-        // chatches invalid argument of to_int if port or rate are not ints.
+        // chatches invalid argument of to_number if port or rate are not ints.
     catch(const std::invalid_argument& e){
 
         throw("failed opening server, invalid argument PORT or RATE is not representing an int");

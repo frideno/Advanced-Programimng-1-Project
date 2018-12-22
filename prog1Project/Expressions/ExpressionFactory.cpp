@@ -157,7 +157,7 @@ bool ExpressionFactory::isNumber(string token) {
     // iterating over the string to see if there is a char that is not a digit:
     for(int i = 0; i < token.length(); i++) {
         char c = token[i];
-        if (!isdigit(c))
+        if (!(isdigit(c) || c == '.'))
             return false;
     }
     // if all chars are digits, its a number.
