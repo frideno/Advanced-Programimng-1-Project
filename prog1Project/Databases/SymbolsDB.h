@@ -9,6 +9,7 @@
 #include <string>
 #include <map>
 #include "../Command.h"
+#include "../Sockets/FlightSocketManager.h"
 
 using namespace std;
 
@@ -19,6 +20,14 @@ private:
     static const double UNINTILIZED_VAR_DEFAULT;
     static map<string, double> _symbolTable;
     static map<string, string> _bindTable;  // TODO: check if maybe change to <string, list<string>> if you can be binded to more than one.
+    static FlightSocketManager* _socketManager;
+
+    // returns if the symbolName starts and ends with paraheses means it is a source var.
+public:
+    static bool isSourceSymbol(string symbolName);
+
+    // earase a parantheses from source symbol string.
+    static string getPath(string sourceSymbolName);
 
 public:
 
@@ -45,6 +54,12 @@ public:
 
     // check if two vars with those names are binded in bind map.
     static bool isBinded(string var1, string var2);
+
+    // set the flightGear socket to be as teh sockfd.
+    static void setSocket(int sockfd);
+
+    // get the socket sender.
+    static FlightSocketManager *get_socketManager();
 
 };
 

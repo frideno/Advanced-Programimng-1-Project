@@ -97,6 +97,12 @@
 		<Unit filename="/home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Commands/ConditionParser.h">
 			<Option target="prog1Project"/>
 		</Unit>
+		<Unit filename="/home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Commands/ConnectCommand.cpp">
+			<Option target="prog1Project"/>
+		</Unit>
+		<Unit filename="/home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Commands/ConnectCommand.h">
+			<Option target="prog1Project"/>
+		</Unit>
 		<Unit filename="/home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Commands/DefineVarCommand.cpp">
 			<Option target="prog1Project"/>
 		</Unit>
@@ -197,6 +203,15 @@
 			<Option target="prog1Project"/>
 		</Unit>
 		<Unit filename="/home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Interperter.h">
+			<Option target="prog1Project"/>
+		</Unit>
+		<Unit filename="/home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Sockets/FlightSocketManager.cpp">
+			<Option target="prog1Project"/>
+		</Unit>
+		<Unit filename="/home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Sockets/FlightSocketManager.h">
+			<Option target="prog1Project"/>
+		</Unit>
+		<Unit filename="/home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Symbol.h">
 			<Option target="prog1Project"/>
 		</Unit>
 		<Unit filename="/home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Utils.cpp">

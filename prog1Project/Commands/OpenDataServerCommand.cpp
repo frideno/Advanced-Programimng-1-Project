@@ -6,18 +6,40 @@
 #include "NumberOfArgsToCommandException.h"
 #include <stdexcept>
 #include "../Utils.h"
-include <iostream>
-#include <sys/types.h>
-#include <unistd.h>
-#include <sys/socket.h>
+#include "../Databases/SymbolsDB.h"
+#include <stdio.h>
+#include <stdlib.h>
 #include <netdb.h>
-#include <arpa/inet.h>
+#include <unistd.h>
+#include <netinet/in.h>
+#include <string.h>
+#include <sys/socket.h>
 #include <thread>
+#include <iostream>
 
 using namespace std;
 
+void OpenDataServerCommand::getAllFlightSymbols() {
+
+    string symbol;
+    for(int i = 0; i < symbolsNames.size(); i++) {
+        symbol = symbolsNames[i];
+        double value = _socketManager->recieve("get " + symbol);
+        SymbolsDB::setsymbol("\"" + symbol + "\"", value);
+    }
+}
+
 void OpenDataServerCommand::doCommand(vector<string> &args) {
-    thead t1(task1, args);
+
+    //void (OpenDataServerCommand::*func)(vector<string>&);
+    //func = &OpenDataServerCommand::task1;
+    thread tDataServer(&OpenDataServerCommand::task1, ref(args));
+
+    tDataServer.join();
+//    thread t_1(x, 0);
+//
+//    // joins it to main thread after it ends.
+//    t_1.join();
 }
 
 /*
@@ -26,86 +48,94 @@ void OpenDataServerCommand::doCommand(vector<string> &args) {
 * he will deliver us. this task will run in it's own thread, simultaneously with another threads so that
 * we could run our program faster while making io requests.
 */
-void task1(vector<string>& args) {
- // Create a socket
-    int listening = socket(AF_INET, SOCK_STREAM, 0);
-    if (listening == -1)
-    {
-        throw("can't create socket!");
+void OpenDataServerCommand::task1(vector<string>& args) {
+
+    int port;
+    double rate;
+
+    // tring to tanslate port and rate to ints.
+    try {
+        port = (int) Utils::to_number(args[0]);
+        rate = Utils::to_number(args[1]);
     }
- 
-    // Bind the ip address and port to a socket
-    sockaddr_in hint;
-    hint.sin_family = AF_INET;
-    hint.sin_port = htons(args[0]);
-    inet_pton(AF_INET, "0.0.0.0", &hint.sin_addr);
- 
-    bind(listening, (sockaddr*)&hint, sizeof(hint));
- 
-    // Tell Winsock the socket is for listening
-    listen(listening, SOMAXCONN);
- 
-    // Wait for a connection
-    sockaddr_in client;
-    socklen_t clientSize = sizeof(client);
- 
-    int clientSocket = accept(listening, (sockaddr*)&client, &clientSize);
- 
-    char host[NI_MAXHOST];      // Client's remote name
-    char service[NI_MAXSERV];   // Service (i.e. port) the client is connect on
- 
-    memset(host, 0, NI_MAXHOST);
-    memset(service, 0, NI_MAXSERV);
- 
-    if (getnameinfo((sockaddr*)&client, sizeof(client), host, NI_MAXHOST, service, NI_MAXSERV, 0) == 0)
-    {
-        cout << host << " connected on port " << service << endl;
+
+    // chatches invalid argument of to_number if port or rate are not ints.
+    catch(const std::invalid_argument& e){
+
+        throw("failed opening server, invalid argument PORT or RATE is not representing an int");
     }
-    else
-    {
-        inet_ntop(AF_INET, &client.sin_addr, host, NI_MAXHOST);
-        cout << host << " connected on port " << ntohs(client.sin_port) << endl;
+
+    int sockfd, newsockfd, portno, clilen;
+    char buffer[256];
+    struct sockaddr_in serv_addr, cli_addr;
+    int  n;
+
+    /* First call to socket() function */
+    sockfd = socket(AF_INET, SOCK_STREAM, 0);
+
+    if (sockfd < 0) {
+        perror("ERROR opening socket");
+        exit(1);
     }
- 
-    // Close listening socket
-    close(listening);
- 
-    // While loop: accept and echo message back to client
-    char buf[4096];
- 
-    while (true)
-    {
-        memset(buf, 0, 4096);
- 
-        // Wait for client to send data
-        int bytesReceived = recv(clientSocket, buf, 4096, 0);
-        if (bytesReceived == -1)
-        {
-            throw("Error in recv()");
-        }
- 
-        if (bytesReceived == 0)
-        {
-            throw("Client disconnected");
-        }
-        
-        /*
-        cout << string(buf, 0, bytesReceived) << endl;
- 
-        // Echo message back to client
-        send(clientSocket, buf, bytesReceived + 1, 0);
-        */
-        
-        //here we should update the current data according to what the client sent to us............
+
+    /* Initialize socket structure */
+    bzero((char *) &serv_addr, sizeof(serv_addr));
+
+    serv_addr.sin_family = AF_INET;
+    serv_addr.sin_addr.s_addr = INADDR_ANY;
+    serv_addr.sin_port = htons(port);
+
+    /* Now bind the host address using bind() call.*/
+    if (bind(sockfd, (struct sockaddr *) &serv_addr, sizeof(serv_addr)) < 0) {
+        perror("ERROR on binding");
+        exit(1);
     }
- 
-    // Close the socket
-    close(clientSocket);
+
+    /* Now start listening for the clients, here process will
+       * go in sleep mode and will wait for the incoming connection
+    */
+
+    listen(sockfd,5);
+    clilen = sizeof(cli_addr);
+
+    /* Accept actual connection from the client */
+    newsockfd = accept(sockfd, (struct sockaddr *)&cli_addr, (socklen_t*)&clilen);
+
+    if (newsockfd < 0) {
+        perror("ERROR on accept");
+        exit(1);
+    }
+
+    /* If connection is established then start communicating */
+    bzero(buffer,256);
+    n = read( newsockfd,buffer,255 );
+
+    if (n < 0) {
+        perror("ERROR reading from socket");
+        exit(1);
+    }
+
+    printf("Here is the message: %s\n",buffer);
+
+    /* Write a response to the client */
+    n = write(newsockfd,"I got your message",18);
+
+    if (n < 0) {
+        perror("ERROR writing to socket");
+        exit(1);
+    }
+
+    _socketManager = new FlightSocketManager(sockfd);
+    while(true) {
+        getAllFlightSymbols();
+    }
+
 }
+
 
 bool OpenDataServerCommand::anotherArg(string &current) {
 
-    // get const amout of anotehr args - 2.
+    // get const amount of args - 2.
     return Utils::getNArguments(_internalUseN);
 }
 

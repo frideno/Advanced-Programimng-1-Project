@@ -10,13 +10,31 @@ double Utils::to_number(string s) {
 
     return std::stod(s, &sz);
 }
-/**
- * returns N - 1 = *Np - 1 times true, last time fasle;
-*/
+
 bool Utils::getNArguments(int& N) {
     if (N == 0)
         return false;
     N--;
     return true;
+}
+
+vector<string> Utils::split(string str, char token) {
+
+    vector<string> splited;
+
+    int i = 0, j = 0;
+
+    while (i < str.length()) {
+
+        j = i;
+        while (j < str.length() && str[j] != token) {
+            j++;
+        }
+
+        // if found at j, cut the substring from i to j and push it to splited vector.
+        splited.push_back(str.substr(i, j - i));
+        i = j + 1;
+    }
+    return splited;
 }
 

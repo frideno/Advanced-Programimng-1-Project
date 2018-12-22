@@ -10,6 +10,7 @@
 #include "Expressions/ExpressionFactory.h"
 #include "Utils.h"
 #include "Expressions/Var.h"
+
 /**
  * Shuting yard algortim -
  * get string @expression and return combined work of two functions
@@ -123,9 +124,13 @@ Expression* Interperter::shuntingYard_postfixToExpression(vector<string>& exp){
                 return new Number(ConstsDB::getKeywordValue(token));
             }
             if (!SymbolsDB::containsSymbol(token)) {
+                //TODO
+                if (SymbolsDB::isSourceSymbol(token))
+                    return new Var(token);
+
                 throw ("no symbol named " + token + "is defined.");
             } else {
-                return new Var(token);
+                    return new Var(token);
             }
         }
 

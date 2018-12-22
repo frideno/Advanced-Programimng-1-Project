@@ -1,20 +1,33 @@
 
-#include "OpenDataServerCommand.h"
+#include "ConnectCommand.h"
 #include "NumberOfArgsToCommandException.h"
 #include <stdexcept>
 #include "../Utils.h"
-include <iostream>
+#include "../Databases/SymbolsDB.h"
+#include <iostream>
 #include <sys/types.h>
 #include <unistd.h>
 #include <sys/socket.h>
 #include <netdb.h>
 #include <arpa/inet.h>
 #include <thread>
+#include <stdio.h>
+#include <stdlib.h>
+
+#include <netdb.h>
+#include <sys/socket.h>
+#include <unistd.h>
+#include <netinet/in.h>
+
+#include <string.h>
 
 using namespace std;
 
-void OpenDataServerCommand::doCommand(vector<string> &args) {
-    thead t1(task1, args);
+void task(vector<string>& args);
+
+void ConnectCommand::doCommand(vector<string> &args) {
+    thread t1(task, ref(args));
+    t1.join();
 }
 
 /*
@@ -23,74 +36,65 @@ void OpenDataServerCommand::doCommand(vector<string> &args) {
 * we will get from the final client. this task will run in it's own thread, simultaneously with another threads so that
 * we could run our program faster while making io requests.
 */
-void task1(vector<string>& args) {
+void task(vector<string>& args) {
 
-    int sock = socket(AF_INET, SOCK_STREAM, 0);
-    if (sock == -1)
-    {
-        return 1;
-    }
+        int sockfd, port, n;
+        struct sockaddr_in serv_addr;
+        struct hostent *server;
 
-    //	Create a hint structure for the server we're connecting with
-    int port = 54000;
-    string ipAddress = "127.0.0.1";
+        char buffer[256];
 
-    sockaddr_in hint;
-    hint.sin_family = AF_INET;
-    hint.sin_port = htons(port);
-    inet_pton(AF_INET, ipAddress.c_str(), &hint.sin_addr);
-
-    //	Connect to the server on the socket
-    int connectRes = connect(sock, (sockaddr*)&hint, sizeof(hint));
-    if (connectRes == -1)
-    {
-        return 1;
-    }
-
-    //	While loop:
-    char buf[4096];
-    string userInput;
+        try {
+            port = (int) Utils::to_number(args[1]);
+            server = gethostbyname(args[0].c_str());
 
 
-    do {
-        //		Enter lines of text
-        cout << "> ";
-        getline(cin, userInput);
+        }
+        catch (exception& e){
+            throw ("failed connecting to server, invalid argument PORT or RATE is not representing an int");
+        }
+        /* Create a socket point */
+        sockfd = socket(AF_INET, SOCK_STREAM, 0);
 
-        //		Send to server
-        int sendRes = send(sock, userInput.c_str(), userInput.size() + 1, 0);
-        if (sendRes == -1)
-        {
-            cout << "Could not send to server! Whoops!\r\n";
-            continue;
+        if (sockfd < 0) {
+            perror("ERROR opening socket");
+            exit(1);
         }
 
-        //		Wait for response
-        memset(buf, 0, 4096);
-        int bytesReceived = recv(sock, buf, 4096, 0);
-        if (bytesReceived == -1)
-        {
-            cout << "There was an error getting response from server\r\n";
-        }
-        else
-        {
-            //		Display response
-            cout << "SERVER> " << string(buf, bytesReceived) << "\r\n";
-        }
-    } while(true);
 
-    //	Close the socket
-    close(sock);
+        if (server == NULL) {
+            fprintf(stderr,"ERROR, no such host\n");
+            exit(0);
+        }
+
+        bzero((char *) &serv_addr, sizeof(serv_addr));
+        serv_addr.sin_family = AF_INET;
+        bcopy((char *)server->h_addr, (char *)&serv_addr.sin_addr.s_addr, server->h_length);
+        serv_addr.sin_port = htons(port);
+
+        /* Now connect to the server */
+        if (connect(sockfd, (struct sockaddr*)&serv_addr, sizeof(serv_addr)) < 0) {
+            perror("ERROR connecting");
+            exit(1);
+        }
+
+        /* Now ask for a message from the user, this message
+           * will be read by server
+        */
+
+        SymbolsDB::setSocket(sockfd);
+
+
 
 }
 
-bool OpenDataServerCommand::anotherArg(string &current) {
+bool ConnectCommand::anotherArg(string &current) {
 
     // get const amout of anotehr args - 2.
     return Utils::getNArguments(_internalUseN);
 }
 
-bool OpenDataServerCommand::goBackArg(string &current) {
+bool ConnectCommand::goBackArg(string &current) {
     // open data server command don't need to go back to read before the keyword.
     return false;
 }

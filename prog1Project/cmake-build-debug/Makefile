@@ -150,6 +150,33 @@ Commands/ConditionParser.cpp.s:
 	$(MAKE) -f CMakeFiles/prog1Project.dir/build.make CMakeFiles/prog1Project.dir/Commands/ConditionParser.cpp.s
 .PHONY : Commands/ConditionParser.cpp.s
 
+Commands/ConnectCommand.o: Commands/ConnectCommand.cpp.o
+
+.PHONY : Commands/ConnectCommand.o
+
+# target to build an object file
+Commands/ConnectCommand.cpp.o:
+	$(MAKE) -f CMakeFiles/prog1Project.dir/build.make CMakeFiles/prog1Project.dir/Commands/ConnectCommand.cpp.o
+.PHONY : Commands/ConnectCommand.cpp.o
+
+Commands/ConnectCommand.i: Commands/ConnectCommand.cpp.i
+
+.PHONY : Commands/ConnectCommand.i
+
+# target to preprocess a source file
+Commands/ConnectCommand.cpp.i:
+	$(MAKE) -f CMakeFiles/prog1Project.dir/build.make CMakeFiles/prog1Project.dir/Commands/ConnectCommand.cpp.i
+.PHONY : Commands/ConnectCommand.cpp.i
+
+Commands/ConnectCommand.s: Commands/ConnectCommand.cpp.s
+
+.PHONY : Commands/ConnectCommand.s
+
+# target to generate assembly for a file
+Commands/ConnectCommand.cpp.s:
+	$(MAKE) -f CMakeFiles/prog1Project.dir/build.make CMakeFiles/prog1Project.dir/Commands/ConnectCommand.cpp.s
+.PHONY : Commands/ConnectCommand.cpp.s
+
 Commands/DefineVarCommand.o: Commands/DefineVarCommand.cpp.o
 
 .PHONY : Commands/DefineVarCommand.o
@@ -393,6 +420,33 @@ Interperter.cpp.s:
 	$(MAKE) -f CMakeFiles/prog1Project.dir/build.make CMakeFiles/prog1Project.dir/Interperter.cpp.s
 .PHONY : Interperter.cpp.s
 
+Sockets/FlightSocketManager.o: Sockets/FlightSocketManager.cpp.o
+
+.PHONY : Sockets/FlightSocketManager.o
+
+# target to build an object file
+Sockets/FlightSocketManager.cpp.o:
+	$(MAKE) -f CMakeFiles/prog1Project.dir/build.make CMakeFiles/prog1Project.dir/Sockets/FlightSocketManager.cpp.o
+.PHONY : Sockets/FlightSocketManager.cpp.o
+
+Sockets/FlightSocketManager.i: Sockets/FlightSocketManager.cpp.i
+
+.PHONY : Sockets/FlightSocketManager.i
+
+# target to preprocess a source file
+Sockets/FlightSocketManager.cpp.i:
+	$(MAKE) -f CMakeFiles/prog1Project.dir/build.make CMakeFiles/prog1Project.dir/Sockets/FlightSocketManager.cpp.i
+.PHONY : Sockets/FlightSocketManager.cpp.i
+
+Sockets/FlightSocketManager.s: Sockets/FlightSocketManager.cpp.s
+
+.PHONY : Sockets/FlightSocketManager.s
+
+# target to generate assembly for a file
+Sockets/FlightSocketManager.cpp.s:
+	$(MAKE) -f CMakeFiles/prog1Project.dir/build.make CMakeFiles/prog1Project.dir/Sockets/FlightSocketManager.cpp.s
+.PHONY : Sockets/FlightSocketManager.cpp.s
+
 Utils.o: Utils.cpp.o
 
 .PHONY : Utils.o
@@ -459,6 +513,9 @@ help:
 	@echo "... Commands/ConditionParser.o"
 	@echo "... Commands/ConditionParser.i"
 	@echo "... Commands/ConditionParser.s"
+	@echo "... Commands/ConnectCommand.o"
+	@echo "... Commands/ConnectCommand.i"
+	@echo "... Commands/ConnectCommand.s"
 	@echo "... Commands/DefineVarCommand.o"
 	@echo "... Commands/DefineVarCommand.i"
 	@echo "... Commands/DefineVarCommand.s"
@@ -486,6 +543,9 @@ help:
 	@echo "... Interperter.o"
 	@echo "... Interperter.i"
 	@echo "... Interperter.s"
+	@echo "... Sockets/FlightSocketManager.o"
+	@echo "... Sockets/FlightSocketManager.i"
+	@echo "... Sockets/FlightSocketManager.s"
 	@echo "... Utils.o"
 	@echo "... Utils.i"
 	@echo "... Utils.s"

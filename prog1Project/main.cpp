@@ -15,6 +15,7 @@ using namespace std;;
 #include <limits.h>
 #include "Databases/SymbolsDB.h"
 #include "Enviroment.h"
+#include "Utils.h"
 
 int main() {
 

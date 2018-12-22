@@ -21,8 +21,31 @@ CMakeFiles/prog1Project.dir/Commands/ConditionParser.cpp.o: ../Expressions/Unary
 CMakeFiles/prog1Project.dir/Commands/ConditionParser.cpp.o: ../Interperter.h
 CMakeFiles/prog1Project.dir/Commands/ConditionParser.cpp.o: ../Utils.h
 
+CMakeFiles/prog1Project.dir/Commands/ConnectCommand.cpp.o: ../Command.h
+CMakeFiles/prog1Project.dir/Commands/ConnectCommand.cpp.o: ../Commands/ConnectCommand.cpp
+CMakeFiles/prog1Project.dir/Commands/ConnectCommand.cpp.o: ../Commands/ConnectCommand.h
+CMakeFiles/prog1Project.dir/Commands/ConnectCommand.cpp.o: ../Commands/NumberOfArgsToCommandException.h
+CMakeFiles/prog1Project.dir/Commands/ConnectCommand.cpp.o: ../Databases/SymbolsDB.h
+CMakeFiles/prog1Project.dir/Commands/ConnectCommand.cpp.o: ../Expression.h
+CMakeFiles/prog1Project.dir/Commands/ConnectCommand.cpp.o: ../Expressions.h
+CMakeFiles/prog1Project.dir/Commands/ConnectCommand.cpp.o: ../Expressions/BinaryExpression.h
+CMakeFiles/prog1Project.dir/Commands/ConnectCommand.cpp.o: ../Expressions/BooleanExpressions/Bigger.h
+CMakeFiles/prog1Project.dir/Commands/ConnectCommand.cpp.o: ../Expressions/BooleanExpressions/Equals.h
+CMakeFiles/prog1Project.dir/Commands/ConnectCommand.cpp.o: ../Expressions/BooleanExpressions/NotEquals.h
+CMakeFiles/prog1Project.dir/Commands/ConnectCommand.cpp.o: ../Expressions/BooleanExpressions/Smaller.h
+CMakeFiles/prog1Project.dir/Commands/ConnectCommand.cpp.o: ../Expressions/Expressions_operators/Div.h
+CMakeFiles/prog1Project.dir/Commands/ConnectCommand.cpp.o: ../Expressions/Expressions_operators/Minus.h
+CMakeFiles/prog1Project.dir/Commands/ConnectCommand.cpp.o: ../Expressions/Expressions_operators/Mul.h
+CMakeFiles/prog1Project.dir/Commands/ConnectCommand.cpp.o: ../Expressions/Expressions_operators/Plus.h
+CMakeFiles/prog1Project.dir/Commands/ConnectCommand.cpp.o: ../Expressions/Expressions_operators/Pow.h
+CMakeFiles/prog1Project.dir/Commands/ConnectCommand.cpp.o: ../Expressions/Number.h
+CMakeFiles/prog1Project.dir/Commands/ConnectCommand.cpp.o: ../Expressions/UnaryExpression.h
+CMakeFiles/prog1Project.dir/Commands/ConnectCommand.cpp.o: ../Sockets/FlightSocketManager.h
+CMakeFiles/prog1Project.dir/Commands/ConnectCommand.cpp.o: ../Utils.h
+
 CMakeFiles/prog1Project.dir/Commands/DefineVarCommand.cpp.o: ../Command.h
 CMakeFiles/prog1Project.dir/Commands/DefineVarCommand.cpp.o: ../Commands/ConditionParser.h
+CMakeFiles/prog1Project.dir/Commands/DefineVarCommand.cpp.o: ../Commands/ConnectCommand.h
 CMakeFiles/prog1Project.dir/Commands/DefineVarCommand.cpp.o: ../Commands/DefineVarCommand.cpp
 CMakeFiles/prog1Project.dir/Commands/DefineVarCommand.cpp.o: ../Commands/DefineVarCommand.h
 CMakeFiles/prog1Project.dir/Commands/DefineVarCommand.cpp.o: ../Commands/EqualsCommand.h
@@ -50,6 +73,7 @@ CMakeFiles/prog1Project.dir/Commands/DefineVarCommand.cpp.o: ../Expressions/Expr
 CMakeFiles/prog1Project.dir/Commands/DefineVarCommand.cpp.o: ../Expressions/Number.h
 CMakeFiles/prog1Project.dir/Commands/DefineVarCommand.cpp.o: ../Expressions/UnaryExpression.h
 CMakeFiles/prog1Project.dir/Commands/DefineVarCommand.cpp.o: ../Interperter.h
+CMakeFiles/prog1Project.dir/Commands/DefineVarCommand.cpp.o: ../Sockets/FlightSocketManager.h
 CMakeFiles/prog1Project.dir/Commands/DefineVarCommand.cpp.o: ../Utils.h
 
 CMakeFiles/prog1Project.dir/Commands/EqualsCommand.cpp.o: ../Command.h
@@ -73,6 +97,7 @@ CMakeFiles/prog1Project.dir/Commands/EqualsCommand.cpp.o: ../Expressions/Express
 CMakeFiles/prog1Project.dir/Commands/EqualsCommand.cpp.o: ../Expressions/Number.h
 CMakeFiles/prog1Project.dir/Commands/EqualsCommand.cpp.o: ../Expressions/UnaryExpression.h
 CMakeFiles/prog1Project.dir/Commands/EqualsCommand.cpp.o: ../Interperter.h
+CMakeFiles/prog1Project.dir/Commands/EqualsCommand.cpp.o: ../Sockets/FlightSocketManager.h
 CMakeFiles/prog1Project.dir/Commands/EqualsCommand.cpp.o: ../Utils.h
 
 CMakeFiles/prog1Project.dir/Commands/IfCommand.cpp.o: ../Command.h
@@ -121,6 +146,7 @@ CMakeFiles/prog1Project.dir/Commands/PrintCommand.cpp.o: ../Expressions/Expressi
 CMakeFiles/prog1Project.dir/Commands/PrintCommand.cpp.o: ../Expressions/Number.h
 CMakeFiles/prog1Project.dir/Commands/PrintCommand.cpp.o: ../Expressions/UnaryExpression.h
 CMakeFiles/prog1Project.dir/Commands/PrintCommand.cpp.o: ../Interperter.h
+CMakeFiles/prog1Project.dir/Commands/PrintCommand.cpp.o: ../Sockets/FlightSocketManager.h
 CMakeFiles/prog1Project.dir/Commands/PrintCommand.cpp.o: ../Utils.h
 
 CMakeFiles/prog1Project.dir/Commands/WhileCommand.cpp.o: ../Command.h
@@ -206,7 +232,12 @@ CMakeFiles/prog1Project.dir/Interperter.cpp.o: ../Expressions/UnaryExpression.h
 CMakeFiles/prog1Project.dir/Interperter.cpp.o: ../Expressions/Var.h
 CMakeFiles/prog1Project.dir/Interperter.cpp.o: ../Interperter.cpp
 CMakeFiles/prog1Project.dir/Interperter.cpp.o: ../Interperter.h
+CMakeFiles/prog1Project.dir/Interperter.cpp.o: ../Sockets/FlightSocketManager.h
 CMakeFiles/prog1Project.dir/Interperter.cpp.o: ../Utils.h
+
+CMakeFiles/prog1Project.dir/Sockets/FlightSocketManager.cpp.o: ../Sockets/FlightSocketManager.cpp
+CMakeFiles/prog1Project.dir/Sockets/FlightSocketManager.cpp.o: ../Sockets/FlightSocketManager.h
+CMakeFiles/prog1Project.dir/Sockets/FlightSocketManager.cpp.o: ../Utils.h
 
 CMakeFiles/prog1Project.dir/Utils.cpp.o: ../Utils.cpp
 CMakeFiles/prog1Project.dir/Utils.cpp.o: ../Utils.h
@@ -229,5 +260,7 @@ CMakeFiles/prog1Project.dir/main.cpp.o: ../Expressions/Expressions_operators/Pow
 CMakeFiles/prog1Project.dir/main.cpp.o: ../Expressions/Number.h
 CMakeFiles/prog1Project.dir/main.cpp.o: ../Expressions/UnaryExpression.h
 CMakeFiles/prog1Project.dir/main.cpp.o: ../Interperter.h
+CMakeFiles/prog1Project.dir/main.cpp.o: ../Sockets/FlightSocketManager.h
+CMakeFiles/prog1Project.dir/main.cpp.o: ../Utils.h
 CMakeFiles/prog1Project.dir/main.cpp.o: ../main.cpp
 

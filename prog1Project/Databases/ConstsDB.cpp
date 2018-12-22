@@ -9,6 +9,7 @@
 #include "../Commands/EqualsCommand.h"
 #include "../Commands/DefineVarCommand.h"
 #include "../Commands/OpenDataServerCommand.h"
+#include "../Commands/ConnectCommand.h"
 //intilizing const maps:
 
 const string ConstsDB::ENDLINE_KEYWORD = ";";
@@ -21,7 +22,7 @@ map<string, Command*> m =
         {{ "if", new IfCommand() }, { "while", new WhileCommand() },
          { "openDataServer", new OpenDataServerCommand() }, { "print", new PrintCommand()} ,
          {ConstsDB::ENDLINE_KEYWORD, new SemicolonCommand()}, {"=", new EqualsCommand()},
-         {"var", new DefineVarCommand()}
+         {"var", new DefineVarCommand()}, {"connect", new ConnectCommand()}
         };
 
     // TODO: insert var, connect, =, bind.

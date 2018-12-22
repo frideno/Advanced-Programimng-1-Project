@@ -1,5 +1,5 @@
-var x = 1
-while (x < 2) {
-    x = x + 1
-}
+connect 127.0.0.1 5409
+var y = bind "controls/engines/engine/throttle"
+y = 0.9
+var x = "controls/engines/engine/throttle"
 print x

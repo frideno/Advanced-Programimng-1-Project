@@ -5,6 +5,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Commands/ConditionParser.cpp" "/home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/cmake-build-debug/CMakeFiles/prog1Project.dir/Commands/ConditionParser.cpp.o"
+  "/home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Commands/ConnectCommand.cpp" "/home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/cmake-build-debug/CMakeFiles/prog1Project.dir/Commands/ConnectCommand.cpp.o"
   "/home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Commands/DefineVarCommand.cpp" "/home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/cmake-build-debug/CMakeFiles/prog1Project.dir/Commands/DefineVarCommand.cpp.o"
   "/home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Commands/EqualsCommand.cpp" "/home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/cmake-build-debug/CMakeFiles/prog1Project.dir/Commands/EqualsCommand.cpp.o"
   "/home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Commands/IfCommand.cpp" "/home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/cmake-build-debug/CMakeFiles/prog1Project.dir/Commands/IfCommand.cpp.o"
@@ -14,6 +15,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Enviroment.cpp" "/home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/cmake-build-debug/CMakeFiles/prog1Project.dir/Enviroment.cpp.o"
   "/home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expressions/ExpressionFactory.cpp" "/home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/cmake-build-debug/CMakeFiles/prog1Project.dir/Expressions/ExpressionFactory.cpp.o"
   "/home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Interperter.cpp" "/home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/cmake-build-debug/CMakeFiles/prog1Project.dir/Interperter.cpp.o"
+  "/home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Sockets/FlightSocketManager.cpp" "/home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/cmake-build-debug/CMakeFiles/prog1Project.dir/Sockets/FlightSocketManager.cpp.o"
   "/home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Utils.cpp" "/home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/cmake-build-debug/CMakeFiles/prog1Project.dir/Utils.cpp.o"
   "/home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/main.cpp" "/home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/cmake-build-debug/CMakeFiles/prog1Project.dir/main.cpp.o"
   )

@@ -20,6 +20,7 @@ void EqualsCommand::doCommand(vector<string> &args) {
         // binds between first and second var.
         string& otherArgName = args[3];
         SymbolsDB::bind(varName, otherArgName);
+        SymbolsDB::setsymbol(varName, SymbolsDB::getsymbol(otherArgName));
 
     }
     else {
