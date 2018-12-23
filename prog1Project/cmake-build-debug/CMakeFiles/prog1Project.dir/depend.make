@@ -124,6 +124,22 @@ CMakeFiles/prog1Project.dir/Commands/OpenDataServerCommand.cpp.o: ../Command.h
 CMakeFiles/prog1Project.dir/Commands/OpenDataServerCommand.cpp.o: ../Commands/NumberOfArgsToCommandException.h
 CMakeFiles/prog1Project.dir/Commands/OpenDataServerCommand.cpp.o: ../Commands/OpenDataServerCommand.cpp
 CMakeFiles/prog1Project.dir/Commands/OpenDataServerCommand.cpp.o: ../Commands/OpenDataServerCommand.h
+CMakeFiles/prog1Project.dir/Commands/OpenDataServerCommand.cpp.o: ../Databases/SymbolsDB.h
+CMakeFiles/prog1Project.dir/Commands/OpenDataServerCommand.cpp.o: ../Expression.h
+CMakeFiles/prog1Project.dir/Commands/OpenDataServerCommand.cpp.o: ../Expressions.h
+CMakeFiles/prog1Project.dir/Commands/OpenDataServerCommand.cpp.o: ../Expressions/BinaryExpression.h
+CMakeFiles/prog1Project.dir/Commands/OpenDataServerCommand.cpp.o: ../Expressions/BooleanExpressions/Bigger.h
+CMakeFiles/prog1Project.dir/Commands/OpenDataServerCommand.cpp.o: ../Expressions/BooleanExpressions/Equals.h
+CMakeFiles/prog1Project.dir/Commands/OpenDataServerCommand.cpp.o: ../Expressions/BooleanExpressions/NotEquals.h
+CMakeFiles/prog1Project.dir/Commands/OpenDataServerCommand.cpp.o: ../Expressions/BooleanExpressions/Smaller.h
+CMakeFiles/prog1Project.dir/Commands/OpenDataServerCommand.cpp.o: ../Expressions/Expressions_operators/Div.h
+CMakeFiles/prog1Project.dir/Commands/OpenDataServerCommand.cpp.o: ../Expressions/Expressions_operators/Minus.h
+CMakeFiles/prog1Project.dir/Commands/OpenDataServerCommand.cpp.o: ../Expressions/Expressions_operators/Mul.h
+CMakeFiles/prog1Project.dir/Commands/OpenDataServerCommand.cpp.o: ../Expressions/Expressions_operators/Plus.h
+CMakeFiles/prog1Project.dir/Commands/OpenDataServerCommand.cpp.o: ../Expressions/Expressions_operators/Pow.h
+CMakeFiles/prog1Project.dir/Commands/OpenDataServerCommand.cpp.o: ../Expressions/Number.h
+CMakeFiles/prog1Project.dir/Commands/OpenDataServerCommand.cpp.o: ../Expressions/UnaryExpression.h
+CMakeFiles/prog1Project.dir/Commands/OpenDataServerCommand.cpp.o: ../Sockets/FlightSocketManager.h
 CMakeFiles/prog1Project.dir/Commands/OpenDataServerCommand.cpp.o: ../Utils.h
 
 CMakeFiles/prog1Project.dir/Commands/PrintCommand.cpp.o: ../Command.h
