@@ -16,8 +16,13 @@
 #include <sys/socket.h>
 #include <thread>
 #include <iostream>
+#include <fcntl.h>
 
 using namespace std;
+
+const vector<string> OpenDataServerCommand::_FlightSymbols = {"\"/instrumentation/airspeed-indicator/indicated-speed-kt\"","\"/instrumentation/altimeter/indicated-altitude-ft\"","\"/instrumentation/altimeter/pressure-alt-ft\"","\"/instrumentation/attitude-indicator/indicated-pitch-deg\"","\"/instrumentation/attitude-indicator/indicated-roll-deg\"","\"/instrumentation/attitude-indicator/internal-pitch-deg\"","\"/instrumentation/attitude-indicator/internal-roll-deg\"","\"/instrumentation/encoder/indicated-altitude-ft\"","\"/instrumentation/encoder/pressure-alt-ft\"","\"/instrumentation/gps/indicated-altitude-ft\"","\"/instrumentation/gps/indicated-ground-speed-kt\"","\"/instrumentation/gps/indicated-vertical-speed\"","\"/instrumentation/heading-indicator/indicated-heading-deg\"","\"/instrumentation/magnetic-compass/indicated-heading-deg\"","\"/instrumentation/slip-skid-ball/indicated-slip-skid\"","\"/instrumentation/turn-indicator/indicated-turn-rate\"","\"/instrumentation/vertical-speed-indicator/indicated-speed-fpm\"","\"/controls/flight/aileron\"","\"/controls/flight/elevator\"","\"/controls/flight/rudder\"","\"/controls/flight/flaps\"","\"/controls/engines/engine/throttle\"","\"/engines/engine/rpm\""};
+
+void task1(vector<string>& args);
 
 void OpenDataServerCommand::getAllFlightSymbols() {
 
@@ -33,7 +38,7 @@ void OpenDataServerCommand::doCommand(vector<string> &args) {
 
     //void (OpenDataServerCommand::*func)(vector<string>&);
     //func = &OpenDataServerCommand::task1;
-    thread tDataServer(&OpenDataServerCommand::task1, ref(args));
+    thread tDataServer(&OpenDataServerCommand::task1, this,  ref(args));
 
     tDataServer.join();
 //    thread t_1(x, 0);
@@ -65,7 +70,7 @@ void OpenDataServerCommand::task1(vector<string>& args) {
         throw("failed opening server, invalid argument PORT or RATE is not representing an int");
     }
 
-    int sockfd, newsockfd, portno, clilen;
+    int sockfd, newsockfd, clilen;
     char buffer[256];
     struct sockaddr_in serv_addr, cli_addr;
     int  n;
@@ -99,6 +104,7 @@ void OpenDataServerCommand::task1(vector<string>& args) {
     clilen = sizeof(cli_addr);
 
     /* Accept actual connection from the client */
+    fcntl(sockfd, F_SETFL, fcntl(sockfd, F_GETFL, 0) | O_NONBLOCK);
     newsockfd = accept(sockfd, (struct sockaddr *)&cli_addr, (socklen_t*)&clilen);
 
     if (newsockfd < 0) {

@@ -16,6 +16,9 @@ class OpenDataServerCommand: public Command {
 private:
     FlightSocketManager* _socketManager;
 
+    // list of all symbolNames for flight.
+    static const vector<string> _FlightSymbols;
+
     // take all flight symbols from server to maps.
     void getAllFlightSymbols();
 
@@ -27,8 +30,7 @@ private:
 public:
 
     // command method:
-
-    bool goBackArg(string &current) override;
+        bool goBackArg(string &current) override;
 
     void doCommand(vector<string> &args) override;
 
