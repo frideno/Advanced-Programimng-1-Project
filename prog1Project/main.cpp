@@ -4,7 +4,7 @@
 #include <string>
 #include <iostream>
 #include <fstream>
-#include "Interperter.h"
+#include "Interpreter.h"
 
 using namespace std;;
 #include <unistd.h>

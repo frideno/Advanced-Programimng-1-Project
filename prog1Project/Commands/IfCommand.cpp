@@ -4,14 +4,16 @@
 
 #include "IfCommand.h"
 
-void IfCommand::doCommand(std::vector<std::string>& args) {
+void IfCommand::doCommand() {
 
+    saveLastScopeSymbols();
     // do parent condition parser to get the condition and statements.
-    ConditionParser::doCommand(args);
+    ConditionParser::doCommand();
 
     if(getCondition()->calculate() > 0) {
         getStatementsInterpreter()->parser();
 
     }
+    restoreLastScopeSymbols();
 
 }

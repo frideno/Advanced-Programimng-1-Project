@@ -3,26 +3,20 @@
 //
 
 #include "ConstsDB.h"
-#include "../Commands/WhileCommand.h"
-#include "../Commands/IfCommand.h"
-#include "../Commands/SemicolonCommand.h"
-#include "../Commands/EqualsCommand.h"
-#include "../Commands/DefineVarCommand.h"
-#include "../Commands/OpenDataServerCommand.h"
-#include "../Commands/ConnectCommand.h"
+#include "../Commands/Creators.h"
 //intilizing const maps:
 
 const string ConstsDB::ENDLINE_KEYWORD = ";";
 
 // inner use to intilize maps:
 
-map<string, Command*> ConstsDB::createCommandsByNames() {
+map<string, CommandCreator*> ConstsDB::createCommandsByNames() {
 
-map<string, Command*> m =
-        {{ "if", new IfCommand() }, { "while", new WhileCommand() },
-         { "openDataServer", new OpenDataServerCommand() }, { "print", new PrintCommand()} ,
-         {ConstsDB::ENDLINE_KEYWORD, new SemicolonCommand()}, {"=", new EqualsCommand()},
-         {"var", new DefineVarCommand()}, {"connect", new ConnectCommand()}
+map<string, CommandCreator*> m =
+        {{ "if", new IfCommandCreator() }, { "while", new WhileCommandCreator() },
+         { "openDataServer", new OpenDataServerCommandCreator() }, { "print", new PrintCommandCreator()} ,
+         {ConstsDB::ENDLINE_KEYWORD, new SemicolonCommandCreator()}, {"=", new EqualsCommandCreator()},
+         {"var", new DefineVarCommandCreator()}, {"connect", new ConnectCommandCreator()}, {"sleep", new SleepCommandCreator()}
         };
 
     // TODO: insert var, connect, =, bind.
@@ -30,7 +24,7 @@ map<string, Command*> m =
 };
 
 // now create the maps:
-map<string, Command*> ConstsDB::_commandsByNames = ConstsDB::createCommandsByNames();
+map<string, CommandCreator*> ConstsDB::_commandsByNames = ConstsDB::createCommandsByNames();
 
 map<string, double> ConstsDB::_keywordValues = ConstsDB::createKeywordValues();
 
@@ -39,10 +33,10 @@ map<string, double> ConstsDB::createKeywordValues() {
     return m;
 };
 
-Command* ConstsDB::createCommand(string name) {
+Command* ConstsDB::createCommand(string name, vector<string>& args) {
     if(_commandsByNames.count(name) != 0) {
         // TODO: CHANGE TO FACTORY.
-        return _commandsByNames.at(name)->clone();
+        return _commandsByNames.at(name)->create(args);
     }
     else {
         throw("Command (keyword) name is not defined");
@@ -50,7 +44,7 @@ Command* ConstsDB::createCommand(string name) {
 
 }
 
-Command *ConstsDB::getCommand(string name) {
+CommandCreator *ConstsDB::getCommand(string name) {
     if(_commandsByNames.count(name) != 0) {
         return  _commandsByNames.at(name);
     }

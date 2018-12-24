@@ -9,7 +9,7 @@
 #include <string>
 #include <map>
 #include "../Command.h"
-#include "../Sockets/FlightSocketManager.h"
+#include "../Sockets/FlightDataGetterSetter.h"
 
 using namespace std;
 
@@ -20,7 +20,7 @@ private:
     static const double UNINTILIZED_VAR_DEFAULT;
     static map<string, double> _symbolTable;
     static map<string, string> _bindTable;  // TODO: check if maybe change to <string, list<string>> if you can be binded to more than one.
-    static FlightSocketManager* _socketManager;
+    static FlightDataGetterSetter* _socketManager;
 
     // returns if the symbolName starts and ends with paraheses means it is a source var.
 public:
@@ -34,17 +34,17 @@ public:
     // dinamicly changed map methods:
 
     // get a symbol value named after name.
-    static  double getsymbol(string symbolName);
+    static  double getSymbol(string symbolName);
 
     // add a symbol by defualt value;
-    static void addsymbol(string symbolName);
+    static void addSymbol(string symbolName);
 
 
     // adds a (symbolName, symbol ovalue) to symbols map.
-    static void setsymbol(string  symbolName, double symbolValue);
+    static void setSymbol(string  symbolName, double symbolValue);
 
     // removes a (symbolName, symbol value) from symbols map.
-    static void removesymbol(string symbolName);
+    static void removeSymbol(string symbolName);
 
     // return if a symbol named symbolName is in the symbolTable.
     static bool containsSymbol(string symbolName);
@@ -55,11 +55,13 @@ public:
     // check if two vars with those names are binded in bind map.
     static bool isBinded(string var1, string var2);
 
+    static vector<string> getSymbolsNames();
+
     // set the flightGear socket to be as teh sockfd.
     static void setSocket(int sockfd);
 
     // get the socket sender.
-    static FlightSocketManager *get_socketManager();
+    static FlightDataGetterSetter *get_socketManager();
 
 };
 

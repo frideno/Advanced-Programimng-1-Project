@@ -9,11 +9,14 @@
 #include "ConditionParser.h"
 
 class WhileCommand :public ConditionParser{
-public:
-    void doCommand(std::vector<std::string>& args) override;
 
-    // clonable:
-    Command* clone() { return new WhileCommand(*this);}
+public:
+    // constructor:
+    WhileCommand(vector<string>& v):
+    ConditionParser(v) {};
+
+    void doCommand() override;
+
 
 };
 

@@ -5,11 +5,11 @@
 #include <strings.h>
 #include <cstring>
 #include <unistd.h>
-#include "FlightSocketManager.h"
+#include "FlightDataGetterSetter.h"
 #include "../Utils.h"
 
 
-double FlightSocketManager::recieve(string message) {
+double FlightDataGetterSetter::recieve(string message) {
     char buffer[256];
 
     bzero(buffer, 256);
@@ -37,10 +37,10 @@ double FlightSocketManager::recieve(string message) {
 
 
     // extract the float part of the "x = '<double-part>' (double)" answer.
-    vector<string> equalSplit = Utils::split(answer, '=');
+    vector<string> equalSplit = Utils::strSplit(answer, '=');
     if (equalSplit.size() < 2)
         throw("server sent somthing wrong formmatted.");
-    vector<string> parantethisSplit = Utils::split(equalSplit[1], '\'');
+    vector<string> parantethisSplit = Utils::strSplit(equalSplit[1], '\'');
     if (parantethisSplit.size() < 3)
         throw("server sent somthing wrong formmatted.");
     string doublePart = parantethisSplit[1];
@@ -48,7 +48,7 @@ double FlightSocketManager::recieve(string message) {
     return Utils::to_number(doublePart);
 }
 
-void FlightSocketManager::send(string message) {
+void FlightDataGetterSetter::send(string message) {
     char buffer[256];
 
     bzero(buffer, 256);

@@ -1,9 +1,9 @@
 
 #include "ConnectCommand.h"
-#include "NumberOfArgsToCommandException.h"
 #include <stdexcept>
 #include "../Utils.h"
 #include "../Databases/SymbolsDB.h"
+#include "../Databases/ConstsDB.h"
 #include <iostream>
 #include <sys/types.h>
 #include <unistd.h>
@@ -25,7 +25,7 @@ using namespace std;
 
 void task(vector<string>& args);
 
-void ConnectCommand::doCommand(vector<string> &args) {
+void ConnectCommand::doCommand() {
     thread t1(task, ref(args));
     t1.join();
 }
@@ -45,9 +45,23 @@ void task(vector<string>& args) {
         char buffer[256];
 
         try {
-            port = (int) Utils::to_number(args[1]);
+            vector<Expression*> extractedExpressions = Utils::blabla(args);
+            if (extractedExpressions.size() != 1)
+                throw;
+
+            // get ip as string form args.
+
             server = gethostbyname(args[0].c_str());
 
+            // extracting next expression from args using shunting yard.
+            // deleting the ip, and sends the rest to shunting yard.
+            int skip = 0;
+            if (args[1] == ",")
+                skip  = 1;
+            args.erase(args.begin(), args.begin() + skip + 1);
+
+            // calculating the port from the expression.
+            port = Utils::blabla(args)[0]->calculate();
 
         }
         catch (exception& e){
@@ -90,8 +104,8 @@ void task(vector<string>& args) {
 
 bool ConnectCommand::anotherArg(string &current) {
 
-    // get const amout of anotehr args - 2.
-    return Utils::getNArguments(_internalUseN);
+    // get until end of line.
+    return current != ConstsDB::ENDLINE_KEYWORD;
 }
 
 bool ConnectCommand::goBackArg(string &current) {

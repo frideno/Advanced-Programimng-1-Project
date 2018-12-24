@@ -10,15 +10,22 @@
 class EqualsCommand: public Command {
 private:
     int _internalUseN = 2;
+
+protected:
+
+    vector<string>& args;
 public:
-    void doCommand(vector<string> &args) override;
+    // constructor:
+    EqualsCommand(vector<string>& v):
+    args(v) {};
+
+    void doCommand() override;
 
     bool anotherArg(string &current) override;
 
     bool goBackArg(string &current) override;
 
-    // clonable:
-    Command* clone() { return new EqualsCommand(*this);}
+
 
 };
 

@@ -13,18 +13,22 @@
  */
 class PrintCommand : public Command{
 
+protected:
+
+    vector<string>& args;
+
 public:
+    // constructor:
+    PrintCommand(vector<string>& v):
+        args(v) {};
+
     bool anotherArg(string &current) override;
 
-    void doCommand(vector<string> &args) override;
+    void doCommand() override;
 
     bool goBackArg(string &current) override;
 
-    // clonable:
-    Command* clone() { return new PrintCommand(*this);}
 
-private:
-    int _internalUseN = 1;
 };
 
 

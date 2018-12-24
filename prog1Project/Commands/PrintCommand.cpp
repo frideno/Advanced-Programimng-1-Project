@@ -3,12 +3,12 @@
 //
 
 #include "PrintCommand.h"
-#include "NumberOfArgsToCommandException.h"
-#include "../Interperter.h"
+#include "../Interpreter.h"
 #include "../Utils.h"
 #include "../Databases/SymbolsDB.h"
+#include "../Databases/ConstsDB.h"
 
-void PrintCommand::doCommand(vector<string> &args) {
+void PrintCommand::doCommand() {
     string toPrint = args[0];
 
     // if we want to print a string in quatos, print it.
@@ -18,7 +18,11 @@ void PrintCommand::doCommand(vector<string> &args) {
                                                                         // length - 2 chars ahead - all but quaots.
         cout << withOutQuates;
     } else {
-        cout << SymbolsDB::getsymbol(toPrint);
+        // getting next expression with shunting yard from args.
+
+        vector<Expression*> extractedExpressions = Utils::blabla(args);
+        cout << extractedExpressions[0]->calculate() << endl;
+
     }
 
 }
@@ -32,7 +36,7 @@ bool PrintCommand::goBackArg(string &current) {
 
 bool PrintCommand::anotherArg(string &current) {
 
-    // get const amout of anotehr args - 1.
-    return Utils::getNArguments(_internalUseN);
+    // get until end of line.
+    return current != ConstsDB::ENDLINE_KEYWORD;
 
 }

@@ -7,41 +7,42 @@
 
 #include "../Command.h"
 #include <string>
-#include "../Sockets/FlightSocketManager.h"
+#include "../Sockets/FlightDataGetterSetter.h"
 
 
 using namespace std;
 
 class OpenDataServerCommand: public Command {
 private:
-    FlightSocketManager* _socketManager;
+    int _sockfd = 0;
 
     // list of all symbolNames for flight.
-    static const vector<string> _FlightSymbols;
+    static const vector<string> _flightSymbols;
 
     // take all flight symbols from server to maps.
     void getAllFlightSymbols();
 
+    // opens a server socket, that can recieve data from client - flight simulator.
+    void openServer(int port, int rate);
+
     void task1(vector<string>& args);
 
-    vector<string> symbolsNames;
+protected:
 
-
+    vector<string>& args;
 public:
+
+    // constructor:
+    OpenDataServerCommand(vector<string>& v):
+        args(v) {};
 
     // command method:
         bool goBackArg(string &current) override;
 
-    void doCommand(vector<string> &args) override;
+    void doCommand() override;
 
     bool anotherArg(string &current) override;
 
 
-
-        // clonable:
-    Command* clone() { return new OpenDataServerCommand(*this);}
-
-private:
-    int _internalUseN = 2;
 };
 #endif //PROG1PROJECT_OPENDATASERVER_H

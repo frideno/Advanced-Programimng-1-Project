@@ -5,7 +5,8 @@
 #include "Enviroment.h"
 #include <iostream>
 #include "Utils.h"
-#include "Interperter.h"
+#include "Interpreter.h"
+#include "Databases/ConstsDB.h"
 
 
 using namespace std;
@@ -32,9 +33,9 @@ void Enviroment::operation() {
 void Enviroment::CommandlineOperation() {
 // test parser:
     try {
-        Interperter* i = new Interperter();
+        Interpreter* i = new Interpreter();
 
-        string line = ";";
+        string line = ConstsDB::ENDLINE_KEYWORD;
         while (line != "done") {
 
             // if the command is to operate a script from file - run "../fileName"
@@ -74,7 +75,7 @@ void Enviroment::runScriptFromFile(std::string &fileName) {
 
     ifstream file("../"+fileName);
     if (file.is_open()) {
-        Interperter* i = new Interperter();
+        Interpreter* i = new Interpreter();
         string line;
         while (getline(file, line)) {
             i->lexer(line);

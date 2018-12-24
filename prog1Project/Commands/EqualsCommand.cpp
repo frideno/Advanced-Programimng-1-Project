@@ -6,9 +6,9 @@
 #include "../Utils.h"
 #include "../Databases/ConstsDB.h"
 #include "../Databases/SymbolsDB.h"
-#include "../Interperter.h"
+#include "../Interpreter.h"
 
-void EqualsCommand::doCommand(vector<string> &args) {
+void EqualsCommand::doCommand() {
     // TODO: handle bind.
     // arguments are: varName, = , (optional bind) ..... (expression).
 
@@ -20,7 +20,7 @@ void EqualsCommand::doCommand(vector<string> &args) {
         // binds between first and second var.
         string& otherArgName = args[3];
         SymbolsDB::bind(varName, otherArgName);
-        SymbolsDB::setsymbol(varName, SymbolsDB::getsymbol(otherArgName));
+        SymbolsDB::setSymbol(varName, SymbolsDB::getSymbol(otherArgName));
 
     }
     else {
@@ -28,11 +28,11 @@ void EqualsCommand::doCommand(vector<string> &args) {
         vector<string> expressionArgs(args.begin() + 2, args.end());
 
         // creates an expression with shunting yard.
-        Expression *e = Interperter::shuntingYard(expressionArgs);
+        Expression *e = Interpreter::shuntingYard(expressionArgs);
 
 
         // assign value of expression to varName;
-        SymbolsDB::setsymbol(varName, e->calculate());
+        SymbolsDB::setSymbol(varName, e->calculate());
 
         // deleting memory of e.
         delete e;
@@ -42,7 +42,7 @@ void EqualsCommand::doCommand(vector<string> &args) {
 
 bool EqualsCommand::anotherArg(string &current) {
     // get the whole line.
-    return !(current == ";");   //TODO
+    return !(current == ConstsDB::ENDLINE_KEYWORD);
 }
 
 bool EqualsCommand::goBackArg(string &current) {

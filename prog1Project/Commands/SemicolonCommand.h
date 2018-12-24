@@ -8,8 +8,16 @@
 #include "../Command.h"
 
 class SemicolonCommand: public Command{
+
+protected:
+
+    vector<string>& args;
+
 public:
-    void doCommand(vector<string> &args) override {
+    SemicolonCommand(vector<string>& v):
+        args(v) {}
+
+    void doCommand() override {
         // do nothing as ;.
     }
 

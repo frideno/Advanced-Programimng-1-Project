@@ -7,7 +7,7 @@
 
 #include "../Command.h"
 #include "../Expressions.h"
-#include "../Interperter.h"
+#include "../Interpreter.h"
 #include <vector>
 #include <string>
 #include <map>
@@ -21,25 +21,34 @@ private:
     Expression* _condition;
 
     // script of statements to execute:
-    Interperter* _statesmentsInterpreter;
+    Interpreter* _statesmentsInterpreter;
+
+    // vector of symbol names before entered the scope.
+    vector<string> _beforeScope;
 protected:
 
+    vector<string>& args;
     //getters:
 
     Expression* getCondition();
-    Interperter* getStatementsInterpreter();
+    Interpreter* getStatementsInterpreter();
 
-    int _innerUseN = 1;
+    // save the current symbol table var names into our list.
+    void saveLastScopeSymbols();
+
+    // restore the symbols defined in symbol table before the scope.
+    void restoreLastScopeSymbols();
+
 
 public:
-    void doCommand(std::vector<std::string>& args) override;
+    ConditionParser(vector<string>& v):
+        args(v) {};
+    void doCommand() override;
 
     bool anotherArg(string &current)override;
 
     bool goBackArg(string &current) override;
 
-    // clonable:
-    Command* clone() { return new ConditionParser(*this);}
 
 };
 

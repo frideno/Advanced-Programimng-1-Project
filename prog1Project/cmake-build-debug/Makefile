@@ -312,6 +312,33 @@ Commands/PrintCommand.cpp.s:
 	$(MAKE) -f CMakeFiles/prog1Project.dir/build.make CMakeFiles/prog1Project.dir/Commands/PrintCommand.cpp.s
 .PHONY : Commands/PrintCommand.cpp.s
 
+Commands/SleepCommand.o: Commands/SleepCommand.cpp.o
+
+.PHONY : Commands/SleepCommand.o
+
+# target to build an object file
+Commands/SleepCommand.cpp.o:
+	$(MAKE) -f CMakeFiles/prog1Project.dir/build.make CMakeFiles/prog1Project.dir/Commands/SleepCommand.cpp.o
+.PHONY : Commands/SleepCommand.cpp.o
+
+Commands/SleepCommand.i: Commands/SleepCommand.cpp.i
+
+.PHONY : Commands/SleepCommand.i
+
+# target to preprocess a source file
+Commands/SleepCommand.cpp.i:
+	$(MAKE) -f CMakeFiles/prog1Project.dir/build.make CMakeFiles/prog1Project.dir/Commands/SleepCommand.cpp.i
+.PHONY : Commands/SleepCommand.cpp.i
+
+Commands/SleepCommand.s: Commands/SleepCommand.cpp.s
+
+.PHONY : Commands/SleepCommand.s
+
+# target to generate assembly for a file
+Commands/SleepCommand.cpp.s:
+	$(MAKE) -f CMakeFiles/prog1Project.dir/build.make CMakeFiles/prog1Project.dir/Commands/SleepCommand.cpp.s
+.PHONY : Commands/SleepCommand.cpp.s
+
 Commands/WhileCommand.o: Commands/WhileCommand.cpp.o
 
 .PHONY : Commands/WhileCommand.o
@@ -393,59 +420,59 @@ Expressions/ExpressionFactory.cpp.s:
 	$(MAKE) -f CMakeFiles/prog1Project.dir/build.make CMakeFiles/prog1Project.dir/Expressions/ExpressionFactory.cpp.s
 .PHONY : Expressions/ExpressionFactory.cpp.s
 
-Interperter.o: Interperter.cpp.o
+Interpreter.o: Interpreter.cpp.o
 
-.PHONY : Interperter.o
-
-# target to build an object file
-Interperter.cpp.o:
-	$(MAKE) -f CMakeFiles/prog1Project.dir/build.make CMakeFiles/prog1Project.dir/Interperter.cpp.o
-.PHONY : Interperter.cpp.o
-
-Interperter.i: Interperter.cpp.i
-
-.PHONY : Interperter.i
-
-# target to preprocess a source file
-Interperter.cpp.i:
-	$(MAKE) -f CMakeFiles/prog1Project.dir/build.make CMakeFiles/prog1Project.dir/Interperter.cpp.i
-.PHONY : Interperter.cpp.i
-
-Interperter.s: Interperter.cpp.s
-
-.PHONY : Interperter.s
-
-# target to generate assembly for a file
-Interperter.cpp.s:
-	$(MAKE) -f CMakeFiles/prog1Project.dir/build.make CMakeFiles/prog1Project.dir/Interperter.cpp.s
-.PHONY : Interperter.cpp.s
-
-Sockets/FlightSocketManager.o: Sockets/FlightSocketManager.cpp.o
-
-.PHONY : Sockets/FlightSocketManager.o
+.PHONY : Interpreter.o
 
 # target to build an object file
-Sockets/FlightSocketManager.cpp.o:
-	$(MAKE) -f CMakeFiles/prog1Project.dir/build.make CMakeFiles/prog1Project.dir/Sockets/FlightSocketManager.cpp.o
-.PHONY : Sockets/FlightSocketManager.cpp.o
+Interpreter.cpp.o:
+	$(MAKE) -f CMakeFiles/prog1Project.dir/build.make CMakeFiles/prog1Project.dir/Interpreter.cpp.o
+.PHONY : Interpreter.cpp.o
 
-Sockets/FlightSocketManager.i: Sockets/FlightSocketManager.cpp.i
+Interpreter.i: Interpreter.cpp.i
 
-.PHONY : Sockets/FlightSocketManager.i
+.PHONY : Interpreter.i
 
 # target to preprocess a source file
-Sockets/FlightSocketManager.cpp.i:
-	$(MAKE) -f CMakeFiles/prog1Project.dir/build.make CMakeFiles/prog1Project.dir/Sockets/FlightSocketManager.cpp.i
-.PHONY : Sockets/FlightSocketManager.cpp.i
+Interpreter.cpp.i:
+	$(MAKE) -f CMakeFiles/prog1Project.dir/build.make CMakeFiles/prog1Project.dir/Interpreter.cpp.i
+.PHONY : Interpreter.cpp.i
 
-Sockets/FlightSocketManager.s: Sockets/FlightSocketManager.cpp.s
+Interpreter.s: Interpreter.cpp.s
 
-.PHONY : Sockets/FlightSocketManager.s
+.PHONY : Interpreter.s
 
 # target to generate assembly for a file
-Sockets/FlightSocketManager.cpp.s:
-	$(MAKE) -f CMakeFiles/prog1Project.dir/build.make CMakeFiles/prog1Project.dir/Sockets/FlightSocketManager.cpp.s
-.PHONY : Sockets/FlightSocketManager.cpp.s
+Interpreter.cpp.s:
+	$(MAKE) -f CMakeFiles/prog1Project.dir/build.make CMakeFiles/prog1Project.dir/Interpreter.cpp.s
+.PHONY : Interpreter.cpp.s
+
+Sockets/FlightDataGetterSetter.o: Sockets/FlightDataGetterSetter.cpp.o
+
+.PHONY : Sockets/FlightDataGetterSetter.o
+
+# target to build an object file
+Sockets/FlightDataGetterSetter.cpp.o:
+	$(MAKE) -f CMakeFiles/prog1Project.dir/build.make CMakeFiles/prog1Project.dir/Sockets/FlightDataGetterSetter.cpp.o
+.PHONY : Sockets/FlightDataGetterSetter.cpp.o
+
+Sockets/FlightDataGetterSetter.i: Sockets/FlightDataGetterSetter.cpp.i
+
+.PHONY : Sockets/FlightDataGetterSetter.i
+
+# target to preprocess a source file
+Sockets/FlightDataGetterSetter.cpp.i:
+	$(MAKE) -f CMakeFiles/prog1Project.dir/build.make CMakeFiles/prog1Project.dir/Sockets/FlightDataGetterSetter.cpp.i
+.PHONY : Sockets/FlightDataGetterSetter.cpp.i
+
+Sockets/FlightDataGetterSetter.s: Sockets/FlightDataGetterSetter.cpp.s
+
+.PHONY : Sockets/FlightDataGetterSetter.s
+
+# target to generate assembly for a file
+Sockets/FlightDataGetterSetter.cpp.s:
+	$(MAKE) -f CMakeFiles/prog1Project.dir/build.make CMakeFiles/prog1Project.dir/Sockets/FlightDataGetterSetter.cpp.s
+.PHONY : Sockets/FlightDataGetterSetter.cpp.s
 
 Utils.o: Utils.cpp.o
 
@@ -531,6 +558,9 @@ help:
 	@echo "... Commands/PrintCommand.o"
 	@echo "... Commands/PrintCommand.i"
 	@echo "... Commands/PrintCommand.s"
+	@echo "... Commands/SleepCommand.o"
+	@echo "... Commands/SleepCommand.i"
+	@echo "... Commands/SleepCommand.s"
 	@echo "... Commands/WhileCommand.o"
 	@echo "... Commands/WhileCommand.i"
 	@echo "... Commands/WhileCommand.s"
@@ -540,12 +570,12 @@ help:
 	@echo "... Expressions/ExpressionFactory.o"
 	@echo "... Expressions/ExpressionFactory.i"
 	@echo "... Expressions/ExpressionFactory.s"
-	@echo "... Interperter.o"
-	@echo "... Interperter.i"
-	@echo "... Interperter.s"
-	@echo "... Sockets/FlightSocketManager.o"
-	@echo "... Sockets/FlightSocketManager.i"
-	@echo "... Sockets/FlightSocketManager.s"
+	@echo "... Interpreter.o"
+	@echo "... Interpreter.i"
+	@echo "... Interpreter.s"
+	@echo "... Sockets/FlightDataGetterSetter.o"
+	@echo "... Sockets/FlightDataGetterSetter.i"
+	@echo "... Sockets/FlightDataGetterSetter.s"
 	@echo "... Utils.o"
 	@echo "... Utils.i"
 	@echo "... Utils.s"

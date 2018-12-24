@@ -10,15 +10,23 @@ using namespace std;
 class ConnectCommand: public Command {
 private:
     int _socketfd;
+
+protected:
+
+    vector<string>& args;
+
 public:
+
+    // constructor:
+    ConnectCommand(vector<string>& v):
+        args(v) {};
+
     bool goBackArg(string &current) override;
 
-    void doCommand(vector<string> &args) override;
+    void doCommand() override;
 
     bool anotherArg(string &current) override;
 
-    // clonable:
-    Command* clone() { return new ConnectCommand(*this);}
 
 
 private:

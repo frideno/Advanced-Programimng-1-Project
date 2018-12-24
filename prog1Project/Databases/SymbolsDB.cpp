@@ -6,9 +6,9 @@
 const double SymbolsDB::UNINTILIZED_VAR_DEFAULT = 0;
 map<string, double> SymbolsDB::_symbolTable;
 map<string, string> SymbolsDB::_bindTable;
-FlightSocketManager* SymbolsDB::_socketManager = nullptr;
+FlightDataGetterSetter* SymbolsDB::_socketManager = nullptr;
 
-double SymbolsDB::getsymbol(string symbolName) {
+double SymbolsDB::getSymbol(string symbolName) {
     // if symbol doesn't exsists, throw expception;
 
     // if it is a symbol describes an source path, get it from the flights server - last value, update the table.
@@ -26,7 +26,7 @@ double SymbolsDB::getsymbol(string symbolName) {
     return _symbolTable.at(symbolName);
 }
 
-void SymbolsDB::setsymbol(string symbolName, double symbolValue) {
+void SymbolsDB::setSymbol(string symbolName, double symbolValue) {
 
     // if symbol not exsists, throw exception.
 
@@ -57,6 +57,19 @@ void SymbolsDB::setsymbol(string symbolName, double symbolValue) {
     }
 
 }
+
+vector<string> SymbolsDB::getSymbolsNames() {
+
+    vector<string> v;
+
+    // extract the symbols names from the map into a vector.
+    for(map<string, double>::const_iterator it = _symbolTable.cbegin(); it != _symbolTable.cend(); ++it) {
+        v.push_back(it->first);
+    }
+
+    return v;
+}
+
 bool SymbolsDB::isSourceSymbol(string token) {
     return (token.length() > 2 && token[0] == '"' && token[token.length() - 1] == '"');
 }
@@ -75,7 +88,7 @@ string SymbolsDB::getPath(string sourceSymbolName) {
 
 
 
-void SymbolsDB::removesymbol(string symbolName) {
+void SymbolsDB::removeSymbol(string symbolName) {
     map<string, double>::iterator it = _symbolTable.find(symbolName);
     _symbolTable.erase(symbolName);
 }
@@ -84,7 +97,7 @@ bool SymbolsDB::containsSymbol(string symbolName) {
     return _symbolTable.count(symbolName) != 0;
 }
 
-void SymbolsDB::addsymbol(string symbolName) {
+void SymbolsDB::addSymbol(string symbolName) {
     _symbolTable[symbolName] = UNINTILIZED_VAR_DEFAULT;
 }
 
@@ -101,10 +114,10 @@ bool SymbolsDB::isBinded(string var1, string var2) {
 }
 
 void SymbolsDB::setSocket(int sockfd) {
-    _socketManager = new FlightSocketManager(sockfd);
+    _socketManager = new FlightDataGetterSetter(sockfd);
 }
 
-FlightSocketManager *SymbolsDB::get_socketManager() {
+FlightDataGetterSetter *SymbolsDB::get_socketManager() {
     return _socketManager;
 }
 

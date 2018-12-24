@@ -2,8 +2,8 @@
 // Created by omri on 12/22/18.
 //
 
-#ifndef PROG1PROJECT_FlightSocketManager_H
-#define PROG1PROJECT_FlightSocketManager_H
+#ifndef PROG1PROJECT_FlightDataGetterSetter_H
+#define PROG1PROJECT_FlightDataGetterSetter_H
 
 #include <map>
 #include <string>
@@ -13,7 +13,7 @@ using namespace std;
 /**
  * this class is responsible for manaing sockets and sending messages through them.
  */
-class FlightSocketManager {
+class FlightDataGetterSetter {
 
 private:
     int _socketfd;
@@ -21,7 +21,7 @@ private:
 public:
 
     // constructor.
-    FlightSocketManager(int _socketfd) : _socketfd(_socketfd) {}
+    FlightDataGetterSetter(int _socketfd) : _socketfd(_socketfd) {}
 
     // sends a message through the socket.
     double recieve(string message);
@@ -30,4 +30,4 @@ public:
 };
 
 
-#endif //PROG1PROJECT_FlightSocketManager_H
+#endif //PROG1PROJECT_FlightDataGetterSetter_H

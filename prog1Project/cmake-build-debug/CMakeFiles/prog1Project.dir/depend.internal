@@ -5,27 +5,6 @@ CMakeFiles/prog1Project.dir/Commands/ConditionParser.cpp.o
  /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Command.h
  /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Commands/ConditionParser.cpp
  /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Commands/ConditionParser.h
- /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expression.h
- /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expressions.h
- /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expressions/BinaryExpression.h
- /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expressions/BooleanExpressions/Bigger.h
- /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expressions/BooleanExpressions/Equals.h
- /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expressions/BooleanExpressions/NotEquals.h
- /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expressions/BooleanExpressions/Smaller.h
- /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expressions/Expressions_operators/Div.h
- /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expressions/Expressions_operators/Minus.h
- /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expressions/Expressions_operators/Mul.h
- /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expressions/Expressions_operators/Plus.h
- /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expressions/Expressions_operators/Pow.h
- /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expressions/Number.h
- /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expressions/UnaryExpression.h
- /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Interperter.h
- /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Utils.h
-CMakeFiles/prog1Project.dir/Commands/ConnectCommand.cpp.o
- /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Command.h
- /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Commands/ConnectCommand.cpp
- /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Commands/ConnectCommand.h
- /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Commands/NumberOfArgsToCommandException.h
  /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Databases/SymbolsDB.h
  /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expression.h
  /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expressions.h
@@ -41,12 +20,39 @@ CMakeFiles/prog1Project.dir/Commands/ConnectCommand.cpp.o
  /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expressions/Expressions_operators/Pow.h
  /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expressions/Number.h
  /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expressions/UnaryExpression.h
- /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Sockets/FlightSocketManager.h
+ /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Interpreter.h
+ /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Sockets/FlightDataGetterSetter.h
+ /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Utils.h
+CMakeFiles/prog1Project.dir/Commands/ConnectCommand.cpp.o
+ /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Command.h
+ /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Commands/CommandCreator.h
+ /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Commands/ConnectCommand.cpp
+ /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Commands/ConnectCommand.h
+ /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Commands/PrintCommand.h
+ /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Databases/ConstsDB.h
+ /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Databases/SymbolsDB.h
+ /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expression.h
+ /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expressions.h
+ /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expressions/BinaryExpression.h
+ /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expressions/BooleanExpressions/Bigger.h
+ /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expressions/BooleanExpressions/Equals.h
+ /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expressions/BooleanExpressions/NotEquals.h
+ /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expressions/BooleanExpressions/Smaller.h
+ /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expressions/Expressions_operators/Div.h
+ /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expressions/Expressions_operators/Minus.h
+ /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expressions/Expressions_operators/Mul.h
+ /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expressions/Expressions_operators/Plus.h
+ /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expressions/Expressions_operators/Pow.h
+ /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expressions/Number.h
+ /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expressions/UnaryExpression.h
+ /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Sockets/FlightDataGetterSetter.h
  /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Utils.h
 CMakeFiles/prog1Project.dir/Commands/DefineVarCommand.cpp.o
  /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Command.h
+ /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Commands/CommandCreator.h
  /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Commands/ConditionParser.h
  /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Commands/ConnectCommand.h
+ /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Commands/Creators.h
  /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Commands/DefineVarCommand.cpp
  /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Commands/DefineVarCommand.h
  /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Commands/EqualsCommand.h
@@ -54,6 +60,7 @@ CMakeFiles/prog1Project.dir/Commands/DefineVarCommand.cpp.o
  /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Commands/OpenDataServerCommand.h
  /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Commands/PrintCommand.h
  /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Commands/SemicolonCommand.h
+ /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Commands/SleepCommand.h
  /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Commands/WhileCommand.h
  /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Databases/ConstsDB.cpp
  /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Databases/ConstsDB.h
@@ -73,11 +80,12 @@ CMakeFiles/prog1Project.dir/Commands/DefineVarCommand.cpp.o
  /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expressions/Expressions_operators/Pow.h
  /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expressions/Number.h
  /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expressions/UnaryExpression.h
- /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Interperter.h
- /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Sockets/FlightSocketManager.h
+ /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Interpreter.h
+ /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Sockets/FlightDataGetterSetter.h
  /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Utils.h
 CMakeFiles/prog1Project.dir/Commands/EqualsCommand.cpp.o
  /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Command.h
+ /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Commands/CommandCreator.h
  /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Commands/EqualsCommand.cpp
  /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Commands/EqualsCommand.h
  /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Commands/PrintCommand.h
@@ -97,8 +105,8 @@ CMakeFiles/prog1Project.dir/Commands/EqualsCommand.cpp.o
  /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expressions/Expressions_operators/Pow.h
  /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expressions/Number.h
  /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expressions/UnaryExpression.h
- /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Interperter.h
- /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Sockets/FlightSocketManager.h
+ /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Interpreter.h
+ /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Sockets/FlightDataGetterSetter.h
  /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Utils.h
 CMakeFiles/prog1Project.dir/Commands/IfCommand.cpp.o
  /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Command.h
@@ -119,12 +127,14 @@ CMakeFiles/prog1Project.dir/Commands/IfCommand.cpp.o
  /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expressions/Expressions_operators/Pow.h
  /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expressions/Number.h
  /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expressions/UnaryExpression.h
- /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Interperter.h
+ /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Interpreter.h
 CMakeFiles/prog1Project.dir/Commands/OpenDataServerCommand.cpp.o
  /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Command.h
- /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Commands/NumberOfArgsToCommandException.h
+ /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Commands/CommandCreator.h
  /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Commands/OpenDataServerCommand.cpp
  /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Commands/OpenDataServerCommand.h
+ /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Commands/PrintCommand.h
+ /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Databases/ConstsDB.h
  /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Databases/SymbolsDB.h
  /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expression.h
  /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expressions.h
@@ -140,13 +150,14 @@ CMakeFiles/prog1Project.dir/Commands/OpenDataServerCommand.cpp.o
  /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expressions/Expressions_operators/Pow.h
  /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expressions/Number.h
  /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expressions/UnaryExpression.h
- /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Sockets/FlightSocketManager.h
+ /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Sockets/FlightDataGetterSetter.h
  /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Utils.h
 CMakeFiles/prog1Project.dir/Commands/PrintCommand.cpp.o
  /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Command.h
- /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Commands/NumberOfArgsToCommandException.h
+ /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Commands/CommandCreator.h
  /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Commands/PrintCommand.cpp
  /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Commands/PrintCommand.h
+ /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Databases/ConstsDB.h
  /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Databases/SymbolsDB.h
  /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expression.h
  /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expressions.h
@@ -162,8 +173,30 @@ CMakeFiles/prog1Project.dir/Commands/PrintCommand.cpp.o
  /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expressions/Expressions_operators/Pow.h
  /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expressions/Number.h
  /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expressions/UnaryExpression.h
- /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Interperter.h
- /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Sockets/FlightSocketManager.h
+ /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Interpreter.h
+ /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Sockets/FlightDataGetterSetter.h
+ /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Utils.h
+CMakeFiles/prog1Project.dir/Commands/SleepCommand.cpp.o
+ /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Command.h
+ /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Commands/CommandCreator.h
+ /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Commands/PrintCommand.h
+ /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Commands/SleepCommand.cpp
+ /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Commands/SleepCommand.h
+ /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Databases/ConstsDB.h
+ /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expression.h
+ /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expressions.h
+ /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expressions/BinaryExpression.h
+ /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expressions/BooleanExpressions/Bigger.h
+ /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expressions/BooleanExpressions/Equals.h
+ /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expressions/BooleanExpressions/NotEquals.h
+ /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expressions/BooleanExpressions/Smaller.h
+ /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expressions/Expressions_operators/Div.h
+ /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expressions/Expressions_operators/Minus.h
+ /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expressions/Expressions_operators/Mul.h
+ /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expressions/Expressions_operators/Plus.h
+ /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expressions/Expressions_operators/Pow.h
+ /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expressions/Number.h
+ /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expressions/UnaryExpression.h
  /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Utils.h
 CMakeFiles/prog1Project.dir/Commands/WhileCommand.cpp.o
  /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Command.h
@@ -184,9 +217,12 @@ CMakeFiles/prog1Project.dir/Commands/WhileCommand.cpp.o
  /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expressions/Expressions_operators/Pow.h
  /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expressions/Number.h
  /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expressions/UnaryExpression.h
- /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Interperter.h
+ /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Interpreter.h
 CMakeFiles/prog1Project.dir/Enviroment.cpp.o
  /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Command.h
+ /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Commands/CommandCreator.h
+ /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Commands/PrintCommand.h
+ /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Databases/ConstsDB.h
  /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Enviroment.cpp
  /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Enviroment.h
  /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expression.h
@@ -203,7 +239,7 @@ CMakeFiles/prog1Project.dir/Enviroment.cpp.o
  /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expressions/Expressions_operators/Pow.h
  /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expressions/Number.h
  /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expressions/UnaryExpression.h
- /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Interperter.h
+ /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Interpreter.h
  /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Utils.h
 CMakeFiles/prog1Project.dir/Expressions/ExpressionFactory.cpp.o
  /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expression.h
@@ -226,8 +262,9 @@ CMakeFiles/prog1Project.dir/Expressions/ExpressionFactory.cpp.o
  /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expressions/Expressions_operators/Plus.h
  /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expressions/Expressions_operators/Pow.h
  /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expressions/UnaryExpression.h
-CMakeFiles/prog1Project.dir/Interperter.cpp.o
+CMakeFiles/prog1Project.dir/Interpreter.cpp.o
  /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Command.h
+ /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Commands/CommandCreator.h
  /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Commands/PrintCommand.h
  /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Databases/ConstsDB.h
  /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Databases/SymbolsDB.h
@@ -247,15 +284,32 @@ CMakeFiles/prog1Project.dir/Interperter.cpp.o
  /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expressions/Number.h
  /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expressions/UnaryExpression.h
  /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expressions/Var.h
- /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Interperter.cpp
- /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Interperter.h
- /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Sockets/FlightSocketManager.h
+ /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Interpreter.cpp
+ /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Interpreter.h
+ /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Sockets/FlightDataGetterSetter.h
  /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Utils.h
-CMakeFiles/prog1Project.dir/Sockets/FlightSocketManager.cpp.o
- /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Sockets/FlightSocketManager.cpp
- /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Sockets/FlightSocketManager.h
+CMakeFiles/prog1Project.dir/Sockets/FlightDataGetterSetter.cpp.o
+ /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expression.h
+ /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Sockets/FlightDataGetterSetter.cpp
+ /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Sockets/FlightDataGetterSetter.h
  /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Utils.h
 CMakeFiles/prog1Project.dir/Utils.cpp.o
+ /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Command.h
+ /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expression.h
+ /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expressions.h
+ /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expressions/BinaryExpression.h
+ /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expressions/BooleanExpressions/Bigger.h
+ /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expressions/BooleanExpressions/Equals.h
+ /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expressions/BooleanExpressions/NotEquals.h
+ /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expressions/BooleanExpressions/Smaller.h
+ /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expressions/Expressions_operators/Div.h
+ /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expressions/Expressions_operators/Minus.h
+ /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expressions/Expressions_operators/Mul.h
+ /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expressions/Expressions_operators/Plus.h
+ /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expressions/Expressions_operators/Pow.h
+ /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expressions/Number.h
+ /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expressions/UnaryExpression.h
+ /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Interpreter.h
  /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Utils.cpp
  /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Utils.h
 CMakeFiles/prog1Project.dir/main.cpp.o
@@ -276,7 +330,7 @@ CMakeFiles/prog1Project.dir/main.cpp.o
  /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expressions/Expressions_operators/Pow.h
  /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expressions/Number.h
  /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expressions/UnaryExpression.h
- /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Interperter.h
- /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Sockets/FlightSocketManager.h
+ /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Interpreter.h
+ /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Sockets/FlightDataGetterSetter.h
  /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Utils.h
  /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/main.cpp

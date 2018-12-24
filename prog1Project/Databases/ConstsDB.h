@@ -10,13 +10,14 @@
 #include <map>
 #include "../Command.h"
 #include "../Commands/PrintCommand.h"
+#include "../Commands/CommandCreator.h"
 
 class ConstsDB {
 
 private:
 
 // initliztion of string names to command object map:
-    static map<string, Command *> createCommandsByNames();
+    static map<string, CommandCreator *> createCommandsByNames();
 
     // intiliztion of string names to keyword values map:
 
@@ -26,14 +27,14 @@ private:
     static map<string, double> _keywordValues;
 
     // commands table - between name and command object.
-    static map<string, Command *> _commandsByNames;
+    static map<string, CommandCreator*> _commandsByNames;
 
 public:
     static const string ENDLINE_KEYWORD;
 
-    static Command* createCommand(string name);
+    static Command* createCommand(string name, vector<string>& args);
         // get a command object by name.
-    static Command *getCommand(string name);
+    static CommandCreator *getCommand(string name);
 
     static bool containsCommand(string name);
 

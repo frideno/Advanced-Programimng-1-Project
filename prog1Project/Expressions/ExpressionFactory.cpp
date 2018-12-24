@@ -95,7 +95,8 @@ map<string, int> ExpressionFactory::createMap1() {
                     {"<=", 1},
                     {"||", 0},
                     {"&&", 0},
-                    {"^^", 0}
+                    {"^^", 0},
+                    {"#", 100}
 
             };
     return m;
@@ -124,7 +125,7 @@ map<string, int> ExpressionFactory::createNarity() {
                     {"||", 2},
                     {"&&", 2},
                     {"^^", 2},
-                    {"#",  1}
+                    {"#",  1},
             };
     return m;
 }

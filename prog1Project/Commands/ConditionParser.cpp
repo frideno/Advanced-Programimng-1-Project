@@ -3,19 +3,41 @@
 //
 
 #include "ConditionParser.h"
-#include "../Interperter.h"
+#include "../Interpreter.h"
 #include "../Utils.h"
+#include "../Databases/SymbolsDB.h"
+#include <algorithm>
+
 Expression *ConditionParser::getCondition() {
     return _condition;
 }
 
-Interperter *ConditionParser::getStatementsInterpreter() {
-    Interperter* i = _statesmentsInterpreter;
+Interpreter *ConditionParser::getStatementsInterpreter() {
+    Interpreter* i = _statesmentsInterpreter;
     i->reset();
     return i;
 }
 
-void ConditionParser::doCommand(vector<string>& args) {
+void ConditionParser::saveLastScopeSymbols() {
+    _beforeScope = SymbolsDB::getSymbolsNames();
+}
+
+void ConditionParser::restoreLastScopeSymbols() {
+
+    vector<string> afterScope = SymbolsDB::getSymbolsNames();
+
+    // for each symbol name defined in the scope, that is in after scope but not in before scope, delete it.
+    for(string& symbolName:afterScope) {
+
+        // if we didn't find the symbolName in the symbols before the scope, it created on the
+        // scope, and we delete it from the symbol table.
+        if (find(_beforeScope.cbegin(), _beforeScope.cend(), symbolName) == _beforeScope.cend()) {
+            SymbolsDB::removeSymbol(symbolName);
+        }
+    }
+}
+
+void ConditionParser::doCommand() {
 
     int i = 0;
 
@@ -35,8 +57,8 @@ void ConditionParser::doCommand(vector<string>& args) {
     // moving i to skip {.
     i++;
 
-    // interperter the shunting yard of expression into the condition, so we can caluclate it next.
-    _condition = Interperter::shuntingYard(conditionVec);
+    // Interpreter the shunting yard of expression into the condition, so we can caluclate it next.
+    _condition = Interpreter::shuntingYard(conditionVec);
 
 
     vector<string> statesments;
@@ -44,7 +66,7 @@ void ConditionParser::doCommand(vector<string>& args) {
     for(i; i < args.size(); i++)
         statesments.push_back(args[i]);
 
-    _statesmentsInterpreter = new Interperter(statesments);
+    _statesmentsInterpreter = new Interpreter(statesments);
 
 }
 

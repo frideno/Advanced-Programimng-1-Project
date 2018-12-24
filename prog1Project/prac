@@ -1,5 +1,9 @@
-connect 127.0.0.1 5409
-var y = bind "controls/engines/engine/throttle"
-y = 0.9
-var x = "controls/engines/engine/throttle"
+var x = 1
+while x < 5 {
 print x
+
+x = x + 1
+
+sleep 2000
+
+}

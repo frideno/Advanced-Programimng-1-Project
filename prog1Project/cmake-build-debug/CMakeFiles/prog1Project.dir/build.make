@@ -161,9 +161,22 @@ CMakeFiles/prog1Project.dir/Commands/ConnectCommand.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/prog1Project.dir/Commands/ConnectCommand.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Commands/ConnectCommand.cpp -o CMakeFiles/prog1Project.dir/Commands/ConnectCommand.cpp.s
 
+CMakeFiles/prog1Project.dir/Commands/SleepCommand.cpp.o: CMakeFiles/prog1Project.dir/flags.make
+CMakeFiles/prog1Project.dir/Commands/SleepCommand.cpp.o: ../Commands/SleepCommand.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/prog1Project.dir/Commands/SleepCommand.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/prog1Project.dir/Commands/SleepCommand.cpp.o -c /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Commands/SleepCommand.cpp
+
+CMakeFiles/prog1Project.dir/Commands/SleepCommand.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/prog1Project.dir/Commands/SleepCommand.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Commands/SleepCommand.cpp > CMakeFiles/prog1Project.dir/Commands/SleepCommand.cpp.i
+
+CMakeFiles/prog1Project.dir/Commands/SleepCommand.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/prog1Project.dir/Commands/SleepCommand.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Commands/SleepCommand.cpp -o CMakeFiles/prog1Project.dir/Commands/SleepCommand.cpp.s
+
 CMakeFiles/prog1Project.dir/Expressions/ExpressionFactory.cpp.o: CMakeFiles/prog1Project.dir/flags.make
 CMakeFiles/prog1Project.dir/Expressions/ExpressionFactory.cpp.o: ../Expressions/ExpressionFactory.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/prog1Project.dir/Expressions/ExpressionFactory.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/prog1Project.dir/Expressions/ExpressionFactory.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/prog1Project.dir/Expressions/ExpressionFactory.cpp.o -c /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expressions/ExpressionFactory.cpp
 
 CMakeFiles/prog1Project.dir/Expressions/ExpressionFactory.cpp.i: cmake_force
@@ -174,22 +187,22 @@ CMakeFiles/prog1Project.dir/Expressions/ExpressionFactory.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/prog1Project.dir/Expressions/ExpressionFactory.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expressions/ExpressionFactory.cpp -o CMakeFiles/prog1Project.dir/Expressions/ExpressionFactory.cpp.s
 
-CMakeFiles/prog1Project.dir/Sockets/FlightSocketManager.cpp.o: CMakeFiles/prog1Project.dir/flags.make
-CMakeFiles/prog1Project.dir/Sockets/FlightSocketManager.cpp.o: ../Sockets/FlightSocketManager.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/prog1Project.dir/Sockets/FlightSocketManager.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/prog1Project.dir/Sockets/FlightSocketManager.cpp.o -c /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Sockets/FlightSocketManager.cpp
+CMakeFiles/prog1Project.dir/Sockets/FlightDataGetterSetter.cpp.o: CMakeFiles/prog1Project.dir/flags.make
+CMakeFiles/prog1Project.dir/Sockets/FlightDataGetterSetter.cpp.o: ../Sockets/FlightDataGetterSetter.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/prog1Project.dir/Sockets/FlightDataGetterSetter.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/prog1Project.dir/Sockets/FlightDataGetterSetter.cpp.o -c /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Sockets/FlightDataGetterSetter.cpp
 
-CMakeFiles/prog1Project.dir/Sockets/FlightSocketManager.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/prog1Project.dir/Sockets/FlightSocketManager.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Sockets/FlightSocketManager.cpp > CMakeFiles/prog1Project.dir/Sockets/FlightSocketManager.cpp.i
+CMakeFiles/prog1Project.dir/Sockets/FlightDataGetterSetter.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/prog1Project.dir/Sockets/FlightDataGetterSetter.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Sockets/FlightDataGetterSetter.cpp > CMakeFiles/prog1Project.dir/Sockets/FlightDataGetterSetter.cpp.i
 
-CMakeFiles/prog1Project.dir/Sockets/FlightSocketManager.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/prog1Project.dir/Sockets/FlightSocketManager.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Sockets/FlightSocketManager.cpp -o CMakeFiles/prog1Project.dir/Sockets/FlightSocketManager.cpp.s
+CMakeFiles/prog1Project.dir/Sockets/FlightDataGetterSetter.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/prog1Project.dir/Sockets/FlightDataGetterSetter.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Sockets/FlightDataGetterSetter.cpp -o CMakeFiles/prog1Project.dir/Sockets/FlightDataGetterSetter.cpp.s
 
 CMakeFiles/prog1Project.dir/main.cpp.o: CMakeFiles/prog1Project.dir/flags.make
 CMakeFiles/prog1Project.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/prog1Project.dir/main.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/prog1Project.dir/main.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/prog1Project.dir/main.cpp.o -c /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/main.cpp
 
 CMakeFiles/prog1Project.dir/main.cpp.i: cmake_force
@@ -200,22 +213,22 @@ CMakeFiles/prog1Project.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/prog1Project.dir/main.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/main.cpp -o CMakeFiles/prog1Project.dir/main.cpp.s
 
-CMakeFiles/prog1Project.dir/Interperter.cpp.o: CMakeFiles/prog1Project.dir/flags.make
-CMakeFiles/prog1Project.dir/Interperter.cpp.o: ../Interperter.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/prog1Project.dir/Interperter.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/prog1Project.dir/Interperter.cpp.o -c /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Interperter.cpp
+CMakeFiles/prog1Project.dir/Interpreter.cpp.o: CMakeFiles/prog1Project.dir/flags.make
+CMakeFiles/prog1Project.dir/Interpreter.cpp.o: ../Interpreter.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/prog1Project.dir/Interpreter.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/prog1Project.dir/Interpreter.cpp.o -c /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Interpreter.cpp
 
-CMakeFiles/prog1Project.dir/Interperter.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/prog1Project.dir/Interperter.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Interperter.cpp > CMakeFiles/prog1Project.dir/Interperter.cpp.i
+CMakeFiles/prog1Project.dir/Interpreter.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/prog1Project.dir/Interpreter.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Interpreter.cpp > CMakeFiles/prog1Project.dir/Interpreter.cpp.i
 
-CMakeFiles/prog1Project.dir/Interperter.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/prog1Project.dir/Interperter.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Interperter.cpp -o CMakeFiles/prog1Project.dir/Interperter.cpp.s
+CMakeFiles/prog1Project.dir/Interpreter.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/prog1Project.dir/Interpreter.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Interpreter.cpp -o CMakeFiles/prog1Project.dir/Interpreter.cpp.s
 
 CMakeFiles/prog1Project.dir/Utils.cpp.o: CMakeFiles/prog1Project.dir/flags.make
 CMakeFiles/prog1Project.dir/Utils.cpp.o: ../Utils.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/prog1Project.dir/Utils.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/prog1Project.dir/Utils.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/prog1Project.dir/Utils.cpp.o -c /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Utils.cpp
 
 CMakeFiles/prog1Project.dir/Utils.cpp.i: cmake_force
@@ -228,7 +241,7 @@ CMakeFiles/prog1Project.dir/Utils.cpp.s: cmake_force
 
 CMakeFiles/prog1Project.dir/Enviroment.cpp.o: CMakeFiles/prog1Project.dir/flags.make
 CMakeFiles/prog1Project.dir/Enviroment.cpp.o: ../Enviroment.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/prog1Project.dir/Enviroment.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/prog1Project.dir/Enviroment.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/prog1Project.dir/Enviroment.cpp.o -c /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Enviroment.cpp
 
 CMakeFiles/prog1Project.dir/Enviroment.cpp.i: cmake_force
@@ -249,10 +262,11 @@ prog1Project_OBJECTS = \
 "CMakeFiles/prog1Project.dir/Commands/PrintCommand.cpp.o" \
 "CMakeFiles/prog1Project.dir/Commands/WhileCommand.cpp.o" \
 "CMakeFiles/prog1Project.dir/Commands/ConnectCommand.cpp.o" \
+"CMakeFiles/prog1Project.dir/Commands/SleepCommand.cpp.o" \
 "CMakeFiles/prog1Project.dir/Expressions/ExpressionFactory.cpp.o" \
-"CMakeFiles/prog1Project.dir/Sockets/FlightSocketManager.cpp.o" \
+"CMakeFiles/prog1Project.dir/Sockets/FlightDataGetterSetter.cpp.o" \
 "CMakeFiles/prog1Project.dir/main.cpp.o" \
-"CMakeFiles/prog1Project.dir/Interperter.cpp.o" \
+"CMakeFiles/prog1Project.dir/Interpreter.cpp.o" \
 "CMakeFiles/prog1Project.dir/Utils.cpp.o" \
 "CMakeFiles/prog1Project.dir/Enviroment.cpp.o"
 
@@ -267,15 +281,16 @@ prog1Project: CMakeFiles/prog1Project.dir/Commands/OpenDataServerCommand.cpp.o
 prog1Project: CMakeFiles/prog1Project.dir/Commands/PrintCommand.cpp.o
 prog1Project: CMakeFiles/prog1Project.dir/Commands/WhileCommand.cpp.o
 prog1Project: CMakeFiles/prog1Project.dir/Commands/ConnectCommand.cpp.o
+prog1Project: CMakeFiles/prog1Project.dir/Commands/SleepCommand.cpp.o
 prog1Project: CMakeFiles/prog1Project.dir/Expressions/ExpressionFactory.cpp.o
-prog1Project: CMakeFiles/prog1Project.dir/Sockets/FlightSocketManager.cpp.o
+prog1Project: CMakeFiles/prog1Project.dir/Sockets/FlightDataGetterSetter.cpp.o
 prog1Project: CMakeFiles/prog1Project.dir/main.cpp.o
-prog1Project: CMakeFiles/prog1Project.dir/Interperter.cpp.o
+prog1Project: CMakeFiles/prog1Project.dir/Interpreter.cpp.o
 prog1Project: CMakeFiles/prog1Project.dir/Utils.cpp.o
 prog1Project: CMakeFiles/prog1Project.dir/Enviroment.cpp.o
 prog1Project: CMakeFiles/prog1Project.dir/build.make
 prog1Project: CMakeFiles/prog1Project.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Linking CXX executable prog1Project"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Linking CXX executable prog1Project"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/prog1Project.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

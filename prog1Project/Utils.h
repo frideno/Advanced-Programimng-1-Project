@@ -7,6 +7,7 @@
 
 #include <string>
 #include <vector>
+#include "Expression.h"
 
 using namespace std;
 
@@ -21,10 +22,17 @@ public:
 
     // splits a string str by a token. returned in vector. if the token not found, str returned as
     // the only in the vector.
-    static vector<string> split(string str, char token);
+    template <class T>
+    static vector<vector<T>> split(vector<T>, T token);
+
+    // split the vector by commas (,) and create an expression from each part.
+    static vector<Expression*> blabla(vector<string> tokens);
+
+    // split string using split.
+    static vector<string> strSplit(string str, char token);
 
 
-};
+    };
 /**
  * g++ Expressions/*.h Expressions/*.cpp DataBase.cpp DataBase.h Expression.h Expressions.h Utils.h Utils.cpp Expressions/BooleanExpressions/*.h Expressions/Expressions_operators/*.h
 

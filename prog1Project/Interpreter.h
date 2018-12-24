@@ -2,8 +2,8 @@
      Created by omri on 12/9/18.
 */
 
-#ifndef PROG1PROJECT_INTERPERTER_H
-#define PROG1PROJECT_INTERPERTER_H
+#ifndef PROG1PROJECT_Interpreter_H
+#define PROG1PROJECT_Interpreter_H
 #include <vector>
 #include <string>
 #include <map>
@@ -12,14 +12,14 @@
 #include "Expressions.h"
 using namespace std;
 /*
- *  class Interperter:
+ *  class Interpreter:
  *  constits of few main functionalities:
  *  to lexe from file or command line into strings array
  *  to parse from the string array into the map of variables - commands.
  *  to
 */
 
-class Interperter {
+class Interpreter {
 private:
 
     Command* _currentCommand;
@@ -40,11 +40,11 @@ public:
 
 
     // interpreter constructor, which builds around the code from lexed list, start with index = 0.
-    Interperter(vector<string> code):
+    Interpreter(vector<string> code):
         _currentCommand(nullptr), _index(0),  _tokens(code), _currentArgs(), _isNeededMoreLines(false) {};
 
     // interpreter constructor, which build new interpreter ready to lex and parse in this order.
-    Interperter():
+    Interpreter():
         _currentCommand(nullptr), _index(0),  _tokens(), _currentArgs(), _isNeededMoreLines(false) {};
 
 
@@ -61,4 +61,4 @@ public:
 
 };
 
-#endif //PROG1PROJECT_INTERPERTER_H
+#endif //PROG1PROJECT_Interpreter_H

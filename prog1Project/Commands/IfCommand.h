@@ -10,10 +10,13 @@
 
 class IfCommand: public ConditionParser{
 public:
-    void doCommand(std::vector<std::string>& args) override;
+    // constructor:
+    IfCommand(vector<string>& v):
+    ConditionParser(v) {};
 
-    // clonable:
-    Command* clone() { return new IfCommand(*this);}
+    void doCommand() override;
+
+
 
 };
 

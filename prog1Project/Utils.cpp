@@ -3,6 +3,7 @@
 //
 
 #include "Utils.h"
+#include "Interpreter.h"
 
 // turn string to int.
 double Utils::to_number(string s) {
@@ -18,23 +19,53 @@ bool Utils::getNArguments(int& N) {
     return true;
 }
 
-vector<string> Utils::split(string str, char token) {
+template <class T>
+vector<vector<T>> Utils::split(vector<T> str, T token) {
 
-    vector<string> splited;
+    vector<vector<T>> splited;
 
     int i = 0, j = 0;
 
-    while (i < str.length()) {
+    while (i < str.size()) {
 
         j = i;
-        while (j < str.length() && str[j] != token) {
+        while (j < str.size() && str[j] != token) {
             j++;
         }
 
         // if found at j, cut the substring from i to j and push it to splited vector.
-        splited.push_back(str.substr(i, j - i));
+        typename vector<T>::const_iterator first = str.cbegin() + i;
+        typename vector<T>::const_iterator last = str.cbegin() + j;
+        vector<T> newVec(first, last);
+        splited.push_back(newVec);
         i = j + 1;
     }
     return splited;
+}
+
+vector<string> Utils::strSplit(string str, char token) {
+    vector<string> answer;
+    vector<vector<char>> splittedInChars = split(vector<char>(str.begin(), str.end()), token);
+
+    // turns each vector<char> to string.
+    for (vector<char>& v: splittedInChars) {
+        answer.push_back(string(v.begin(), v.end()));
+    }
+
+    return answer;
+}
+
+vector<Expression*> Utils::blabla(vector<string> tokens) {
+
+    vector<Expression*> answer;
+
+    string delimator = ",";
+    vector<vector<string>> splitted = split(tokens, delimator);
+    for (vector<string>& expTokens: splitted) {
+        Expression* e = Interpreter::shuntingYard(expTokens);
+        answer.push_back(e);
+    }
+    return answer;
+
 }
 

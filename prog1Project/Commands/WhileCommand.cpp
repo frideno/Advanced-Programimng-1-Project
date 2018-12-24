@@ -4,14 +4,17 @@
 
 #include "WhileCommand.h"
 
-void WhileCommand::doCommand(std::vector<std::string>& args) {
+void WhileCommand::doCommand() {
+
+    saveLastScopeSymbols();
 
     // do parent condition parser to get the condition and statements.
-    ConditionParser::doCommand(args);
+    ConditionParser::doCommand();
 
     while(getCondition()->calculate() > 0) {
         getStatementsInterpreter()->parser();
 
     }
+    restoreLastScopeSymbols();
 
 }

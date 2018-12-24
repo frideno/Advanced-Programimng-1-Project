@@ -7,7 +7,7 @@
 #include "../Databases/SymbolsDB.cpp"
 #include "../Databases/ConstsDB.cpp"
 
-void DefineVarCommand::doCommand(vector<string> &args) {
+void DefineVarCommand::doCommand() {
 
     string varName = args[0];
 
@@ -17,7 +17,7 @@ void DefineVarCommand::doCommand(vector<string> &args) {
     }
 
     // defualt value of unintilize varialbe.
-    SymbolsDB::addsymbol(varName);
+    SymbolsDB::addSymbol(varName);
 }
 
 bool DefineVarCommand::anotherArg(string &current) {
