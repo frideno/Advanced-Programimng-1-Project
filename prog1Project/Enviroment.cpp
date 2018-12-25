@@ -33,7 +33,7 @@ void Enviroment::operation() {
 void Enviroment::CommandlineOperation() {
 // test parser:
     try {
-        Interpreter* i = new Interpreter();
+        Interpreter *i = new Interpreter();
 
         string line = ConstsDB::ENDLINE_KEYWORD;
         while (line != "done") {
@@ -45,28 +45,34 @@ void Enviroment::CommandlineOperation() {
 
                     runScriptFromFile(fileName);
                 }
-
-                    // else lex and parse the line.
-
+                // e
+                // lse lex and parse the line.
                 else {
                     i->lexer(line);
                     i->parser();
                 }
+                getline(cin, line);
+
 
                 // get another line.
-            } catch (exception e) {
+            } catch (BasicException& be) {
+                cout << EXCEPTION_WAS_THROWN << " " << be.what() << endl;
+                delete i;
+                ConstsDB::destroyAllDB();
+                exit(1);
+            } catch (...){
+                cout << "unknown exception was thrown." << endl;
+                delete i;
+                ConstsDB::destroyAllDB();
+                exit(1);
 
             }
-            getline(cin, line);
 
         }
-        delete i;
-        ConstsDB::destroyAllDB();
-
-    } catch (exception e) {
-        cout << e.what() << endl;
-        //clostAllSystemResources();
+    } catch (...) {
+        exit(1);
     }
+
 }
 
 void Enviroment::FileOperation() {
@@ -91,11 +97,18 @@ void Enviroment::runScriptFromFile(std::string &fileName) {
                 i->parser();
 
             }
-    } catch (exception e) {
-        cout << e.what() << endl;
-        //clostAllSystemResources();
-    }
-    delete i;
+        }   catch (BasicException& be) {
+            cout <<  EXCEPTION_WAS_THROWN << " " << EXCEPTION_WAS_THROWN << " " << be.what() << endl;
+            delete i;
+            ConstsDB::destroyAllDB();
+            exit(1);
+        } catch (...){
+            cout << "unknown exception was thrown." << endl;
+            delete i;
+            ConstsDB::destroyAllDB();
+            exit(1);
+
+        }
     ConstsDB::destroyAllDB();
 
     } else {

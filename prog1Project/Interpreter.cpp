@@ -94,7 +94,7 @@ vector<string> Interpreter::shuntingYard_infixToPostfix(vector<string>& tokens) 
  * Shunting yard algorithm second part - of our own -
  * turns the vector of tokens exp, and turn it into Expression object.
  * */
-Expression* Interpreter::shuntingYard_postfixToExpression(vector<string>& exp){
+Expression* Interpreter::shuntingYard_postfixToExpression(vector<string>& exp) {
 
     int n = exp.size();
 
@@ -118,7 +118,7 @@ Expression* Interpreter::shuntingYard_postfixToExpression(vector<string>& exp){
 
             // ddddd
             if (ConstsDB::containsCommand(token)) {
-                throw new SymbolException("Variable with name of language keyword is not allowed");
+                throw SymbolException("Variable with name of language keyword is not allowed");
             }
             // if the variable is a keyword like TRUE, FALSE, we will give it a keyword value by the map.
             if (ConstsDB::containsKeyword(token)) {
@@ -129,7 +129,7 @@ Expression* Interpreter::shuntingYard_postfixToExpression(vector<string>& exp){
                 if (SymbolsDB::isSourceSymbol(token))
                     return new Var(token);
 
-                throw new SymbolException("no symbol named " + token + "is defined.");
+                throw SymbolException("no symbol named " + token + " is defined.");
             } else {
                     return new Var(token);
             }
@@ -366,7 +366,7 @@ void Interpreter::lexer(string& line) {
 }
 
 
-void Interpreter::parser() throw() {
+void Interpreter::parser() {
 
     // reset tokens index to 0
     _index = 0;

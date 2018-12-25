@@ -13,11 +13,11 @@ void DefineVarCommand::doCommand() {
 
     // if the variable name is not a command/keyword.
     if (ConstsDB::containsCommand(varName) || ConstsDB::containsKeyword(varName)) {
-        throw new SymbolException("Variable with name of language keyword is not allowed");
+        throw SymbolException("Variable with name of language keyword is not allowed");
     }
     // check that var name is not define.
     if (SymbolsDB::containsSymbol(varName)) {
-        throw new SymbolException("Varialbe " + varName + " is already declared");
+        throw SymbolException("Varialbe " + varName + " is already declared");
     }
 
     // defualt value of unintilize varialbe.

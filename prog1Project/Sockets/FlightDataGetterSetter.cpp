@@ -41,10 +41,10 @@ double FlightDataGetterSetter::recieve(string message) {
     // extract the float part of the "x = '<double-part>' (double)" answer.
     vector<string> equalSplit = Utils::strSplit(answer, '=');
     if (equalSplit.size() < 2)
-        throw new FlightsServerException("server sent somthing wrong formmatted.");
+        throw FlightsServerException("server sent somthing wrong formmatted.");
     vector<string> parantethisSplit = Utils::strSplit(equalSplit[1], '\'');
     if (parantethisSplit.size() < 3)
-        throw new FlightsServerException("server sent somthing wrong formmatted.");
+        throw FlightsServerException("server sent somthing wrong formmatted.");
     string doublePart = parantethisSplit[1];
     return Utils::to_number(doublePart);
 }

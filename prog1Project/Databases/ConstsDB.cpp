@@ -39,7 +39,7 @@ Command* ConstsDB::createCommand(string name, vector<string>& args) {
         return _commandsByNames.at(name)->create(args);
     }
     else {
-        throw new CommandException("Command (keyword) name is not defined");
+        throw CommandException("Command (keyword) name is not defined");
     }
 
 }
@@ -49,7 +49,7 @@ CommandCreator *ConstsDB::getCommand(string name) {
         return  _commandsByNames.at(name);
     }
     else {
-        throw new CommandException("Command (keyword) name is not defined");
+        throw CommandException("Command (keyword) name is not defined");
     }
 }
 
@@ -58,7 +58,7 @@ double ConstsDB::getKeywordValue(string name) {
         return  _keywordValues.at(name);
     }
     else {
-        throw new KeywordException("Keyword is not defined");
+        throw KeywordException("Keyword is not defined");
     }
 }
 bool ConstsDB::containsKeyword(string name) {

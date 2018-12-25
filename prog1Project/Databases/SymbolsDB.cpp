@@ -19,7 +19,7 @@ double SymbolsDB::getSymbol(string symbolName) {
     }
 
     if(_symbolTable.count(symbolName) == 0)
-        throw new SymbolException("Symbol "+ symbolName +" not Exists");
+        throw SymbolException("Symbol "+ symbolName +" not Exists");
 
     // else, return the symbol at symbolName from table.
 
@@ -36,7 +36,7 @@ void SymbolsDB::setBindedSymbolRecursivly(string symbolName, double symbolValue,
     else {
         // if there is no var named this name, throw exception.
         if (_symbolTable.count(symbolName) == 0) {
-            throw new SymbolException("Symbol " + symbolName + " not exists. can't assing to it.");
+            throw SymbolException("Symbol " + symbolName + " not exists. can't assing to it.");
         }
 
         // else, update its value.

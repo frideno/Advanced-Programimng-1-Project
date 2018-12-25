@@ -53,7 +53,7 @@ public:
     void lexer(string& line);
 
     // parser - from a commmandLine representing a command, parse it into command and do it.
-    void parser() throw();
+    void parser();
 
     // ‫‪Shunting-yard‬‬ of Dikstra - parse a string into a Expression (only binaries expressions).
     static Expression* shuntingYard(vector<string>& tokens);

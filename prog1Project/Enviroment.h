@@ -13,6 +13,8 @@
  */
 class Enviroment {
 
+private:
+    const std::string EXCEPTION_WAS_THROWN = "EXCEPTION was thrown !";
 public:
 
     // do all operation letting the user choose command line or file.

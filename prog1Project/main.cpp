@@ -19,9 +19,14 @@ using namespace std;;
 
 int main() {
 
-    Enviroment* e = new Enviroment;
-    e->operation();
-    delete e;
+    try {
+
+        Enviroment *e = new Enviroment;
+        e->operation();
+        delete e;
+    } catch (...)  {
+        cout << "An main exception was thrown at undetected problem." << endl;
+    }
 
 
 }

@@ -19,7 +19,7 @@ public:
 
     // the implementation of operation - Div.
     double operation(double var1, double var2) {
-        if (var2 == 0) {throw new DevisionByZeroException("can't devide by 0");}
+        if (var2 == 0) {throw DevisionByZeroException("can't devide by 0");}
         return var1 / var2;
     };
 };

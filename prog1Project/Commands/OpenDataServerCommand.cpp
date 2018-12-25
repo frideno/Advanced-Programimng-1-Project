@@ -149,7 +149,7 @@ void OpenDataServerCommand::doCommand() {
         // extracting next two expressions from the args.
         vector<Expression*> extractedExpressions = Utils::blabla(args);
         if (extractedExpressions.size() != 2)
-            throw new BadArgumentsException("bad arguments on openDataServer");
+            throw BadArgumentsException("bad arguments on openDataServer");
 
         port = (int) extractedExpressions[0]->calculate();
         frequency = extractedExpressions[1]->calculate();
@@ -158,7 +158,7 @@ void OpenDataServerCommand::doCommand() {
         // chatches invalid argument of to_number if port or frequency are not ints.
     catch(const std::invalid_argument& e){
 
-        throw new ServerException("failed opening server, invalid argument PORT or RATE is not representing an int");
+        throw ServerException("failed opening server, invalid argument PORT or RATE is not representing an int");
     }
 
 

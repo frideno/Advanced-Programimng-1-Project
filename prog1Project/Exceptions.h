@@ -9,77 +9,77 @@
 #include <string>
 using namespace std;
 
-class BasicException : exception{
+class BasicException : public exception{
 protected:
-    const char* _message;
+    string _message;
 
-public:
+public :
     BasicException(string message):
-            _message(message.c_str()) {}
+            _message(message) {}
 
     virtual const char* what() const throw() {
-        return _message;
+        return _message.c_str();
     }
 
 };
 
 
-class SymbolException : BasicException{
-public:
+class SymbolException : public BasicException{
+public :
     SymbolException(string message):
             BasicException(message) {};
 };
 
 
-class DevisionByZeroException: BasicException{
-public:
+class DevisionByZeroException: public BasicException{
+public :
     DevisionByZeroException(string m):
     BasicException(m) {};
 };
 
 
 
-class ServerException : BasicException{
-public:
+class ServerException : public BasicException{
+public :
     ServerException(string message):
     BasicException(message) {};
 };
 
 
-class FlightsServerException : BasicException{
-public:
+class FlightsServerException : public BasicException{
+public :
     FlightsServerException(string message):
     BasicException(message) {};
 };
 
-class KeywordException : BasicException{
-public:
+class KeywordException : public BasicException{
+public :
     KeywordException(string message):
     BasicException(message) {};
 };
 
 
-class BadArgumentsException : BasicException{
-public:
+class BadArgumentsException : public BasicException{
+public :
     BadArgumentsException(string message):
     BasicException(message) {};
 };
 
-class BracketsException : BasicException{
-public:
+class BracketsException : public BasicException{
+public :
     BracketsException(string message):
             BasicException(message) {};
 };
 
 
-class CommandException : BasicException{
-public:
+class CommandException : public BasicException{
+public :
     CommandException(string message):
             BasicException(message) {};
 };
 
-class ConditionalException : BasicException{
-public:
+class ConditionalException : public BasicException{
+public :
     ConditionalException(string message):
             BasicException(message) {};
 };
