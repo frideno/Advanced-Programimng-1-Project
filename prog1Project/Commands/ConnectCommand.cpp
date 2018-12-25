@@ -26,8 +26,46 @@ using namespace std;
 void task(vector<string>& args);
 
 void ConnectCommand::doCommand() {
-    thread t1(task, ref(args));
-    t1.join();
+
+    struct hostent *server;
+    int port;
+    try {
+
+        // get ip as string form args.
+
+        server = gethostbyname(args[0].c_str());
+
+        // extracting next expression from args using shunting yard.
+        // deleting the ip, and sends the rest to shunting yard.
+        int skip = 0;
+        if (args[1] == ",")
+            skip  = 1;
+        args.erase(args.begin(), args.begin() + skip + 1);
+
+        // calculating the port from the expression.
+        vector<Expression*> extractedExpressions = Utils::blabla(args);
+        if (extractedExpressions.size() != 1)
+            throw;
+        port = Utils::blabla(args)[0]->calculate();
+
+        // connecting to server in port port.
+        connectToServer(server, port);
+
+
+
+    }
+    catch (exception& e){
+        throw ServerException("failed connecting to server, invalid argument PORT or RATE is not representing an int");
+    }
+
+}
+
+void ConnectCommand::disconnect() {
+    close(_socketfd);
+}
+
+ConnectCommand::~ConnectCommand() {
+    disconnect();
 }
 
 /*
@@ -36,67 +74,44 @@ void ConnectCommand::doCommand() {
 * we will get from the final client. this task will run in it's own thread, simultaneously with another threads so that
 * we could run our program faster while making io requests.
 */
-void task(vector<string>& args) {
+void ConnectCommand::connectToServer(struct  hostent *server, int port) {
 
-        int sockfd, port, n;
-        struct sockaddr_in serv_addr;
-        struct hostent *server;
+    int sockfd,  n;
+    struct sockaddr_in serv_addr;
 
-        char buffer[256];
-
-        try {
-            vector<Expression*> extractedExpressions = Utils::blabla(args);
-            if (extractedExpressions.size() != 1)
-                throw;
-
-            // get ip as string form args.
-
-            server = gethostbyname(args[0].c_str());
-
-            // extracting next expression from args using shunting yard.
-            // deleting the ip, and sends the rest to shunting yard.
-            int skip = 0;
-            if (args[1] == ",")
-                skip  = 1;
-            args.erase(args.begin(), args.begin() + skip + 1);
-
-            // calculating the port from the expression.
-            port = Utils::blabla(args)[0]->calculate();
-
-        }
-        catch (exception& e){
-            throw ("failed connecting to server, invalid argument PORT or RATE is not representing an int");
-        }
-        /* Create a socket point */
-        sockfd = socket(AF_INET, SOCK_STREAM, 0);
-
-        if (sockfd < 0) {
-            perror("ERROR opening socket");
-            exit(1);
-        }
+    char buffer[256];
 
 
-        if (server == NULL) {
-            fprintf(stderr,"ERROR, no such host\n");
-            exit(0);
-        }
+    /* Create a socket point */
+    sockfd = socket(AF_INET, SOCK_STREAM, 0);
 
-        bzero((char *) &serv_addr, sizeof(serv_addr));
-        serv_addr.sin_family = AF_INET;
-        bcopy((char *)server->h_addr, (char *)&serv_addr.sin_addr.s_addr, server->h_length);
-        serv_addr.sin_port = htons(port);
+    if (sockfd < 0) {
+        perror("ERROR opening socket");
+        exit(1);
+    }
 
-        /* Now connect to the server */
-        if (connect(sockfd, (struct sockaddr*)&serv_addr, sizeof(serv_addr)) < 0) {
-            perror("ERROR connecting");
-            exit(1);
-        }
 
-        /* Now ask for a message from the user, this message
-           * will be read by server
-        */
+    if (server == NULL) {
+        fprintf(stderr,"ERROR, no such host\n");
+        exit(0);
+    }
 
-        SymbolsDB::setSocket(sockfd);
+    bzero((char *) &serv_addr, sizeof(serv_addr));
+    serv_addr.sin_family = AF_INET;
+    bcopy((char *)server->h_addr, (char *)&serv_addr.sin_addr.s_addr, server->h_length);
+    serv_addr.sin_port = htons(port);
+
+    /* Now connect to the server */
+    if (connect(sockfd, (struct sockaddr*)&serv_addr, sizeof(serv_addr)) < 0) {
+        perror("ERROR connecting");
+        exit(1);
+    }
+
+    /* Now ask for a message from the user, this message
+       * will be read by server
+    */
+
+    SymbolsDB::setSocket(sockfd);
 
 
 

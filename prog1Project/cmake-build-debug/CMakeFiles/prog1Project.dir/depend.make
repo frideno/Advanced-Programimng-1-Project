@@ -5,6 +5,7 @@ CMakeFiles/prog1Project.dir/Commands/ConditionParser.cpp.o: ../Command.h
 CMakeFiles/prog1Project.dir/Commands/ConditionParser.cpp.o: ../Commands/ConditionParser.cpp
 CMakeFiles/prog1Project.dir/Commands/ConditionParser.cpp.o: ../Commands/ConditionParser.h
 CMakeFiles/prog1Project.dir/Commands/ConditionParser.cpp.o: ../Databases/SymbolsDB.h
+CMakeFiles/prog1Project.dir/Commands/ConditionParser.cpp.o: ../Exceptions.h
 CMakeFiles/prog1Project.dir/Commands/ConditionParser.cpp.o: ../Expression.h
 CMakeFiles/prog1Project.dir/Commands/ConditionParser.cpp.o: ../Expressions.h
 CMakeFiles/prog1Project.dir/Commands/ConditionParser.cpp.o: ../Expressions/BinaryExpression.h
@@ -30,6 +31,7 @@ CMakeFiles/prog1Project.dir/Commands/ConnectCommand.cpp.o: ../Commands/ConnectCo
 CMakeFiles/prog1Project.dir/Commands/ConnectCommand.cpp.o: ../Commands/PrintCommand.h
 CMakeFiles/prog1Project.dir/Commands/ConnectCommand.cpp.o: ../Databases/ConstsDB.h
 CMakeFiles/prog1Project.dir/Commands/ConnectCommand.cpp.o: ../Databases/SymbolsDB.h
+CMakeFiles/prog1Project.dir/Commands/ConnectCommand.cpp.o: ../Exceptions.h
 CMakeFiles/prog1Project.dir/Commands/ConnectCommand.cpp.o: ../Expression.h
 CMakeFiles/prog1Project.dir/Commands/ConnectCommand.cpp.o: ../Expressions.h
 CMakeFiles/prog1Project.dir/Commands/ConnectCommand.cpp.o: ../Expressions/BinaryExpression.h
@@ -65,6 +67,7 @@ CMakeFiles/prog1Project.dir/Commands/DefineVarCommand.cpp.o: ../Databases/Consts
 CMakeFiles/prog1Project.dir/Commands/DefineVarCommand.cpp.o: ../Databases/ConstsDB.h
 CMakeFiles/prog1Project.dir/Commands/DefineVarCommand.cpp.o: ../Databases/SymbolsDB.cpp
 CMakeFiles/prog1Project.dir/Commands/DefineVarCommand.cpp.o: ../Databases/SymbolsDB.h
+CMakeFiles/prog1Project.dir/Commands/DefineVarCommand.cpp.o: ../Exceptions.h
 CMakeFiles/prog1Project.dir/Commands/DefineVarCommand.cpp.o: ../Expression.h
 CMakeFiles/prog1Project.dir/Commands/DefineVarCommand.cpp.o: ../Expressions.h
 CMakeFiles/prog1Project.dir/Commands/DefineVarCommand.cpp.o: ../Expressions/BinaryExpression.h
@@ -90,6 +93,7 @@ CMakeFiles/prog1Project.dir/Commands/EqualsCommand.cpp.o: ../Commands/EqualsComm
 CMakeFiles/prog1Project.dir/Commands/EqualsCommand.cpp.o: ../Commands/PrintCommand.h
 CMakeFiles/prog1Project.dir/Commands/EqualsCommand.cpp.o: ../Databases/ConstsDB.h
 CMakeFiles/prog1Project.dir/Commands/EqualsCommand.cpp.o: ../Databases/SymbolsDB.h
+CMakeFiles/prog1Project.dir/Commands/EqualsCommand.cpp.o: ../Exceptions.h
 CMakeFiles/prog1Project.dir/Commands/EqualsCommand.cpp.o: ../Expression.h
 CMakeFiles/prog1Project.dir/Commands/EqualsCommand.cpp.o: ../Expressions.h
 CMakeFiles/prog1Project.dir/Commands/EqualsCommand.cpp.o: ../Expressions/BinaryExpression.h
@@ -112,6 +116,7 @@ CMakeFiles/prog1Project.dir/Commands/IfCommand.cpp.o: ../Command.h
 CMakeFiles/prog1Project.dir/Commands/IfCommand.cpp.o: ../Commands/ConditionParser.h
 CMakeFiles/prog1Project.dir/Commands/IfCommand.cpp.o: ../Commands/IfCommand.cpp
 CMakeFiles/prog1Project.dir/Commands/IfCommand.cpp.o: ../Commands/IfCommand.h
+CMakeFiles/prog1Project.dir/Commands/IfCommand.cpp.o: ../Exceptions.h
 CMakeFiles/prog1Project.dir/Commands/IfCommand.cpp.o: ../Expression.h
 CMakeFiles/prog1Project.dir/Commands/IfCommand.cpp.o: ../Expressions.h
 CMakeFiles/prog1Project.dir/Commands/IfCommand.cpp.o: ../Expressions/BinaryExpression.h
@@ -135,6 +140,7 @@ CMakeFiles/prog1Project.dir/Commands/OpenDataServerCommand.cpp.o: ../Commands/Op
 CMakeFiles/prog1Project.dir/Commands/OpenDataServerCommand.cpp.o: ../Commands/PrintCommand.h
 CMakeFiles/prog1Project.dir/Commands/OpenDataServerCommand.cpp.o: ../Databases/ConstsDB.h
 CMakeFiles/prog1Project.dir/Commands/OpenDataServerCommand.cpp.o: ../Databases/SymbolsDB.h
+CMakeFiles/prog1Project.dir/Commands/OpenDataServerCommand.cpp.o: ../Exceptions.h
 CMakeFiles/prog1Project.dir/Commands/OpenDataServerCommand.cpp.o: ../Expression.h
 CMakeFiles/prog1Project.dir/Commands/OpenDataServerCommand.cpp.o: ../Expressions.h
 CMakeFiles/prog1Project.dir/Commands/OpenDataServerCommand.cpp.o: ../Expressions/BinaryExpression.h
@@ -158,6 +164,7 @@ CMakeFiles/prog1Project.dir/Commands/PrintCommand.cpp.o: ../Commands/PrintComman
 CMakeFiles/prog1Project.dir/Commands/PrintCommand.cpp.o: ../Commands/PrintCommand.h
 CMakeFiles/prog1Project.dir/Commands/PrintCommand.cpp.o: ../Databases/ConstsDB.h
 CMakeFiles/prog1Project.dir/Commands/PrintCommand.cpp.o: ../Databases/SymbolsDB.h
+CMakeFiles/prog1Project.dir/Commands/PrintCommand.cpp.o: ../Exceptions.h
 CMakeFiles/prog1Project.dir/Commands/PrintCommand.cpp.o: ../Expression.h
 CMakeFiles/prog1Project.dir/Commands/PrintCommand.cpp.o: ../Expressions.h
 CMakeFiles/prog1Project.dir/Commands/PrintCommand.cpp.o: ../Expressions/BinaryExpression.h
@@ -182,6 +189,7 @@ CMakeFiles/prog1Project.dir/Commands/SleepCommand.cpp.o: ../Commands/PrintComman
 CMakeFiles/prog1Project.dir/Commands/SleepCommand.cpp.o: ../Commands/SleepCommand.cpp
 CMakeFiles/prog1Project.dir/Commands/SleepCommand.cpp.o: ../Commands/SleepCommand.h
 CMakeFiles/prog1Project.dir/Commands/SleepCommand.cpp.o: ../Databases/ConstsDB.h
+CMakeFiles/prog1Project.dir/Commands/SleepCommand.cpp.o: ../Exceptions.h
 CMakeFiles/prog1Project.dir/Commands/SleepCommand.cpp.o: ../Expression.h
 CMakeFiles/prog1Project.dir/Commands/SleepCommand.cpp.o: ../Expressions.h
 CMakeFiles/prog1Project.dir/Commands/SleepCommand.cpp.o: ../Expressions/BinaryExpression.h
@@ -202,6 +210,7 @@ CMakeFiles/prog1Project.dir/Commands/WhileCommand.cpp.o: ../Command.h
 CMakeFiles/prog1Project.dir/Commands/WhileCommand.cpp.o: ../Commands/ConditionParser.h
 CMakeFiles/prog1Project.dir/Commands/WhileCommand.cpp.o: ../Commands/WhileCommand.cpp
 CMakeFiles/prog1Project.dir/Commands/WhileCommand.cpp.o: ../Commands/WhileCommand.h
+CMakeFiles/prog1Project.dir/Commands/WhileCommand.cpp.o: ../Exceptions.h
 CMakeFiles/prog1Project.dir/Commands/WhileCommand.cpp.o: ../Expression.h
 CMakeFiles/prog1Project.dir/Commands/WhileCommand.cpp.o: ../Expressions.h
 CMakeFiles/prog1Project.dir/Commands/WhileCommand.cpp.o: ../Expressions/BinaryExpression.h
@@ -224,6 +233,7 @@ CMakeFiles/prog1Project.dir/Enviroment.cpp.o: ../Commands/PrintCommand.h
 CMakeFiles/prog1Project.dir/Enviroment.cpp.o: ../Databases/ConstsDB.h
 CMakeFiles/prog1Project.dir/Enviroment.cpp.o: ../Enviroment.cpp
 CMakeFiles/prog1Project.dir/Enviroment.cpp.o: ../Enviroment.h
+CMakeFiles/prog1Project.dir/Enviroment.cpp.o: ../Exceptions.h
 CMakeFiles/prog1Project.dir/Enviroment.cpp.o: ../Expression.h
 CMakeFiles/prog1Project.dir/Enviroment.cpp.o: ../Expressions.h
 CMakeFiles/prog1Project.dir/Enviroment.cpp.o: ../Expressions/BinaryExpression.h
@@ -241,6 +251,7 @@ CMakeFiles/prog1Project.dir/Enviroment.cpp.o: ../Expressions/UnaryExpression.h
 CMakeFiles/prog1Project.dir/Enviroment.cpp.o: ../Interpreter.h
 CMakeFiles/prog1Project.dir/Enviroment.cpp.o: ../Utils.h
 
+CMakeFiles/prog1Project.dir/Expressions/ExpressionFactory.cpp.o: ../Exceptions.h
 CMakeFiles/prog1Project.dir/Expressions/ExpressionFactory.cpp.o: ../Expression.h
 CMakeFiles/prog1Project.dir/Expressions/ExpressionFactory.cpp.o: ../Expressions/BinaryExpression.h
 CMakeFiles/prog1Project.dir/Expressions/ExpressionFactory.cpp.o: ../Expressions/BooleanExpressions/And.h
@@ -267,6 +278,7 @@ CMakeFiles/prog1Project.dir/Interpreter.cpp.o: ../Commands/CommandCreator.h
 CMakeFiles/prog1Project.dir/Interpreter.cpp.o: ../Commands/PrintCommand.h
 CMakeFiles/prog1Project.dir/Interpreter.cpp.o: ../Databases/ConstsDB.h
 CMakeFiles/prog1Project.dir/Interpreter.cpp.o: ../Databases/SymbolsDB.h
+CMakeFiles/prog1Project.dir/Interpreter.cpp.o: ../Exceptions.h
 CMakeFiles/prog1Project.dir/Interpreter.cpp.o: ../Expression.h
 CMakeFiles/prog1Project.dir/Interpreter.cpp.o: ../Expressions.h
 CMakeFiles/prog1Project.dir/Interpreter.cpp.o: ../Expressions/BinaryExpression.h
@@ -288,12 +300,14 @@ CMakeFiles/prog1Project.dir/Interpreter.cpp.o: ../Interpreter.h
 CMakeFiles/prog1Project.dir/Interpreter.cpp.o: ../Sockets/FlightDataGetterSetter.h
 CMakeFiles/prog1Project.dir/Interpreter.cpp.o: ../Utils.h
 
+CMakeFiles/prog1Project.dir/Sockets/FlightDataGetterSetter.cpp.o: ../Exceptions.h
 CMakeFiles/prog1Project.dir/Sockets/FlightDataGetterSetter.cpp.o: ../Expression.h
 CMakeFiles/prog1Project.dir/Sockets/FlightDataGetterSetter.cpp.o: ../Sockets/FlightDataGetterSetter.cpp
 CMakeFiles/prog1Project.dir/Sockets/FlightDataGetterSetter.cpp.o: ../Sockets/FlightDataGetterSetter.h
 CMakeFiles/prog1Project.dir/Sockets/FlightDataGetterSetter.cpp.o: ../Utils.h
 
 CMakeFiles/prog1Project.dir/Utils.cpp.o: ../Command.h
+CMakeFiles/prog1Project.dir/Utils.cpp.o: ../Exceptions.h
 CMakeFiles/prog1Project.dir/Utils.cpp.o: ../Expression.h
 CMakeFiles/prog1Project.dir/Utils.cpp.o: ../Expressions.h
 CMakeFiles/prog1Project.dir/Utils.cpp.o: ../Expressions/BinaryExpression.h
@@ -315,6 +329,7 @@ CMakeFiles/prog1Project.dir/Utils.cpp.o: ../Utils.h
 CMakeFiles/prog1Project.dir/main.cpp.o: ../Command.h
 CMakeFiles/prog1Project.dir/main.cpp.o: ../Databases/SymbolsDB.h
 CMakeFiles/prog1Project.dir/main.cpp.o: ../Enviroment.h
+CMakeFiles/prog1Project.dir/main.cpp.o: ../Exceptions.h
 CMakeFiles/prog1Project.dir/main.cpp.o: ../Expression.h
 CMakeFiles/prog1Project.dir/main.cpp.o: ../Expressions.h
 CMakeFiles/prog1Project.dir/main.cpp.o: ../Expressions/BinaryExpression.h

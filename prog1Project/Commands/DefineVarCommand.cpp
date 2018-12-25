@@ -11,9 +11,13 @@ void DefineVarCommand::doCommand() {
 
     string varName = args[0];
 
-    // if the variable name is a command keyword.
-    if (ConstsDB::containsCommand(varName)) {
-        throw ("Variable with name of language keyword is not allowed");
+    // if the variable name is not a command/keyword.
+    if (ConstsDB::containsCommand(varName) || ConstsDB::containsKeyword(varName)) {
+        throw new SymbolException("Variable with name of language keyword is not allowed");
+    }
+    // check that var name is not define.
+    if (SymbolsDB::containsSymbol(varName)) {
+        throw new SymbolException("Varialbe " + varName + " is already declared");
     }
 
     // defualt value of unintilize varialbe.

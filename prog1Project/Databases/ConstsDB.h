@@ -41,6 +41,9 @@ public:
     // get a keyword value by name.
     static double getKeywordValue(string name);
 
+    // destrucor:
+    static void destroyAllDB();
+
     // check if a keyword exsists.
     static bool containsKeyword(string name);
 

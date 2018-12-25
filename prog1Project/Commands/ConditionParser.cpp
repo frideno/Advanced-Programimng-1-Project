@@ -52,7 +52,7 @@ void ConditionParser::doCommand() {
 
     // if no condtion lexed, than exception.
     if (conditionVec.size() == 0)
-        throw ("Conditional has no condition declared");
+        throw new ConditionalException("Conditional has no condition declared");
 
     // moving i to skip {.
     i++;
@@ -90,7 +90,7 @@ bool ConditionParser::anotherArg(string &current) {
             return false; // wait another 1 token - }, before stop excepting arguments.
 
         if (balance < 0)
-            throw("an unappropriate } was defined, without suited {");
+            throw new BracketsException("an unappropriate } was defined, without suited {");
     }
 
     // continue reading if it was not } with balance of 0.

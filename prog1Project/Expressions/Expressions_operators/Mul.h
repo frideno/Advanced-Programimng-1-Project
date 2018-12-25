@@ -18,6 +18,11 @@ public:
 
     // the implementation of operation - Mul.
     double operation(double var1, double var2) {return var1 * var2;};
+
+    ~Mul() {
+        delete getLeft();
+        delete getRight();
+    }
 };
 
 

@@ -5,8 +5,10 @@
 #include <strings.h>
 #include <cstring>
 #include <unistd.h>
+#include <iostream>
 #include "FlightDataGetterSetter.h"
 #include "../Utils.h"
+#include "../Exceptions.h"
 
 
 double FlightDataGetterSetter::recieve(string message) {
@@ -39,12 +41,11 @@ double FlightDataGetterSetter::recieve(string message) {
     // extract the float part of the "x = '<double-part>' (double)" answer.
     vector<string> equalSplit = Utils::strSplit(answer, '=');
     if (equalSplit.size() < 2)
-        throw("server sent somthing wrong formmatted.");
+        throw new FlightsServerException("server sent somthing wrong formmatted.");
     vector<string> parantethisSplit = Utils::strSplit(equalSplit[1], '\'');
     if (parantethisSplit.size() < 3)
-        throw("server sent somthing wrong formmatted.");
+        throw new FlightsServerException("server sent somthing wrong formmatted.");
     string doublePart = parantethisSplit[1];
-
     return Utils::to_number(doublePart);
 }
 

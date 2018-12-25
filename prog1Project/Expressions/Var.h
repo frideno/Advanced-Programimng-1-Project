@@ -31,6 +31,9 @@ public:
         return output;
     }
     std::string toString() const {return _varName; }
+
+    ~Var() {};
+
 };
 //g++ Databases/*.h Databases/*.cpp Expressions/*.h Expressions/*.cpp Commands/*.h Commands/*.cpp  main.cpp Command.h Expression.h Expressions.h Interpreter.h Interpreter.cpp Utils.h Utils.cpp -std=c++1y
 #endif //PROG1PROJECT_Var_H

@@ -12,16 +12,24 @@ void PrintCommand::doCommand() {
     string toPrint = args[0];
 
     // if we want to print a string in quatos, print it.
-    if (toPrint[0] == '"' && toPrint[toPrint.length() -  1] == '"') {
+    if (!(toPrint[0] == '"' && toPrint[toPrint.length() -  1] == '"') ||
+        SymbolsDB::containsSymbol(toPrint)) {
 
-        string withOutQuates = toPrint.substr(1, toPrint.length() - 2); // copies from pos =1, after the first quate.,
-                                                                        // length - 2 chars ahead - all but quaots.
-        cout << withOutQuates;
-    } else {
         // getting next expression with shunting yard from args.
 
         vector<Expression*> extractedExpressions = Utils::blabla(args);
         cout << extractedExpressions[0]->calculate() << endl;
+
+        // clear memory.
+        delete extractedExpressions[0];
+
+
+    } else {
+
+        string withOutQuates = toPrint.substr(1, toPrint.length() - 2); // copies from pos =1, after the first quate.,
+
+        // length - 2 chars ahead - all but quaots.
+        cout << withOutQuates << endl;
 
     }
 

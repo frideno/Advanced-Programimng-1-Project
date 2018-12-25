@@ -6,6 +6,7 @@ CMakeFiles/prog1Project.dir/Commands/ConditionParser.cpp.o
  /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Commands/ConditionParser.cpp
  /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Commands/ConditionParser.h
  /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Databases/SymbolsDB.h
+ /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Exceptions.h
  /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expression.h
  /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expressions.h
  /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expressions/BinaryExpression.h
@@ -31,6 +32,7 @@ CMakeFiles/prog1Project.dir/Commands/ConnectCommand.cpp.o
  /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Commands/PrintCommand.h
  /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Databases/ConstsDB.h
  /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Databases/SymbolsDB.h
+ /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Exceptions.h
  /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expression.h
  /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expressions.h
  /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expressions/BinaryExpression.h
@@ -66,6 +68,7 @@ CMakeFiles/prog1Project.dir/Commands/DefineVarCommand.cpp.o
  /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Databases/ConstsDB.h
  /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Databases/SymbolsDB.cpp
  /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Databases/SymbolsDB.h
+ /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Exceptions.h
  /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expression.h
  /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expressions.h
  /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expressions/BinaryExpression.h
@@ -91,6 +94,7 @@ CMakeFiles/prog1Project.dir/Commands/EqualsCommand.cpp.o
  /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Commands/PrintCommand.h
  /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Databases/ConstsDB.h
  /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Databases/SymbolsDB.h
+ /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Exceptions.h
  /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expression.h
  /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expressions.h
  /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expressions/BinaryExpression.h
@@ -113,6 +117,7 @@ CMakeFiles/prog1Project.dir/Commands/IfCommand.cpp.o
  /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Commands/ConditionParser.h
  /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Commands/IfCommand.cpp
  /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Commands/IfCommand.h
+ /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Exceptions.h
  /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expression.h
  /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expressions.h
  /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expressions/BinaryExpression.h
@@ -136,6 +141,7 @@ CMakeFiles/prog1Project.dir/Commands/OpenDataServerCommand.cpp.o
  /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Commands/PrintCommand.h
  /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Databases/ConstsDB.h
  /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Databases/SymbolsDB.h
+ /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Exceptions.h
  /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expression.h
  /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expressions.h
  /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expressions/BinaryExpression.h
@@ -159,6 +165,7 @@ CMakeFiles/prog1Project.dir/Commands/PrintCommand.cpp.o
  /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Commands/PrintCommand.h
  /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Databases/ConstsDB.h
  /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Databases/SymbolsDB.h
+ /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Exceptions.h
  /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expression.h
  /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expressions.h
  /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expressions/BinaryExpression.h
@@ -183,6 +190,7 @@ CMakeFiles/prog1Project.dir/Commands/SleepCommand.cpp.o
  /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Commands/SleepCommand.cpp
  /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Commands/SleepCommand.h
  /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Databases/ConstsDB.h
+ /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Exceptions.h
  /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expression.h
  /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expressions.h
  /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expressions/BinaryExpression.h
@@ -203,6 +211,7 @@ CMakeFiles/prog1Project.dir/Commands/WhileCommand.cpp.o
  /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Commands/ConditionParser.h
  /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Commands/WhileCommand.cpp
  /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Commands/WhileCommand.h
+ /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Exceptions.h
  /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expression.h
  /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expressions.h
  /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expressions/BinaryExpression.h
@@ -225,6 +234,7 @@ CMakeFiles/prog1Project.dir/Enviroment.cpp.o
  /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Databases/ConstsDB.h
  /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Enviroment.cpp
  /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Enviroment.h
+ /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Exceptions.h
  /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expression.h
  /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expressions.h
  /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expressions/BinaryExpression.h
@@ -242,6 +252,7 @@ CMakeFiles/prog1Project.dir/Enviroment.cpp.o
  /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Interpreter.h
  /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Utils.h
 CMakeFiles/prog1Project.dir/Expressions/ExpressionFactory.cpp.o
+ /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Exceptions.h
  /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expression.h
  /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expressions/BinaryExpression.h
  /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expressions/BooleanExpressions/And.h
@@ -268,6 +279,7 @@ CMakeFiles/prog1Project.dir/Interpreter.cpp.o
  /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Commands/PrintCommand.h
  /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Databases/ConstsDB.h
  /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Databases/SymbolsDB.h
+ /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Exceptions.h
  /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expression.h
  /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expressions.h
  /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expressions/BinaryExpression.h
@@ -289,12 +301,14 @@ CMakeFiles/prog1Project.dir/Interpreter.cpp.o
  /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Sockets/FlightDataGetterSetter.h
  /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Utils.h
 CMakeFiles/prog1Project.dir/Sockets/FlightDataGetterSetter.cpp.o
+ /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Exceptions.h
  /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expression.h
  /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Sockets/FlightDataGetterSetter.cpp
  /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Sockets/FlightDataGetterSetter.h
  /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Utils.h
 CMakeFiles/prog1Project.dir/Utils.cpp.o
  /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Command.h
+ /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Exceptions.h
  /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expression.h
  /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expressions.h
  /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expressions/BinaryExpression.h
@@ -316,6 +330,7 @@ CMakeFiles/prog1Project.dir/main.cpp.o
  /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Command.h
  /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Databases/SymbolsDB.h
  /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Enviroment.h
+ /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Exceptions.h
  /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expression.h
  /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expressions.h
  /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expressions/BinaryExpression.h

@@ -10,6 +10,7 @@
 #include "Expressions/ExpressionFactory.h"
 #include "Utils.h"
 #include "Expressions/Var.h"
+#include "Exceptions.h"
 
 /**
  * Shuting yard algortim -
@@ -115,9 +116,9 @@ Expression* Interpreter::shuntingYard_postfixToExpression(vector<string>& exp){
         // else, it is a variable, so we want to return it.
         else {
 
-            // if the variable is a command keyword.
+            // ddddd
             if (ConstsDB::containsCommand(token)) {
-                throw ("Variable with name of language keyword is not allowed");
+                throw new SymbolException("Variable with name of language keyword is not allowed");
             }
             // if the variable is a keyword like TRUE, FALSE, we will give it a keyword value by the map.
             if (ConstsDB::containsKeyword(token)) {
@@ -128,7 +129,7 @@ Expression* Interpreter::shuntingYard_postfixToExpression(vector<string>& exp){
                 if (SymbolsDB::isSourceSymbol(token))
                     return new Var(token);
 
-                throw ("no symbol named " + token + "is defined.");
+                throw new SymbolException("no symbol named " + token + "is defined.");
             } else {
                     return new Var(token);
             }
@@ -365,7 +366,7 @@ void Interpreter::lexer(string& line) {
 }
 
 
-void Interpreter::parser() {
+void Interpreter::parser() throw() {
 
     // reset tokens index to 0
     _index = 0;
@@ -403,7 +404,7 @@ void Interpreter::parser() {
 
         // now we want to read until end of the command args:
 
-        bool hungry;
+        bool hungry = false;
         while (_index < _tokens.size() && (hungry = _currentCommand->anotherArg(_tokens[_index]))) {
 
             _currentArgs.push_back(_tokens[_index]);
@@ -423,10 +424,18 @@ void Interpreter::parser() {
             // command object do the command on the arguments list.
             _currentCommand->doCommand();
 
-            // delete the command and mark as complete.
-            delete _currentCommand;
+            // adding the command to the stack of commands;
+            _commandsStack.push_back(_currentCommand);
+
+            // setting that the command arguments is over.
             _isNeededMoreLines = false;
         }
+    }
+}
+
+Interpreter::~Interpreter() {
+    for(Command* c:_commandsStack) {
+        delete c;
     }
 }
 

@@ -140,6 +140,10 @@ EqualsCommand.h
 ../Command.h
 /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Command.h
 
+/home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Commands/IfCommand.cpp
+IfCommand.h
+/home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Commands/IfCommand.h
+
 /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Commands/IfCommand.h
 ../Command.h
 /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Command.h
@@ -206,9 +210,27 @@ PrintCommand.h
 ../Command.h
 /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Command.h
 
+/home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Commands/SleepCommand.cpp
+unistd.h
+-
+thread
+-
+chrono
+-
+SleepCommand.h
+/home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Commands/SleepCommand.h
+../Databases/ConstsDB.h
+/home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Databases/ConstsDB.h
+../Utils.h
+/home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Utils.h
+
 /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Commands/SleepCommand.h
 ../Command.h
 /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Command.h
+
+/home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Commands/WhileCommand.cpp
+WhileCommand.h
+/home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Commands/WhileCommand.h
 
 /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Commands/WhileCommand.h
 ../Command.h
@@ -252,7 +274,25 @@ map
 ../Sockets/FlightDataGetterSetter.h
 /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Sockets/FlightDataGetterSetter.h
 
+/home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Enviroment.cpp
+Enviroment.h
 /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Enviroment.h
+iostream
+-
+Utils.h
+/home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Utils.h
+Interpreter.h
+/home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Interpreter.h
+Databases/ConstsDB.h
+/home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Databases/ConstsDB.h
+
+/home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Enviroment.h
+string
+-
+
+/home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Exceptions.h
+exception
+-
 string
 -
 
@@ -296,7 +336,15 @@ string
 iostream
 -
 
+/home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expressions/BooleanExpressions/And.h
+../BinaryExpression.h
+/home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expressions/BinaryExpression.h
+
 /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expressions/BooleanExpressions/Bigger.h
+../BinaryExpression.h
+/home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expressions/BinaryExpression.h
+
+/home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expressions/BooleanExpressions/BiggerEquals.h
 ../BinaryExpression.h
 /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expressions/BinaryExpression.h
 
@@ -308,9 +356,55 @@ iostream
 ../BinaryExpression.h
 /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expressions/BinaryExpression.h
 
+/home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expressions/BooleanExpressions/Or.h
+../BinaryExpression.h
+/home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expressions/BinaryExpression.h
+
 /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expressions/BooleanExpressions/Smaller.h
 ../BinaryExpression.h
 /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expressions/BinaryExpression.h
+
+/home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expressions/BooleanExpressions/SmallerEquals.h
+../BinaryExpression.h
+/home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expressions/BinaryExpression.h
+
+/home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expressions/BooleanExpressions/Xor.h
+../BinaryExpression.h
+/home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expressions/BinaryExpression.h
+
+/home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expressions/ExpressionFactory.cpp
+ExpressionFactory.h
+/home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expressions/ExpressionFactory.h
+Expressions_operators/Div.h
+/home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expressions/Expressions_operators/Div.h
+Expressions_operators/Plus.h
+/home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expressions/Expressions_operators/Plus.h
+Expressions_operators/Minus.h
+/home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expressions/Expressions_operators/Minus.h
+Expressions_operators/Mul.h
+/home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expressions/Expressions_operators/Mul.h
+Expressions_operators/Pow.h
+/home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expressions/Expressions_operators/Pow.h
+BooleanExpressions/Bigger.h
+/home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expressions/BooleanExpressions/Bigger.h
+BooleanExpressions/Smaller.h
+/home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expressions/BooleanExpressions/Smaller.h
+BooleanExpressions/Equals.h
+/home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expressions/BooleanExpressions/Equals.h
+BooleanExpressions/NotEquals.h
+/home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expressions/BooleanExpressions/NotEquals.h
+BooleanExpressions/Xor.h
+/home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expressions/BooleanExpressions/Xor.h
+BooleanExpressions/Or.h
+/home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expressions/BooleanExpressions/Or.h
+BooleanExpressions/And.h
+/home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expressions/BooleanExpressions/And.h
+BooleanExpressions/BiggerEquals.h
+/home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expressions/BooleanExpressions/BiggerEquals.h
+BooleanExpressions/SmallerEquals.h
+/home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expressions/BooleanExpressions/SmallerEquals.h
+Expressions_operators/Neg.h
+/home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expressions/Expressions_operators/Neg.h
 
 /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expressions/ExpressionFactory.h
 ../Expression.h
@@ -325,6 +419,8 @@ vector
 /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expressions/Expressions_operators/Div.h
 ../BinaryExpression.h
 /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expressions/BinaryExpression.h
+../../Exceptions.h
+/home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Exceptions.h
 
 /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expressions/Expressions_operators/Minus.h
 ../BinaryExpression.h
@@ -333,6 +429,10 @@ vector
 /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expressions/Expressions_operators/Mul.h
 ../BinaryExpression.h
 /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expressions/BinaryExpression.h
+
+/home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expressions/Expressions_operators/Neg.h
+../UnaryExpression.h
+/home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expressions/UnaryExpression.h
 
 /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expressions/Expressions_operators/Plus.h
 ../BinaryExpression.h
@@ -387,6 +487,8 @@ Utils.h
 /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Utils.h
 Expressions/Var.h
 /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expressions/Var.h
+Exceptions.h
+/home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Exceptions.h
 
 /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Interpreter.h
 vector
@@ -402,23 +504,17 @@ Command.h
 Expressions.h
 /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Expressions.h
 
-/home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Sockets/FlightDataGetterSetter.cpp
-strings.h
--
-cstring
--
-unistd.h
--
-FlightDataGetterSetter.h
-/home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Sockets/FlightDataGetterSetter.h
-../Utils.h
-/home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Utils.h
-
 /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Sockets/FlightDataGetterSetter.h
 map
 -
 string
 -
+
+/home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Utils.cpp
+Utils.h
+/home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Utils.h
+Interpreter.h
+/home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Interpreter.h
 
 /home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Utils.h
 string

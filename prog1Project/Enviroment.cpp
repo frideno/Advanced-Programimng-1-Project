@@ -38,26 +38,34 @@ void Enviroment::CommandlineOperation() {
         string line = ConstsDB::ENDLINE_KEYWORD;
         while (line != "done") {
 
-            // if the command is to operate a script from file - run "../fileName"
-            if (line.length() > 6 && line.substr(0, 3) == "run") {
-                string fileName = line.substr(5, line.length() - 6);
+            try {
+                // if the command is to operate a script from file - run "../fileName"
+                if (line.length() > 6 && line.substr(0, 3) == "run") {
+                    string fileName = line.substr(5, line.length() - 6);
 
-                runScriptFromFile(fileName);
+                    runScriptFromFile(fileName);
+                }
+
+                    // else lex and parse the line.
+
+                else {
+                    i->lexer(line);
+                    i->parser();
+                }
+
+                // get another line.
+            } catch (exception e) {
+
             }
-
-            // else lex and parse the line.
-
-            else {
-                i->lexer(line);
-                i->parser();
-            }
-
-            // get another line.
             getline(cin, line);
 
         }
+        delete i;
+        ConstsDB::destroyAllDB();
+
     } catch (exception e) {
-        cout << e.what();
+        cout << e.what() << endl;
+        //clostAllSystemResources();
     }
 }
 
@@ -73,16 +81,22 @@ void Enviroment::FileOperation() {
 
 void Enviroment::runScriptFromFile(std::string &fileName) {
 
-    ifstream file("../"+fileName);
+    ifstream file( "../"  + fileName);
     if (file.is_open()) {
-        Interpreter* i = new Interpreter();
-        string line;
-        while (getline(file, line)) {
-            i->lexer(line);
-            i->parser();
+        Interpreter *i = new Interpreter();
+        try {
+            string line;
+            while (getline(file, line)) {
+                i->lexer(line);
+                i->parser();
 
-        }
-
+            }
+    } catch (exception e) {
+        cout << e.what() << endl;
+        //clostAllSystemResources();
+    }
+    delete i;
+    ConstsDB::destroyAllDB();
 
     } else {
         cout << ">> File didn't found. GoodBye.";

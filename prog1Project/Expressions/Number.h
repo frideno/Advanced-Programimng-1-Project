@@ -41,6 +41,6 @@ public:
         return std::to_string(_value);
     }
 
-
+    ~Number() {}
 };
 #endif //PROG1PROJECT_NUMBER_H

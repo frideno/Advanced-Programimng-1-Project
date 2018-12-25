@@ -18,9 +18,14 @@ class SymbolsDB {
 private:
     // symbol table-  variables name to their value.
     static const double UNINTILIZED_VAR_DEFAULT;
+    typedef std::multimap<string, string>::iterator MMAPIterator;
     static map<string, double> _symbolTable;
-    static map<string, string> _bindTable;  // TODO: check if maybe change to <string, list<string>> if you can be binded to more than one.
+    static multimap<string, string> _bindTable;  // TODO: check if maybe change to <string, list<string>> if you can be binded to more than one.
     static FlightDataGetterSetter* _socketManager;
+
+    static const bool UPDATE_IN_SERVER = true;
+    // sets a bindind symbol recursivly - all its binded neigbors.
+    static void setBindedSymbolRecursivly(string symbolName, double symbolValue, map<string, bool>& markedVariables, bool update);
 
     // returns if the symbolName starts and ends with paraheses means it is a source var.
 public:
@@ -40,10 +45,13 @@ public:
     static void addSymbol(string symbolName);
 
 
-    // adds a (symbolName, symbol ovalue) to symbols map.
+    // adds a (symbolName, symbol ovalue) to symbols map ,and send requestes to server if needed.
     static void setSymbol(string  symbolName, double symbolValue);
 
-    // removes a (symbolName, symbol value) from symbols map.
+    // adds (symbolName, symbol ovalue) without asking the server to update it also.
+    static void setLocalSymbol(string symbolName, double symbolValue);
+
+        // removes a (symbolName, symbol value) from symbols map.
     static void removeSymbol(string symbolName);
 
     // return if a symbol named symbolName is in the symbolTable.

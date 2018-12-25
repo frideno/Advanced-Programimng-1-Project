@@ -17,9 +17,9 @@ map<string, CommandCreator*> m =
          { "openDataServer", new OpenDataServerCommandCreator() }, { "print", new PrintCommandCreator()} ,
          {ConstsDB::ENDLINE_KEYWORD, new SemicolonCommandCreator()}, {"=", new EqualsCommandCreator()},
          {"var", new DefineVarCommandCreator()}, {"connect", new ConnectCommandCreator()}, {"sleep", new SleepCommandCreator()}
+         , {"bind", new SemicolonCommandCreator()}
         };
 
-    // TODO: insert var, connect, =, bind.
     return m;
 };
 
@@ -39,7 +39,7 @@ Command* ConstsDB::createCommand(string name, vector<string>& args) {
         return _commandsByNames.at(name)->create(args);
     }
     else {
-        throw("Command (keyword) name is not defined");
+        throw new CommandException("Command (keyword) name is not defined");
     }
 
 }
@@ -49,16 +49,16 @@ CommandCreator *ConstsDB::getCommand(string name) {
         return  _commandsByNames.at(name);
     }
     else {
-        throw("Command (keyword) name is not defined");
+        throw new CommandException("Command (keyword) name is not defined");
     }
 }
 
 double ConstsDB::getKeywordValue(string name) {
-    if(_commandsByNames.count(name) != 0) {
+    if(_keywordValues.count(name) != 0) {
         return  _keywordValues.at(name);
     }
     else {
-        throw("Keyword is not defined");
+        throw new KeywordException("Keyword is not defined");
     }
 }
 bool ConstsDB::containsKeyword(string name) {
@@ -69,3 +69,10 @@ bool ConstsDB::containsCommand(string name) {
     return _commandsByNames.count(name) != 0;
 }
 
+void ConstsDB::destroyAllDB() {
+    for(map<string, CommandCreator*>::iterator p = _commandsByNames.begin(); p != _commandsByNames.end(); ++p) {
+        if(p->second != nullptr)
+            delete p->second;
+
+    }
+}

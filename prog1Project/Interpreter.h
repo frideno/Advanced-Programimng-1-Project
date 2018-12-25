@@ -23,6 +23,7 @@ class Interpreter {
 private:
 
     Command* _currentCommand;
+    vector<Command*> _commandsStack;
     vector<string> _tokens;
     vector<string> _currentArgs;
     int _index = 0;
@@ -52,10 +53,13 @@ public:
     void lexer(string& line);
 
     // parser - from a commmandLine representing a command, parse it into command and do it.
-    void parser();
+    void parser() throw();
 
     // ‫‪Shunting-yard‬‬ of Dikstra - parse a string into a Expression (only binaries expressions).
     static Expression* shuntingYard(vector<string>& tokens);
+
+    // destructor which also deleting all commands and their important recouses.
+    ~Interpreter();
 
     void reset();
 

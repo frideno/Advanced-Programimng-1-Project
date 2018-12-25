@@ -7,6 +7,8 @@
 
 // turn string to int.
 double Utils::to_number(string s) {
+    if (s == "")
+        return  0;
     std::string::size_type sz;     // alias of size_t
 
     return std::stod(s, &sz);

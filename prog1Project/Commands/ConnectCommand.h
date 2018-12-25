@@ -27,9 +27,15 @@ public:
 
     bool anotherArg(string &current) override;
 
+    void connectToServer(struct  hostent *server, int port);
+
+    ~ConnectCommand();
+
+    void disconnect();
 
 
-private:
+
+        private:
     int _internalUseN = 2;
 };
 #endif //PROG1PROJECT_OPENDATASERVER_H

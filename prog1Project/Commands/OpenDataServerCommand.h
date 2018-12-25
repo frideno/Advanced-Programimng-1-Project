@@ -15,17 +15,16 @@ using namespace std;
 class OpenDataServerCommand: public Command {
 private:
     int _sockfd = 0;
+    bool _continueGetData;
 
-    // list of all symbolNames for flight.
-    static const vector<string> _flightSymbols;
-
-    // take all flight symbols from server to maps.
-    void getAllFlightSymbols();
 
     // opens a server socket, that can recieve data from client - flight simulator.
-    void openServer(int port, int rate);
+    void openServer(int port);
 
-    void task1(vector<string>& args);
+    // close down the server:
+    void closeServer();
+
+
 
 protected:
 
@@ -34,7 +33,7 @@ public:
 
     // constructor:
     OpenDataServerCommand(vector<string>& v):
-        args(v) {};
+        args(v), _continueGetData(true) {};
 
     // command method:
         bool goBackArg(string &current) override;
@@ -44,5 +43,17 @@ public:
     bool anotherArg(string &current) override;
 
 
+    void task(int frequency);
+
+// take all flight symbols from server to maps.
+    void getAllFlightSymbols();
+
+    // list of all symbolNames for flight.
+    static const vector<string> _flightSymbols;
+
+    ~OpenDataServerCommand();
+
 };
+
+
 #endif //PROG1PROJECT_OPENDATASERVER_H
