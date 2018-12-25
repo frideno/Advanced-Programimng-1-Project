@@ -1,7 +1,0 @@
-openDataServer 5400 10
-connect 127.0.0.1 5402
-print 5
-print "x"
-var x = 3+2*9
-print x
-var x = "

@@ -43,10 +43,10 @@ void ConnectCommand::doCommand() {
         args.erase(args.begin(), args.begin() + skip + 1);
 
         // calculating the port from the expression.
-        vector<Expression*> extractedExpressions = Utils::blabla(args);
+        vector<Expression*> extractedExpressions = Utils::SplitCommaArgsToExpressions(args);
         if (extractedExpressions.size() != 1)
             throw;
-        port = Utils::blabla(args)[0]->calculate();
+        port = Utils::SplitCommaArgsToExpressions(args)[0]->calculate();
 
         // connecting to server in port port.
         connectToServer(server, port);

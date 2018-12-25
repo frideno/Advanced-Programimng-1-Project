@@ -1,5 +1,5 @@
 //
-// Created by omri on 12/15/18.
+// created by omri & gal on 12/15/18.
 //
 
 #include "Utils.h"
@@ -57,7 +57,7 @@ vector<string> Utils::strSplit(string str, char token) {
     return answer;
 }
 
-vector<Expression*> Utils::blabla(vector<string> tokens) {
+vector<Expression*> Utils::SplitCommaArgsToExpressions(vector<string> tokens) {
 
     vector<Expression*> answer;
 

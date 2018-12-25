@@ -1,5 +1,5 @@
 //
-// Created by omri on 12/24/18.
+// created by omri & gal on 12/24/18.
 //
 
 #include <unistd.h>
@@ -11,7 +11,7 @@
 
 void SleepCommand::doCommand() {
 
-    unsigned int msToSleep = (int) Utils::blabla(args)[0]->calculate();
+    unsigned int msToSleep = (int) Utils::SplitCommaArgsToExpressions(args)[0]->calculate();
 
     // makes the thread sleep.
     std::this_thread::sleep_for(std::chrono::milliseconds(msToSleep));

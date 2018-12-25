@@ -1,5 +1,5 @@
 //
-// Created by omri on 12/10/18.
+// created by omri & gal on 12/10/18.
 //
 
 #ifndef PROG1PROJECT_EXPRESSION_H
@@ -17,6 +17,7 @@ public :
 
     virtual double calculate() = 0;
     virtual std::string toString() const = 0;
+    virtual  ~Expression()  {};
 
 };
 #endif //PROG1PROJECT_EXPRESSION_H

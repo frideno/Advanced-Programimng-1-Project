@@ -56,6 +56,7 @@ CMakeFiles/prog1Project.dir/Commands/DefineVarCommand.cpp.o: ../Commands/Connect
 CMakeFiles/prog1Project.dir/Commands/DefineVarCommand.cpp.o: ../Commands/Creators.h
 CMakeFiles/prog1Project.dir/Commands/DefineVarCommand.cpp.o: ../Commands/DefineVarCommand.cpp
 CMakeFiles/prog1Project.dir/Commands/DefineVarCommand.cpp.o: ../Commands/DefineVarCommand.h
+CMakeFiles/prog1Project.dir/Commands/DefineVarCommand.cpp.o: ../Commands/EnterCCommand.h
 CMakeFiles/prog1Project.dir/Commands/DefineVarCommand.cpp.o: ../Commands/EqualsCommand.h
 CMakeFiles/prog1Project.dir/Commands/DefineVarCommand.cpp.o: ../Commands/IfCommand.h
 CMakeFiles/prog1Project.dir/Commands/DefineVarCommand.cpp.o: ../Commands/OpenDataServerCommand.h

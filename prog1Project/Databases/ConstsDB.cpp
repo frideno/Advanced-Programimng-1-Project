@@ -1,5 +1,5 @@
 //
-// Created by omri on 12/18/18.
+// created by omri & gal on 12/18/18.
 //
 
 #include "ConstsDB.h"
@@ -17,7 +17,7 @@ map<string, CommandCreator*> m =
          { "openDataServer", new OpenDataServerCommandCreator() }, { "print", new PrintCommandCreator()} ,
          {ConstsDB::ENDLINE_KEYWORD, new SemicolonCommandCreator()}, {"=", new EqualsCommandCreator()},
          {"var", new DefineVarCommandCreator()}, {"connect", new ConnectCommandCreator()}, {"sleep", new SleepCommandCreator()}
-         , {"bind", new SemicolonCommandCreator()}
+         , {"bind", new SemicolonCommandCreator()}, {"enterc", new EnterCCommandCreator()}
         };
 
     return m;

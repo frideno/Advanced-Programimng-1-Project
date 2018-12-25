@@ -1,5 +1,5 @@
 //
-// Created by omri on 12/15/18.
+// created by omri & gal on 12/15/18.
 //
 
 #include "PrintCommand.h"
@@ -17,7 +17,7 @@ void PrintCommand::doCommand() {
 
         // getting next expression with shunting yard from args.
 
-        vector<Expression*> extractedExpressions = Utils::blabla(args);
+        vector<Expression*> extractedExpressions = Utils::SplitCommaArgsToExpressions(args);
         cout << extractedExpressions[0]->calculate() << endl;
 
         // clear memory.

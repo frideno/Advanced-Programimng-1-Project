@@ -1,5 +1,5 @@
 //
-// Created by omri on 12/24/18.
+// created by omri & gal on 12/24/18.
 //
 
 #ifndef PROG1PROJECT_CREATORS_H
@@ -18,6 +18,7 @@
 #include "EqualsCommand.h"
 #include "DefineVarCommand.h"
 #include "SleepCommand.h"
+#include "EnterCCommand.h"
 
 class OpenDataServerCommandCreator : public CommandCreator{
     Command *create(vector<string>& CommandArgs) override {
@@ -70,6 +71,12 @@ class DefineVarCommandCreator : public CommandCreator{
 class SleepCommandCreator : public CommandCreator{
     Command *create(vector<string>& CommandArgs) override {
         return new SleepCommand(CommandArgs);
+    }
+};
+
+class EnterCCommandCreator : public CommandCreator{
+    Command *create(vector<string>& CommandArgs) override {
+        return new EnterCCommand(CommandArgs);
     }
 };
 

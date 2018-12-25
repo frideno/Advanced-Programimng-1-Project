@@ -115,6 +115,9 @@
 		<Unit filename="/home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Commands/DefineVarCommand.h">
 			<Option target="prog1Project"/>
 		</Unit>
+		<Unit filename="/home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Commands/EnterCCommand.h">
+			<Option target="prog1Project"/>
+		</Unit>
 		<Unit filename="/home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/Commands/EqualsCommand.cpp">
 			<Option target="prog1Project"/>
 		</Unit>

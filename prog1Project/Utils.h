@@ -1,5 +1,5 @@
 //
-// Created by omri on 12/15/18.
+// created by omri & gal on 12/15/18.
 //
 
 #ifndef PROG1PROJECT_UTILS_H
@@ -26,7 +26,7 @@ public:
     static vector<vector<T>> split(vector<T>, T token);
 
     // split the vector by commas (,) and create an expression from each part.
-    static vector<Expression*> blabla(vector<string> tokens);
+    static vector<Expression*> SplitCommaArgsToExpressions(vector<string> tokens);
 
     // split string using split.
     static vector<string> strSplit(string str, char token);

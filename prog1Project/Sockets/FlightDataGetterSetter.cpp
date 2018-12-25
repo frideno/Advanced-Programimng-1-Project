@@ -1,5 +1,5 @@
 //
-// Created by omri on 12/22/18.
+// created by omri & gal on 12/22/18.
 //
 
 #include <strings.h>
@@ -40,8 +40,9 @@ double FlightDataGetterSetter::recieve(string message) {
 
     // extract the float part of the "x = '<double-part>' (double)" answer.
     vector<string> equalSplit = Utils::strSplit(answer, '=');
-    if (equalSplit.size() < 2)
-        throw FlightsServerException("server sent somthing wrong formmatted.");
+    if (equalSplit.size() < 2) {
+        return recieve(message);
+    }
     vector<string> parantethisSplit = Utils::strSplit(equalSplit[1], '\'');
     if (parantethisSplit.size() < 3)
         throw FlightsServerException("server sent somthing wrong formmatted.");

@@ -1,5 +1,5 @@
 //
-// Created by omri on 12/15/18.
+// created by omri & gal on 12/15/18.
 //
 
 #include "OpenDataServerCommand.h"
@@ -20,7 +20,7 @@
 
 using namespace std;
 
-const vector<string> OpenDataServerCommand::_flightSymbols = {"\"/instrumentation/airspeed-indicator/indicated-speed-kt\"","\"/instrumentation/altimeter/indicated-altitude-ft\"","\"/instrumentation/altimeter/pressure-alt-ft\"","\"/instrumentation/attitude-indicator/indicated-pitch-deg\"","\"/instrumentation/attitude-indicator/indicated-roll-deg\"","\"/instrumentation/attitude-indicator/internal-pitch-deg\"","\"/instrumentation/attitude-indicator/internal-roll-deg\"","\"/instrumentation/encoder/indicated-altitude-ft\"","\"/instrumentation/encoder/pressure-alt-ft\"","\"/instrumentation/gps/indicated-altitude-ft\"","\"/instrumentation/gps/indicated-ground-speed-kt\"","\"/instrumentation/gps/indicated-vertical-speed\"","\"/instrumentation/heading-indicator/indicated-heading-deg\"","\"/instrumentation/magnetic-compass/indicated-heading-deg\"","\"/instrumentation/slip-skid-ball/indicated-slip-skid\"","\"/instrumentation/turn-indicator/indicated-turn-rate\"","\"/instrumentation/vertical-speed-indicator/indicated-speed-fpm\"","\"/controls/flight/aileron\"","\"/controls/flight/elevator\"","\"/controls/flight/rudder\"","\"/controls/flight/flaps\"","\"/controls/engines/engine/throttle\"","\"/engines/engine/rpm\""};
+const vector<string> OpenDataServerCommand::_flightSymbols = {"\"/instrumentation/airspeed-indicator/indicated-speed-kt\"","\"/instrumentation/altimeter/indicated-altitude-ft\"","\"/instrumentation/altimeter/pressure-alt-ft\"","\"/instrumentation/attitude-indicator/indicated-pitch-deg\"","\"/instrumentation/attitude-indicator/indicated-roll-deg\"","\"/instrumentation/attitude-indicator/internal-pitch-deg\"","\"/instrumentation/attitude-indicator/internal-roll-deg\"","\"/instrumentation/encoder/indicated-altitude-ft\"","\"/instrumentation/encoder/pressure-alt-ft\"","\"/instrumentation/gps/indicated-altitude-ft\"","\"/instrumentation/gps/indicated-ground-speed-kt\"","\"/instrumentation/gps/indicated-vertical-speed\"","\"/instrumentation/heading-indicator/indicated-heading-deg\"","\"/instrumentation/magnetic-compass/indicated-heading-deg\"","\"/instrumentation/slip-skid-ball/indicated-slip-skid\"","\"/instrumentation/turn-indicator/indicated-turn-rate\"","\"/instrumentation/vertical-speed-indicator/indicated-speed-fpm\"","\"/controls/flight/aileron\"","\"/controls/flight/elevator\"","\"/controls/flight/rudder\"","\"/controls/flight/flaps\"","\"/controls/engines/current-engine/throttle\"","\"/engines/engine/rpm\""};
 
 void OpenDataServerCommand::openServer(int port) {
 
@@ -128,14 +128,27 @@ void OpenDataServerCommand::getAllFlightSymbols() {
         allValuesDouble.push_back(Utils::to_number(allValuesStr[i]));
     }
 
+    bool serverUp = false;
+
+    // check that flights server is fully up, by checking that its not all 0 , so then the server isn't up yet.
+    for (int i = 0; i < allValuesDouble.size(); i++) {
+        if (allValuesDouble[i] != 0)
+            serverUp = true;
+    }
+
+    // if server didn't up, sleep a 500 ms (0.5 second), and do the whole function again:
+    if (!serverUp) {
+        this_thread::sleep_for(chrono::milliseconds(500));
+        getAllFlightSymbols();
+        return;
+    }
+
 
     // if its fine, sets the symbols at the symbol Table to be the values in allValuesDouble mathcing the order.
 
     for (int i = 0; i < OpenDataServerCommand::_flightSymbols.size(); i++) {
         SymbolsDB::setLocalSymbol(OpenDataServerCommand::_flightSymbols[i], allValuesDouble[i]);
     }
-
-    //0.000000,0.000000,1.193444,12.000000,40.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,270.010010,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000
 }
 
 void OpenDataServerCommand::doCommand() {
@@ -147,7 +160,7 @@ void OpenDataServerCommand::doCommand() {
     try {
 
         // extracting next two expressions from the args.
-        vector<Expression*> extractedExpressions = Utils::blabla(args);
+        vector<Expression*> extractedExpressions = Utils::SplitCommaArgsToExpressions(args);
         if (extractedExpressions.size() != 2)
             throw BadArgumentsException("bad arguments on openDataServer");
 

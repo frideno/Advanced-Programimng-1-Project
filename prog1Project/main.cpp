@@ -17,12 +17,22 @@ using namespace std;;
 #include "Enviroment.h"
 #include "Utils.h"
 
-int main() {
+int main(int argc, char *argv[]) {
 
     try {
 
         Enviroment *e = new Enviroment;
-        e->operation();
+
+        // by if the user inserted a filename or not, do the right operation.
+        if (argc <= 1) {
+            e->CommandlineOperation();
+
+        }
+
+        else {
+            string fileName = string(argv[1]);
+            e->runScriptFromFile(fileName);
+        }
         delete e;
     } catch (...)  {
         cout << "An main exception was thrown at undetected problem." << endl;

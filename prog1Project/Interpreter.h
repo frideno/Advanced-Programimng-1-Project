@@ -1,5 +1,5 @@
 /*
-     Created by omri on 12/9/18.
+     created by omri & gal on 12/9/18.
 */
 
 #ifndef PROG1PROJECT_Interpreter_H

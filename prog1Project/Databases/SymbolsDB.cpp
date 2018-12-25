@@ -1,5 +1,5 @@
 //
-// Created by omri on 12/16/18.
+// created by omri & gal on 12/16/18.
 //
 #include "SymbolsDB.h"
 

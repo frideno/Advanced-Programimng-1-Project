@@ -1,5 +1,5 @@
 //
-// Created by omri on 12/18/18.
+// created by omri & gal on 12/18/18.
 //
 
 #include "EqualsCommand.h"

@@ -1,5 +1,5 @@
 //
-// Created by omri on 12/10/18.
+// created by omri & gal on 12/10/18.
 //
 
 #ifndef PROG1PROJECT_Mul_H
@@ -19,10 +19,6 @@ public:
     // the implementation of operation - Mul.
     double operation(double var1, double var2) {return var1 * var2;};
 
-    ~Mul() {
-        delete getLeft();
-        delete getRight();
-    }
 };
 
 
