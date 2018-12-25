@@ -34,8 +34,14 @@ void SymbolsDB::setBindedSymbolRecursivly(string symbolName, double symbolValue,
     }
 
     else {
+        // if there is no var named this name, throw exception.
         if (_symbolTable.count(symbolName) == 0) {
             throw new SymbolException("Symbol " + symbolName + " not exists. can't assing to it.");
+        }
+
+        // else, update its value.
+        else {
+            _symbolTable.at(symbolName) = symbolValue;
         }
     }
 
@@ -72,7 +78,6 @@ void SymbolsDB::setBindedSymbolRecursivly(string symbolName, double symbolValue,
                 //change all binded variables to other...
                 setBindedSymbolRecursivly(other, symbolValue, markedVariables, update);
             }
-            int x = 3;
         }
     }
 }
