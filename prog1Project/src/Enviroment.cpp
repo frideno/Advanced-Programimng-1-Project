@@ -18,7 +18,7 @@ void Enviroment::CommandlineOperation() {
         Interpreter *i = new Interpreter();
 
         string line = ConstsDB::ENDLINE_KEYWORD;
-        while (line != "done") {
+        while (line != "exit") {
 
             try {
                 // if the command is to operate a script from file - run "../fileName"
@@ -40,22 +40,19 @@ void Enviroment::CommandlineOperation() {
             } catch (BasicException& be) {
                 cout << EXCEPTION_WAS_THROWN << " " << be.what() << endl;
                 delete i;
-                ConstsDB::destroyAllDB();
-                exit(1);
+                throw;
             } catch (...){
                 cout << "unknown exception was thrown." << endl;
                 delete i;
-                ConstsDB::destroyAllDB();
-                exit(1);
+                throw;
 
             }
 
         }
         delete i;
-        ConstsDB::destroyAllDB();
-        exit(0);
+
     } catch (...) {
-        exit(1);
+        throw;
     }
 
 }
@@ -82,19 +79,22 @@ void Enviroment::runScriptFromFile(std::string &fileName) {
         }   catch (BasicException& be) {
             cout <<  EXCEPTION_WAS_THROWN << " "  << " " << be.what() << endl;
             delete i;
-            ConstsDB::destroyAllDB();
-            exit(1);
+            throw;
+
         } catch (...){
             cout << "unknown exception was thrown." << endl;
             delete i;
             ConstsDB::destroyAllDB();
-            exit(1);
+            throw;
 
         }
-    ConstsDB::destroyAllDB();
-
     } else {
         cout << ">> File didn't found. GoodBye.";
 
     }
+}
+
+Enviroment::~Enviroment() {
+    ConstsDB::destroyAllDB();
+
 }

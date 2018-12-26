@@ -31,8 +31,10 @@ void ConnectCommand::doCommand() {
     int port;
     try {
 
-        // get ip as string form args.
+        if(args.size() < 2)
+            throw;
 
+            // get ip as string form args.
         server = gethostbyname(args[0].c_str());
 
         // extracting next expression from args using shunting yard.
@@ -43,25 +45,32 @@ void ConnectCommand::doCommand() {
         args.erase(args.begin(), args.begin() + skip + 1);
 
         // calculating the port from the expression.
+
         vector<Expression*> extractedExpressions = Utils::SplitCommaArgsToExpressions(args);
         if (extractedExpressions.size() != 1)
             throw;
-        port = Utils::SplitCommaArgsToExpressions(args)[0]->calculate();
 
-        // connecting to server in port port.
-        connectToServer(server, port);
+        port = extractedExpressions[0]->calculate();
+
+        for(Expression* pe: extractedExpressions)
+            delete pe;
+
 
 
 
     }
-    catch (exception& e){
-        throw ServerException("failed connecting to server, invalid argument PORT or RATE is not representing an int");
+    catch (...){
+        throw ServerException("failed connecting to server, invalid argument IP or Port is not representing an int");
     }
+
+    // connecting to server in port port.
+    connectToServer(server, port);
 
 }
 
 void ConnectCommand::disconnect() {
-    close(_socketfd);
+    if (_socketfd != 0)
+        close(_socketfd);
 }
 
 ConnectCommand::~ConnectCommand() {
@@ -86,8 +95,8 @@ void ConnectCommand::connectToServer(struct  hostent *server, int port) {
     sockfd = socket(AF_INET, SOCK_STREAM, 0);
 
     if (sockfd < 0) {
-        perror("ERROR opening socket");
-        exit(1);
+        throw ServerException("ERROR opening socket");
+        
     }
 
 
@@ -103,8 +112,8 @@ void ConnectCommand::connectToServer(struct  hostent *server, int port) {
 
     /* Now connect to the server */
     if (connect(sockfd, (struct sockaddr*)&serv_addr, sizeof(serv_addr)) < 0) {
-        perror("ERROR connecting");
-        exit(1);
+        throw ServerException("ERROR connecting");
+        
     }
 
     /* Now ask for a message from the user, this message

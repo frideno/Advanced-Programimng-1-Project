@@ -24,6 +24,8 @@ public:
 
     // interperat script from file named fileName.
     void runScriptFromFile(std::string& fileName);
+
+    ~Enviroment();
 };
 
 

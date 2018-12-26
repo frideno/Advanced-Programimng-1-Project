@@ -34,8 +34,8 @@ void OpenDataServerCommand::openServer(int port) {
     sockfd = socket(AF_INET, SOCK_STREAM, 0);
 
     if (sockfd < 0) {
-        perror("ERROR opening socket");
-        exit(1);
+        throw ServerException("ERROR opening socket");
+        
     }
 
     /* Initialize socket structure */
@@ -47,8 +47,8 @@ void OpenDataServerCommand::openServer(int port) {
 
     /* Now bind the host address using bind() call.*/
     if (bind(sockfd, (struct sockaddr *) &serv_addr, sizeof(serv_addr)) < 0) {
-        perror("ERROR on binding");
-        exit(1);
+        throw ServerException("ERROR on binding");
+        
     }
 
     /* Now start listening for the clients, here process will
@@ -63,8 +63,8 @@ void OpenDataServerCommand::openServer(int port) {
     newsockfd = accept(sockfd, (struct sockaddr *)&cli_addr, (socklen_t*)&clilen);
 
     if (newsockfd < 0) {
-        perror("ERROR on accept");
-        exit(1);
+        throw ServerException("ERROR on accept");
+        
     }
 
     _sockfd = newsockfd;
@@ -96,8 +96,8 @@ void OpenDataServerCommand::getAllFlightSymbols() {
     } while (strlen(buffer) == 0);
 
     if (n < 0) {
-        perror("ERROR reading from socket");
-        exit(1);
+        throw ServerException("ERROR reading from socket");
+        
     }
 
     // translate the values from strings into a vector of string of double symbol values.

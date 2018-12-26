@@ -9,7 +9,7 @@ using namespace std;
 
 class ConnectCommand: public Command {
 private:
-    int _socketfd;
+    int _socketfd = 0;
 
 protected:
 

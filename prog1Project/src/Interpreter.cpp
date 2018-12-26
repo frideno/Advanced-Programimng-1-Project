@@ -6,6 +6,7 @@
 #include "Databases/ConstsDB.h"
 #include <stack>
 #include <algorithm>
+#include <bits/refwrap.h>
 #include "Databases/SymbolsDB.h"
 #include "Expressions/ExpressionFactory.h"
 #include "Utils.h"
@@ -423,9 +424,10 @@ void Interpreter::parser() {
 
             // command object do the command on the arguments list.
             _currentCommand->doCommand();
-
             // adding the command to the stack of commands;
             _commandsStack.push_back(_currentCommand);
+
+            _currentCommand = nullptr;
 
             // setting that the command arguments is over.
             _isNeededMoreLines = false;
@@ -434,9 +436,11 @@ void Interpreter::parser() {
 }
 
 Interpreter::~Interpreter() {
+    delete _currentCommand;
     for(Command* c:_commandsStack) {
         delete c;
     }
+
 }
 
 void Interpreter::reset() {

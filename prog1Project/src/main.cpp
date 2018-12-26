@@ -19,9 +19,8 @@ using namespace std;;
 
 int main(int argc, char *argv[]) {
 
+    Enviroment *e = new Enviroment;
     try {
-
-        Enviroment *e = new Enviroment;
 
         // by if the user inserted a filename or not, do the right operation.
         if (argc <= 1) {
@@ -34,8 +33,10 @@ int main(int argc, char *argv[]) {
             e->runScriptFromFile(fileName);
         }
         delete e;
+        exit(0);
     } catch (...)  {
-        cout << "An main exception was thrown at undetected problem." << endl;
+        delete e;
+        exit(1);
     }
 
 
