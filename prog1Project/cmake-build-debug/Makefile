@@ -123,329 +123,410 @@ prog1Project/fast:
 	$(MAKE) -f CMakeFiles/prog1Project.dir/build.make CMakeFiles/prog1Project.dir/build
 .PHONY : prog1Project/fast
 
-Commands/ConditionParser.o: Commands/ConditionParser.cpp.o
+src/Commands/ConditionParser.o: src/Commands/ConditionParser.cpp.o
 
-.PHONY : Commands/ConditionParser.o
-
-# target to build an object file
-Commands/ConditionParser.cpp.o:
-	$(MAKE) -f CMakeFiles/prog1Project.dir/build.make CMakeFiles/prog1Project.dir/Commands/ConditionParser.cpp.o
-.PHONY : Commands/ConditionParser.cpp.o
-
-Commands/ConditionParser.i: Commands/ConditionParser.cpp.i
-
-.PHONY : Commands/ConditionParser.i
-
-# target to preprocess a source file
-Commands/ConditionParser.cpp.i:
-	$(MAKE) -f CMakeFiles/prog1Project.dir/build.make CMakeFiles/prog1Project.dir/Commands/ConditionParser.cpp.i
-.PHONY : Commands/ConditionParser.cpp.i
-
-Commands/ConditionParser.s: Commands/ConditionParser.cpp.s
-
-.PHONY : Commands/ConditionParser.s
-
-# target to generate assembly for a file
-Commands/ConditionParser.cpp.s:
-	$(MAKE) -f CMakeFiles/prog1Project.dir/build.make CMakeFiles/prog1Project.dir/Commands/ConditionParser.cpp.s
-.PHONY : Commands/ConditionParser.cpp.s
-
-Commands/DefineVarCommand.o: Commands/DefineVarCommand.cpp.o
-
-.PHONY : Commands/DefineVarCommand.o
+.PHONY : src/Commands/ConditionParser.o
 
 # target to build an object file
-Commands/DefineVarCommand.cpp.o:
-	$(MAKE) -f CMakeFiles/prog1Project.dir/build.make CMakeFiles/prog1Project.dir/Commands/DefineVarCommand.cpp.o
-.PHONY : Commands/DefineVarCommand.cpp.o
+src/Commands/ConditionParser.cpp.o:
+	$(MAKE) -f CMakeFiles/prog1Project.dir/build.make CMakeFiles/prog1Project.dir/src/Commands/ConditionParser.cpp.o
+.PHONY : src/Commands/ConditionParser.cpp.o
 
-Commands/DefineVarCommand.i: Commands/DefineVarCommand.cpp.i
+src/Commands/ConditionParser.i: src/Commands/ConditionParser.cpp.i
 
-.PHONY : Commands/DefineVarCommand.i
+.PHONY : src/Commands/ConditionParser.i
 
 # target to preprocess a source file
-Commands/DefineVarCommand.cpp.i:
-	$(MAKE) -f CMakeFiles/prog1Project.dir/build.make CMakeFiles/prog1Project.dir/Commands/DefineVarCommand.cpp.i
-.PHONY : Commands/DefineVarCommand.cpp.i
+src/Commands/ConditionParser.cpp.i:
+	$(MAKE) -f CMakeFiles/prog1Project.dir/build.make CMakeFiles/prog1Project.dir/src/Commands/ConditionParser.cpp.i
+.PHONY : src/Commands/ConditionParser.cpp.i
 
-Commands/DefineVarCommand.s: Commands/DefineVarCommand.cpp.s
+src/Commands/ConditionParser.s: src/Commands/ConditionParser.cpp.s
 
-.PHONY : Commands/DefineVarCommand.s
+.PHONY : src/Commands/ConditionParser.s
 
 # target to generate assembly for a file
-Commands/DefineVarCommand.cpp.s:
-	$(MAKE) -f CMakeFiles/prog1Project.dir/build.make CMakeFiles/prog1Project.dir/Commands/DefineVarCommand.cpp.s
-.PHONY : Commands/DefineVarCommand.cpp.s
+src/Commands/ConditionParser.cpp.s:
+	$(MAKE) -f CMakeFiles/prog1Project.dir/build.make CMakeFiles/prog1Project.dir/src/Commands/ConditionParser.cpp.s
+.PHONY : src/Commands/ConditionParser.cpp.s
 
-Commands/EqualsCommand.o: Commands/EqualsCommand.cpp.o
+src/Commands/ConnectCommand.o: src/Commands/ConnectCommand.cpp.o
 
-.PHONY : Commands/EqualsCommand.o
+.PHONY : src/Commands/ConnectCommand.o
 
 # target to build an object file
-Commands/EqualsCommand.cpp.o:
-	$(MAKE) -f CMakeFiles/prog1Project.dir/build.make CMakeFiles/prog1Project.dir/Commands/EqualsCommand.cpp.o
-.PHONY : Commands/EqualsCommand.cpp.o
+src/Commands/ConnectCommand.cpp.o:
+	$(MAKE) -f CMakeFiles/prog1Project.dir/build.make CMakeFiles/prog1Project.dir/src/Commands/ConnectCommand.cpp.o
+.PHONY : src/Commands/ConnectCommand.cpp.o
 
-Commands/EqualsCommand.i: Commands/EqualsCommand.cpp.i
+src/Commands/ConnectCommand.i: src/Commands/ConnectCommand.cpp.i
 
-.PHONY : Commands/EqualsCommand.i
+.PHONY : src/Commands/ConnectCommand.i
 
 # target to preprocess a source file
-Commands/EqualsCommand.cpp.i:
-	$(MAKE) -f CMakeFiles/prog1Project.dir/build.make CMakeFiles/prog1Project.dir/Commands/EqualsCommand.cpp.i
-.PHONY : Commands/EqualsCommand.cpp.i
+src/Commands/ConnectCommand.cpp.i:
+	$(MAKE) -f CMakeFiles/prog1Project.dir/build.make CMakeFiles/prog1Project.dir/src/Commands/ConnectCommand.cpp.i
+.PHONY : src/Commands/ConnectCommand.cpp.i
 
-Commands/EqualsCommand.s: Commands/EqualsCommand.cpp.s
+src/Commands/ConnectCommand.s: src/Commands/ConnectCommand.cpp.s
 
-.PHONY : Commands/EqualsCommand.s
+.PHONY : src/Commands/ConnectCommand.s
 
 # target to generate assembly for a file
-Commands/EqualsCommand.cpp.s:
-	$(MAKE) -f CMakeFiles/prog1Project.dir/build.make CMakeFiles/prog1Project.dir/Commands/EqualsCommand.cpp.s
-.PHONY : Commands/EqualsCommand.cpp.s
+src/Commands/ConnectCommand.cpp.s:
+	$(MAKE) -f CMakeFiles/prog1Project.dir/build.make CMakeFiles/prog1Project.dir/src/Commands/ConnectCommand.cpp.s
+.PHONY : src/Commands/ConnectCommand.cpp.s
 
-Commands/IfCommand.o: Commands/IfCommand.cpp.o
+src/Commands/DefineVarCommand.o: src/Commands/DefineVarCommand.cpp.o
 
-.PHONY : Commands/IfCommand.o
+.PHONY : src/Commands/DefineVarCommand.o
 
 # target to build an object file
-Commands/IfCommand.cpp.o:
-	$(MAKE) -f CMakeFiles/prog1Project.dir/build.make CMakeFiles/prog1Project.dir/Commands/IfCommand.cpp.o
-.PHONY : Commands/IfCommand.cpp.o
+src/Commands/DefineVarCommand.cpp.o:
+	$(MAKE) -f CMakeFiles/prog1Project.dir/build.make CMakeFiles/prog1Project.dir/src/Commands/DefineVarCommand.cpp.o
+.PHONY : src/Commands/DefineVarCommand.cpp.o
 
-Commands/IfCommand.i: Commands/IfCommand.cpp.i
+src/Commands/DefineVarCommand.i: src/Commands/DefineVarCommand.cpp.i
 
-.PHONY : Commands/IfCommand.i
+.PHONY : src/Commands/DefineVarCommand.i
 
 # target to preprocess a source file
-Commands/IfCommand.cpp.i:
-	$(MAKE) -f CMakeFiles/prog1Project.dir/build.make CMakeFiles/prog1Project.dir/Commands/IfCommand.cpp.i
-.PHONY : Commands/IfCommand.cpp.i
+src/Commands/DefineVarCommand.cpp.i:
+	$(MAKE) -f CMakeFiles/prog1Project.dir/build.make CMakeFiles/prog1Project.dir/src/Commands/DefineVarCommand.cpp.i
+.PHONY : src/Commands/DefineVarCommand.cpp.i
 
-Commands/IfCommand.s: Commands/IfCommand.cpp.s
+src/Commands/DefineVarCommand.s: src/Commands/DefineVarCommand.cpp.s
 
-.PHONY : Commands/IfCommand.s
+.PHONY : src/Commands/DefineVarCommand.s
 
 # target to generate assembly for a file
-Commands/IfCommand.cpp.s:
-	$(MAKE) -f CMakeFiles/prog1Project.dir/build.make CMakeFiles/prog1Project.dir/Commands/IfCommand.cpp.s
-.PHONY : Commands/IfCommand.cpp.s
+src/Commands/DefineVarCommand.cpp.s:
+	$(MAKE) -f CMakeFiles/prog1Project.dir/build.make CMakeFiles/prog1Project.dir/src/Commands/DefineVarCommand.cpp.s
+.PHONY : src/Commands/DefineVarCommand.cpp.s
 
-Commands/OpenDataServerCommand.o: Commands/OpenDataServerCommand.cpp.o
+src/Commands/EqualsCommand.o: src/Commands/EqualsCommand.cpp.o
 
-.PHONY : Commands/OpenDataServerCommand.o
+.PHONY : src/Commands/EqualsCommand.o
 
 # target to build an object file
-Commands/OpenDataServerCommand.cpp.o:
-	$(MAKE) -f CMakeFiles/prog1Project.dir/build.make CMakeFiles/prog1Project.dir/Commands/OpenDataServerCommand.cpp.o
-.PHONY : Commands/OpenDataServerCommand.cpp.o
+src/Commands/EqualsCommand.cpp.o:
+	$(MAKE) -f CMakeFiles/prog1Project.dir/build.make CMakeFiles/prog1Project.dir/src/Commands/EqualsCommand.cpp.o
+.PHONY : src/Commands/EqualsCommand.cpp.o
 
-Commands/OpenDataServerCommand.i: Commands/OpenDataServerCommand.cpp.i
+src/Commands/EqualsCommand.i: src/Commands/EqualsCommand.cpp.i
 
-.PHONY : Commands/OpenDataServerCommand.i
+.PHONY : src/Commands/EqualsCommand.i
 
 # target to preprocess a source file
-Commands/OpenDataServerCommand.cpp.i:
-	$(MAKE) -f CMakeFiles/prog1Project.dir/build.make CMakeFiles/prog1Project.dir/Commands/OpenDataServerCommand.cpp.i
-.PHONY : Commands/OpenDataServerCommand.cpp.i
+src/Commands/EqualsCommand.cpp.i:
+	$(MAKE) -f CMakeFiles/prog1Project.dir/build.make CMakeFiles/prog1Project.dir/src/Commands/EqualsCommand.cpp.i
+.PHONY : src/Commands/EqualsCommand.cpp.i
 
-Commands/OpenDataServerCommand.s: Commands/OpenDataServerCommand.cpp.s
+src/Commands/EqualsCommand.s: src/Commands/EqualsCommand.cpp.s
 
-.PHONY : Commands/OpenDataServerCommand.s
+.PHONY : src/Commands/EqualsCommand.s
 
 # target to generate assembly for a file
-Commands/OpenDataServerCommand.cpp.s:
-	$(MAKE) -f CMakeFiles/prog1Project.dir/build.make CMakeFiles/prog1Project.dir/Commands/OpenDataServerCommand.cpp.s
-.PHONY : Commands/OpenDataServerCommand.cpp.s
+src/Commands/EqualsCommand.cpp.s:
+	$(MAKE) -f CMakeFiles/prog1Project.dir/build.make CMakeFiles/prog1Project.dir/src/Commands/EqualsCommand.cpp.s
+.PHONY : src/Commands/EqualsCommand.cpp.s
 
-Commands/PrintCommand.o: Commands/PrintCommand.cpp.o
+src/Commands/IfCommand.o: src/Commands/IfCommand.cpp.o
 
-.PHONY : Commands/PrintCommand.o
+.PHONY : src/Commands/IfCommand.o
 
 # target to build an object file
-Commands/PrintCommand.cpp.o:
-	$(MAKE) -f CMakeFiles/prog1Project.dir/build.make CMakeFiles/prog1Project.dir/Commands/PrintCommand.cpp.o
-.PHONY : Commands/PrintCommand.cpp.o
+src/Commands/IfCommand.cpp.o:
+	$(MAKE) -f CMakeFiles/prog1Project.dir/build.make CMakeFiles/prog1Project.dir/src/Commands/IfCommand.cpp.o
+.PHONY : src/Commands/IfCommand.cpp.o
 
-Commands/PrintCommand.i: Commands/PrintCommand.cpp.i
+src/Commands/IfCommand.i: src/Commands/IfCommand.cpp.i
 
-.PHONY : Commands/PrintCommand.i
+.PHONY : src/Commands/IfCommand.i
 
 # target to preprocess a source file
-Commands/PrintCommand.cpp.i:
-	$(MAKE) -f CMakeFiles/prog1Project.dir/build.make CMakeFiles/prog1Project.dir/Commands/PrintCommand.cpp.i
-.PHONY : Commands/PrintCommand.cpp.i
+src/Commands/IfCommand.cpp.i:
+	$(MAKE) -f CMakeFiles/prog1Project.dir/build.make CMakeFiles/prog1Project.dir/src/Commands/IfCommand.cpp.i
+.PHONY : src/Commands/IfCommand.cpp.i
 
-Commands/PrintCommand.s: Commands/PrintCommand.cpp.s
+src/Commands/IfCommand.s: src/Commands/IfCommand.cpp.s
 
-.PHONY : Commands/PrintCommand.s
+.PHONY : src/Commands/IfCommand.s
 
 # target to generate assembly for a file
-Commands/PrintCommand.cpp.s:
-	$(MAKE) -f CMakeFiles/prog1Project.dir/build.make CMakeFiles/prog1Project.dir/Commands/PrintCommand.cpp.s
-.PHONY : Commands/PrintCommand.cpp.s
+src/Commands/IfCommand.cpp.s:
+	$(MAKE) -f CMakeFiles/prog1Project.dir/build.make CMakeFiles/prog1Project.dir/src/Commands/IfCommand.cpp.s
+.PHONY : src/Commands/IfCommand.cpp.s
 
-Commands/WhileCommand.o: Commands/WhileCommand.cpp.o
+src/Commands/OpenDataServerCommand.o: src/Commands/OpenDataServerCommand.cpp.o
 
-.PHONY : Commands/WhileCommand.o
+.PHONY : src/Commands/OpenDataServerCommand.o
 
 # target to build an object file
-Commands/WhileCommand.cpp.o:
-	$(MAKE) -f CMakeFiles/prog1Project.dir/build.make CMakeFiles/prog1Project.dir/Commands/WhileCommand.cpp.o
-.PHONY : Commands/WhileCommand.cpp.o
+src/Commands/OpenDataServerCommand.cpp.o:
+	$(MAKE) -f CMakeFiles/prog1Project.dir/build.make CMakeFiles/prog1Project.dir/src/Commands/OpenDataServerCommand.cpp.o
+.PHONY : src/Commands/OpenDataServerCommand.cpp.o
 
-Commands/WhileCommand.i: Commands/WhileCommand.cpp.i
+src/Commands/OpenDataServerCommand.i: src/Commands/OpenDataServerCommand.cpp.i
 
-.PHONY : Commands/WhileCommand.i
+.PHONY : src/Commands/OpenDataServerCommand.i
 
 # target to preprocess a source file
-Commands/WhileCommand.cpp.i:
-	$(MAKE) -f CMakeFiles/prog1Project.dir/build.make CMakeFiles/prog1Project.dir/Commands/WhileCommand.cpp.i
-.PHONY : Commands/WhileCommand.cpp.i
+src/Commands/OpenDataServerCommand.cpp.i:
+	$(MAKE) -f CMakeFiles/prog1Project.dir/build.make CMakeFiles/prog1Project.dir/src/Commands/OpenDataServerCommand.cpp.i
+.PHONY : src/Commands/OpenDataServerCommand.cpp.i
 
-Commands/WhileCommand.s: Commands/WhileCommand.cpp.s
+src/Commands/OpenDataServerCommand.s: src/Commands/OpenDataServerCommand.cpp.s
 
-.PHONY : Commands/WhileCommand.s
+.PHONY : src/Commands/OpenDataServerCommand.s
 
 # target to generate assembly for a file
-Commands/WhileCommand.cpp.s:
-	$(MAKE) -f CMakeFiles/prog1Project.dir/build.make CMakeFiles/prog1Project.dir/Commands/WhileCommand.cpp.s
-.PHONY : Commands/WhileCommand.cpp.s
+src/Commands/OpenDataServerCommand.cpp.s:
+	$(MAKE) -f CMakeFiles/prog1Project.dir/build.make CMakeFiles/prog1Project.dir/src/Commands/OpenDataServerCommand.cpp.s
+.PHONY : src/Commands/OpenDataServerCommand.cpp.s
 
-Enviroment.o: Enviroment.cpp.o
+src/Commands/PrintCommand.o: src/Commands/PrintCommand.cpp.o
 
-.PHONY : Enviroment.o
+.PHONY : src/Commands/PrintCommand.o
 
 # target to build an object file
-Enviroment.cpp.o:
-	$(MAKE) -f CMakeFiles/prog1Project.dir/build.make CMakeFiles/prog1Project.dir/Enviroment.cpp.o
-.PHONY : Enviroment.cpp.o
+src/Commands/PrintCommand.cpp.o:
+	$(MAKE) -f CMakeFiles/prog1Project.dir/build.make CMakeFiles/prog1Project.dir/src/Commands/PrintCommand.cpp.o
+.PHONY : src/Commands/PrintCommand.cpp.o
 
-Enviroment.i: Enviroment.cpp.i
+src/Commands/PrintCommand.i: src/Commands/PrintCommand.cpp.i
 
-.PHONY : Enviroment.i
+.PHONY : src/Commands/PrintCommand.i
 
 # target to preprocess a source file
-Enviroment.cpp.i:
-	$(MAKE) -f CMakeFiles/prog1Project.dir/build.make CMakeFiles/prog1Project.dir/Enviroment.cpp.i
-.PHONY : Enviroment.cpp.i
+src/Commands/PrintCommand.cpp.i:
+	$(MAKE) -f CMakeFiles/prog1Project.dir/build.make CMakeFiles/prog1Project.dir/src/Commands/PrintCommand.cpp.i
+.PHONY : src/Commands/PrintCommand.cpp.i
 
-Enviroment.s: Enviroment.cpp.s
+src/Commands/PrintCommand.s: src/Commands/PrintCommand.cpp.s
 
-.PHONY : Enviroment.s
+.PHONY : src/Commands/PrintCommand.s
 
 # target to generate assembly for a file
-Enviroment.cpp.s:
-	$(MAKE) -f CMakeFiles/prog1Project.dir/build.make CMakeFiles/prog1Project.dir/Enviroment.cpp.s
-.PHONY : Enviroment.cpp.s
+src/Commands/PrintCommand.cpp.s:
+	$(MAKE) -f CMakeFiles/prog1Project.dir/build.make CMakeFiles/prog1Project.dir/src/Commands/PrintCommand.cpp.s
+.PHONY : src/Commands/PrintCommand.cpp.s
 
-Expressions/ExpressionFactory.o: Expressions/ExpressionFactory.cpp.o
+src/Commands/SleepCommand.o: src/Commands/SleepCommand.cpp.o
 
-.PHONY : Expressions/ExpressionFactory.o
+.PHONY : src/Commands/SleepCommand.o
 
 # target to build an object file
-Expressions/ExpressionFactory.cpp.o:
-	$(MAKE) -f CMakeFiles/prog1Project.dir/build.make CMakeFiles/prog1Project.dir/Expressions/ExpressionFactory.cpp.o
-.PHONY : Expressions/ExpressionFactory.cpp.o
+src/Commands/SleepCommand.cpp.o:
+	$(MAKE) -f CMakeFiles/prog1Project.dir/build.make CMakeFiles/prog1Project.dir/src/Commands/SleepCommand.cpp.o
+.PHONY : src/Commands/SleepCommand.cpp.o
 
-Expressions/ExpressionFactory.i: Expressions/ExpressionFactory.cpp.i
+src/Commands/SleepCommand.i: src/Commands/SleepCommand.cpp.i
 
-.PHONY : Expressions/ExpressionFactory.i
+.PHONY : src/Commands/SleepCommand.i
 
 # target to preprocess a source file
-Expressions/ExpressionFactory.cpp.i:
-	$(MAKE) -f CMakeFiles/prog1Project.dir/build.make CMakeFiles/prog1Project.dir/Expressions/ExpressionFactory.cpp.i
-.PHONY : Expressions/ExpressionFactory.cpp.i
+src/Commands/SleepCommand.cpp.i:
+	$(MAKE) -f CMakeFiles/prog1Project.dir/build.make CMakeFiles/prog1Project.dir/src/Commands/SleepCommand.cpp.i
+.PHONY : src/Commands/SleepCommand.cpp.i
 
-Expressions/ExpressionFactory.s: Expressions/ExpressionFactory.cpp.s
+src/Commands/SleepCommand.s: src/Commands/SleepCommand.cpp.s
 
-.PHONY : Expressions/ExpressionFactory.s
+.PHONY : src/Commands/SleepCommand.s
 
 # target to generate assembly for a file
-Expressions/ExpressionFactory.cpp.s:
-	$(MAKE) -f CMakeFiles/prog1Project.dir/build.make CMakeFiles/prog1Project.dir/Expressions/ExpressionFactory.cpp.s
-.PHONY : Expressions/ExpressionFactory.cpp.s
+src/Commands/SleepCommand.cpp.s:
+	$(MAKE) -f CMakeFiles/prog1Project.dir/build.make CMakeFiles/prog1Project.dir/src/Commands/SleepCommand.cpp.s
+.PHONY : src/Commands/SleepCommand.cpp.s
 
-Interperter.o: Interperter.cpp.o
+src/Commands/WhileCommand.o: src/Commands/WhileCommand.cpp.o
 
-.PHONY : Interperter.o
+.PHONY : src/Commands/WhileCommand.o
 
 # target to build an object file
-Interperter.cpp.o:
-	$(MAKE) -f CMakeFiles/prog1Project.dir/build.make CMakeFiles/prog1Project.dir/Interperter.cpp.o
-.PHONY : Interperter.cpp.o
+src/Commands/WhileCommand.cpp.o:
+	$(MAKE) -f CMakeFiles/prog1Project.dir/build.make CMakeFiles/prog1Project.dir/src/Commands/WhileCommand.cpp.o
+.PHONY : src/Commands/WhileCommand.cpp.o
 
-Interperter.i: Interperter.cpp.i
+src/Commands/WhileCommand.i: src/Commands/WhileCommand.cpp.i
 
-.PHONY : Interperter.i
+.PHONY : src/Commands/WhileCommand.i
 
 # target to preprocess a source file
-Interperter.cpp.i:
-	$(MAKE) -f CMakeFiles/prog1Project.dir/build.make CMakeFiles/prog1Project.dir/Interperter.cpp.i
-.PHONY : Interperter.cpp.i
+src/Commands/WhileCommand.cpp.i:
+	$(MAKE) -f CMakeFiles/prog1Project.dir/build.make CMakeFiles/prog1Project.dir/src/Commands/WhileCommand.cpp.i
+.PHONY : src/Commands/WhileCommand.cpp.i
 
-Interperter.s: Interperter.cpp.s
+src/Commands/WhileCommand.s: src/Commands/WhileCommand.cpp.s
 
-.PHONY : Interperter.s
+.PHONY : src/Commands/WhileCommand.s
 
 # target to generate assembly for a file
-Interperter.cpp.s:
-	$(MAKE) -f CMakeFiles/prog1Project.dir/build.make CMakeFiles/prog1Project.dir/Interperter.cpp.s
-.PHONY : Interperter.cpp.s
+src/Commands/WhileCommand.cpp.s:
+	$(MAKE) -f CMakeFiles/prog1Project.dir/build.make CMakeFiles/prog1Project.dir/src/Commands/WhileCommand.cpp.s
+.PHONY : src/Commands/WhileCommand.cpp.s
 
-Utils.o: Utils.cpp.o
+src/Enviroment.o: src/Enviroment.cpp.o
 
-.PHONY : Utils.o
+.PHONY : src/Enviroment.o
 
 # target to build an object file
-Utils.cpp.o:
-	$(MAKE) -f CMakeFiles/prog1Project.dir/build.make CMakeFiles/prog1Project.dir/Utils.cpp.o
-.PHONY : Utils.cpp.o
+src/Enviroment.cpp.o:
+	$(MAKE) -f CMakeFiles/prog1Project.dir/build.make CMakeFiles/prog1Project.dir/src/Enviroment.cpp.o
+.PHONY : src/Enviroment.cpp.o
 
-Utils.i: Utils.cpp.i
+src/Enviroment.i: src/Enviroment.cpp.i
 
-.PHONY : Utils.i
+.PHONY : src/Enviroment.i
 
 # target to preprocess a source file
-Utils.cpp.i:
-	$(MAKE) -f CMakeFiles/prog1Project.dir/build.make CMakeFiles/prog1Project.dir/Utils.cpp.i
-.PHONY : Utils.cpp.i
+src/Enviroment.cpp.i:
+	$(MAKE) -f CMakeFiles/prog1Project.dir/build.make CMakeFiles/prog1Project.dir/src/Enviroment.cpp.i
+.PHONY : src/Enviroment.cpp.i
 
-Utils.s: Utils.cpp.s
+src/Enviroment.s: src/Enviroment.cpp.s
 
-.PHONY : Utils.s
+.PHONY : src/Enviroment.s
 
 # target to generate assembly for a file
-Utils.cpp.s:
-	$(MAKE) -f CMakeFiles/prog1Project.dir/build.make CMakeFiles/prog1Project.dir/Utils.cpp.s
-.PHONY : Utils.cpp.s
+src/Enviroment.cpp.s:
+	$(MAKE) -f CMakeFiles/prog1Project.dir/build.make CMakeFiles/prog1Project.dir/src/Enviroment.cpp.s
+.PHONY : src/Enviroment.cpp.s
 
-main.o: main.cpp.o
+src/Expressions/ExpressionFactory.o: src/Expressions/ExpressionFactory.cpp.o
 
-.PHONY : main.o
+.PHONY : src/Expressions/ExpressionFactory.o
 
 # target to build an object file
-main.cpp.o:
-	$(MAKE) -f CMakeFiles/prog1Project.dir/build.make CMakeFiles/prog1Project.dir/main.cpp.o
-.PHONY : main.cpp.o
+src/Expressions/ExpressionFactory.cpp.o:
+	$(MAKE) -f CMakeFiles/prog1Project.dir/build.make CMakeFiles/prog1Project.dir/src/Expressions/ExpressionFactory.cpp.o
+.PHONY : src/Expressions/ExpressionFactory.cpp.o
 
-main.i: main.cpp.i
+src/Expressions/ExpressionFactory.i: src/Expressions/ExpressionFactory.cpp.i
 
-.PHONY : main.i
+.PHONY : src/Expressions/ExpressionFactory.i
 
 # target to preprocess a source file
-main.cpp.i:
-	$(MAKE) -f CMakeFiles/prog1Project.dir/build.make CMakeFiles/prog1Project.dir/main.cpp.i
-.PHONY : main.cpp.i
+src/Expressions/ExpressionFactory.cpp.i:
+	$(MAKE) -f CMakeFiles/prog1Project.dir/build.make CMakeFiles/prog1Project.dir/src/Expressions/ExpressionFactory.cpp.i
+.PHONY : src/Expressions/ExpressionFactory.cpp.i
 
-main.s: main.cpp.s
+src/Expressions/ExpressionFactory.s: src/Expressions/ExpressionFactory.cpp.s
 
-.PHONY : main.s
+.PHONY : src/Expressions/ExpressionFactory.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) -f CMakeFiles/prog1Project.dir/build.make CMakeFiles/prog1Project.dir/main.cpp.s
-.PHONY : main.cpp.s
+src/Expressions/ExpressionFactory.cpp.s:
+	$(MAKE) -f CMakeFiles/prog1Project.dir/build.make CMakeFiles/prog1Project.dir/src/Expressions/ExpressionFactory.cpp.s
+.PHONY : src/Expressions/ExpressionFactory.cpp.s
+
+src/Interpreter.o: src/Interpreter.cpp.o
+
+.PHONY : src/Interpreter.o
+
+# target to build an object file
+src/Interpreter.cpp.o:
+	$(MAKE) -f CMakeFiles/prog1Project.dir/build.make CMakeFiles/prog1Project.dir/src/Interpreter.cpp.o
+.PHONY : src/Interpreter.cpp.o
+
+src/Interpreter.i: src/Interpreter.cpp.i
+
+.PHONY : src/Interpreter.i
+
+# target to preprocess a source file
+src/Interpreter.cpp.i:
+	$(MAKE) -f CMakeFiles/prog1Project.dir/build.make CMakeFiles/prog1Project.dir/src/Interpreter.cpp.i
+.PHONY : src/Interpreter.cpp.i
+
+src/Interpreter.s: src/Interpreter.cpp.s
+
+.PHONY : src/Interpreter.s
+
+# target to generate assembly for a file
+src/Interpreter.cpp.s:
+	$(MAKE) -f CMakeFiles/prog1Project.dir/build.make CMakeFiles/prog1Project.dir/src/Interpreter.cpp.s
+.PHONY : src/Interpreter.cpp.s
+
+src/Sockets/FlightDataGetterSetter.o: src/Sockets/FlightDataGetterSetter.cpp.o
+
+.PHONY : src/Sockets/FlightDataGetterSetter.o
+
+# target to build an object file
+src/Sockets/FlightDataGetterSetter.cpp.o:
+	$(MAKE) -f CMakeFiles/prog1Project.dir/build.make CMakeFiles/prog1Project.dir/src/Sockets/FlightDataGetterSetter.cpp.o
+.PHONY : src/Sockets/FlightDataGetterSetter.cpp.o
+
+src/Sockets/FlightDataGetterSetter.i: src/Sockets/FlightDataGetterSetter.cpp.i
+
+.PHONY : src/Sockets/FlightDataGetterSetter.i
+
+# target to preprocess a source file
+src/Sockets/FlightDataGetterSetter.cpp.i:
+	$(MAKE) -f CMakeFiles/prog1Project.dir/build.make CMakeFiles/prog1Project.dir/src/Sockets/FlightDataGetterSetter.cpp.i
+.PHONY : src/Sockets/FlightDataGetterSetter.cpp.i
+
+src/Sockets/FlightDataGetterSetter.s: src/Sockets/FlightDataGetterSetter.cpp.s
+
+.PHONY : src/Sockets/FlightDataGetterSetter.s
+
+# target to generate assembly for a file
+src/Sockets/FlightDataGetterSetter.cpp.s:
+	$(MAKE) -f CMakeFiles/prog1Project.dir/build.make CMakeFiles/prog1Project.dir/src/Sockets/FlightDataGetterSetter.cpp.s
+.PHONY : src/Sockets/FlightDataGetterSetter.cpp.s
+
+src/Utils.o: src/Utils.cpp.o
+
+.PHONY : src/Utils.o
+
+# target to build an object file
+src/Utils.cpp.o:
+	$(MAKE) -f CMakeFiles/prog1Project.dir/build.make CMakeFiles/prog1Project.dir/src/Utils.cpp.o
+.PHONY : src/Utils.cpp.o
+
+src/Utils.i: src/Utils.cpp.i
+
+.PHONY : src/Utils.i
+
+# target to preprocess a source file
+src/Utils.cpp.i:
+	$(MAKE) -f CMakeFiles/prog1Project.dir/build.make CMakeFiles/prog1Project.dir/src/Utils.cpp.i
+.PHONY : src/Utils.cpp.i
+
+src/Utils.s: src/Utils.cpp.s
+
+.PHONY : src/Utils.s
+
+# target to generate assembly for a file
+src/Utils.cpp.s:
+	$(MAKE) -f CMakeFiles/prog1Project.dir/build.make CMakeFiles/prog1Project.dir/src/Utils.cpp.s
+.PHONY : src/Utils.cpp.s
+
+src/main.o: src/main.cpp.o
+
+.PHONY : src/main.o
+
+# target to build an object file
+src/main.cpp.o:
+	$(MAKE) -f CMakeFiles/prog1Project.dir/build.make CMakeFiles/prog1Project.dir/src/main.cpp.o
+.PHONY : src/main.cpp.o
+
+src/main.i: src/main.cpp.i
+
+.PHONY : src/main.i
+
+# target to preprocess a source file
+src/main.cpp.i:
+	$(MAKE) -f CMakeFiles/prog1Project.dir/build.make CMakeFiles/prog1Project.dir/src/main.cpp.i
+.PHONY : src/main.cpp.i
+
+src/main.s: src/main.cpp.s
+
+.PHONY : src/main.s
+
+# target to generate assembly for a file
+src/main.cpp.s:
+	$(MAKE) -f CMakeFiles/prog1Project.dir/build.make CMakeFiles/prog1Project.dir/src/main.cpp.s
+.PHONY : src/main.cpp.s
 
 # Help Target
 help:
@@ -456,42 +537,51 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... prog1Project"
 	@echo "... edit_cache"
-	@echo "... Commands/ConditionParser.o"
-	@echo "... Commands/ConditionParser.i"
-	@echo "... Commands/ConditionParser.s"
-	@echo "... Commands/DefineVarCommand.o"
-	@echo "... Commands/DefineVarCommand.i"
-	@echo "... Commands/DefineVarCommand.s"
-	@echo "... Commands/EqualsCommand.o"
-	@echo "... Commands/EqualsCommand.i"
-	@echo "... Commands/EqualsCommand.s"
-	@echo "... Commands/IfCommand.o"
-	@echo "... Commands/IfCommand.i"
-	@echo "... Commands/IfCommand.s"
-	@echo "... Commands/OpenDataServerCommand.o"
-	@echo "... Commands/OpenDataServerCommand.i"
-	@echo "... Commands/OpenDataServerCommand.s"
-	@echo "... Commands/PrintCommand.o"
-	@echo "... Commands/PrintCommand.i"
-	@echo "... Commands/PrintCommand.s"
-	@echo "... Commands/WhileCommand.o"
-	@echo "... Commands/WhileCommand.i"
-	@echo "... Commands/WhileCommand.s"
-	@echo "... Enviroment.o"
-	@echo "... Enviroment.i"
-	@echo "... Enviroment.s"
-	@echo "... Expressions/ExpressionFactory.o"
-	@echo "... Expressions/ExpressionFactory.i"
-	@echo "... Expressions/ExpressionFactory.s"
-	@echo "... Interperter.o"
-	@echo "... Interperter.i"
-	@echo "... Interperter.s"
-	@echo "... Utils.o"
-	@echo "... Utils.i"
-	@echo "... Utils.s"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... src/Commands/ConditionParser.o"
+	@echo "... src/Commands/ConditionParser.i"
+	@echo "... src/Commands/ConditionParser.s"
+	@echo "... src/Commands/ConnectCommand.o"
+	@echo "... src/Commands/ConnectCommand.i"
+	@echo "... src/Commands/ConnectCommand.s"
+	@echo "... src/Commands/DefineVarCommand.o"
+	@echo "... src/Commands/DefineVarCommand.i"
+	@echo "... src/Commands/DefineVarCommand.s"
+	@echo "... src/Commands/EqualsCommand.o"
+	@echo "... src/Commands/EqualsCommand.i"
+	@echo "... src/Commands/EqualsCommand.s"
+	@echo "... src/Commands/IfCommand.o"
+	@echo "... src/Commands/IfCommand.i"
+	@echo "... src/Commands/IfCommand.s"
+	@echo "... src/Commands/OpenDataServerCommand.o"
+	@echo "... src/Commands/OpenDataServerCommand.i"
+	@echo "... src/Commands/OpenDataServerCommand.s"
+	@echo "... src/Commands/PrintCommand.o"
+	@echo "... src/Commands/PrintCommand.i"
+	@echo "... src/Commands/PrintCommand.s"
+	@echo "... src/Commands/SleepCommand.o"
+	@echo "... src/Commands/SleepCommand.i"
+	@echo "... src/Commands/SleepCommand.s"
+	@echo "... src/Commands/WhileCommand.o"
+	@echo "... src/Commands/WhileCommand.i"
+	@echo "... src/Commands/WhileCommand.s"
+	@echo "... src/Enviroment.o"
+	@echo "... src/Enviroment.i"
+	@echo "... src/Enviroment.s"
+	@echo "... src/Expressions/ExpressionFactory.o"
+	@echo "... src/Expressions/ExpressionFactory.i"
+	@echo "... src/Expressions/ExpressionFactory.s"
+	@echo "... src/Interpreter.o"
+	@echo "... src/Interpreter.i"
+	@echo "... src/Interpreter.s"
+	@echo "... src/Sockets/FlightDataGetterSetter.o"
+	@echo "... src/Sockets/FlightDataGetterSetter.i"
+	@echo "... src/Sockets/FlightDataGetterSetter.s"
+	@echo "... src/Utils.o"
+	@echo "... src/Utils.i"
+	@echo "... src/Utils.s"
+	@echo "... src/main.o"
+	@echo "... src/main.i"
+	@echo "... src/main.s"
 .PHONY : help
 
 
