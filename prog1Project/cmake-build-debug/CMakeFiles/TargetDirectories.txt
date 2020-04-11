@@ -1,3 +1,0 @@
-/home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/cmake-build-debug/CMakeFiles/prog1Project.dir
-/home/omri/Documents/biuCS/prog/Advanced-Programimng-1-Project/prog1Project/cmake-build-debug/CMakeFiles/edit_cache.dir
